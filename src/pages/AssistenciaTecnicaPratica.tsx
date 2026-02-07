@@ -28,6 +28,51 @@ const WHATSAPP_URL = "https://wa.me/5562993775711";
 
 const equipamentos = [
   {
+    id: "forst",
+    titulo: "Fornos Combinados FORST - Combi Ovens Prática",
+    conteudo: {
+      descricao: "Os Fornos Combinados FORST são a linha principal da Prática, oferecendo tecnologia de vapor, ar quente e combinado para cocção profissional com máxima eficiência e versatilidade.",
+      modelos: [
+        { nome: "FORST 6 GN's", specs: "Compacto • Elétrico/Gás • Restaurantes pequenos" },
+        { nome: "FORST 10 GN's", specs: "Médio • Elétrico/Gás • Restaurantes e hotéis" },
+        { nome: "FORST 20 GN's", specs: "Grande • Elétrico/Gás • Produção industrial" },
+        { nome: "FORST Advanced", specs: "Touchscreen • Receitas programáveis • HACCP" },
+      ],
+      tecnologias: [
+        "3 modos de cocção: Vapor, Ar Quente, Combinado",
+        "Injeção direta de vapor (boiler integrado)",
+        "Painel digital/touchscreen programável",
+        "Sonda núcleo multipontos",
+        "Sistema de limpeza automática",
+        "Controle de umidade preciso",
+        "Registro HACCP automático",
+        "Receitas programáveis (até 99 programas)",
+      ],
+      servicos: [
+        "Manutenção preventiva trimestral",
+        "Limpeza e descalcificação do boiler",
+        "Calibração de sondas e sensores",
+        "Reparo sistema de vapor",
+        "Substituição de resistências",
+        "Troca de válvulas solenoides",
+        "Reparo/troca de painel eletrônico",
+        "Manutenção motor turbina",
+        "Troca de vedações de porta",
+      ],
+      pecas: [
+        "Resistências de aquecimento",
+        "Sondas de temperatura núcleo",
+        "Válvulas solenoides vapor/água",
+        "Bombas boiler",
+        "Turbinas/motores ventilação",
+        "Placas eletrônicas",
+        "Vedações de porta (silicone)",
+        "Sensores de nível",
+        "Controladores de temperatura",
+      ],
+    },
+  },
+  {
     id: "prcop",
     titulo: "Lavadoras PRCOP - Copeiras Profissionais",
     conteudo: {
