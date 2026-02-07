@@ -1,96 +1,46 @@
 import { CheckCircle } from "lucide-react";
+import logosImage from "@/assets/logos-clientes-marcas.jpeg";
 
-const brands = [
-  {
-    name: "Rational",
-    logo: "https://sspark.genspark.ai/cfimages?u1=a3LnZKxl%2BC3rQuvaBYjYxlbq3pKLxKWXgdKiBXaVyTHE6IA2ID7oQVqhFr%2FB4RprOd6pyTXyT0duRfrHfRbzZDr4beFU5Uo454qt5BjCew2xmZyTU4q4gw4rAj8IJf3jIpBY%2BBYjagSOqtLr6IpyYyweEKRqXLVN&u2=bE0M8Wi1kQhgMa7E&width=2560",
-    authorized: true,
-  },
-  {
-    name: "ITW",
-    logo: "https://sspark.genspark.ai/cfimages?u1=uPTuxsWf0DNKuQzIMbS1ty%2BGH6%2FM%2B3T2DHuaySJPi7JKvDTTcGUZRcLl%2BGGoYBITvgu1Hwrd4VsmF7FGwgF1cvqnkv8G90ygI%2Ba2txDyR8yywaHIEOWaxrPAIM%2BPILZFLDU%3D&u2=Dj5bRNmdAUt6G%2FjP&width=2560",
-  },
-  {
-    name: "Hobart",
-    logo: "https://sspark.genspark.ai/cfimages?u1=pl%2B2G5V4zaoahgoGuFn2hiL3JW24Rgbq07A1Ar4PsWLGZ%2FfF54xmHHotUFfp7b521x1jfdXjCFjuZf0GFts3ZzYzY63VFmOhIwDvwd%2BLd8ogyjgupxQoGfEkx%2BnrXc3w&u2=OraimpxkUPOt7hb1&width=2560",
-  },
-  {
-    name: "Prática Klimaquip",
-    logo: "https://sspark.genspark.ai/cfimages?u1=KJHW7CLGh9M94U9rKJ22xIV831SofvK8noZT5ku6D6yV5ltKgaKw%2B3q%2Fusqe8qttnceN2PQrhkUMVNIBRb0oyjzKpQ5lWkJCMJeSY7ef%2BL4c&u2=J2QMxgSUvyYbTbT%2B&width=2560",
-  },
-  {
-    name: "Tramontina",
-    logo: "https://sspark.genspark.ai/cfimages?u1=uf%2BNM8Xg9Llmq75WviORbEHY7KjTgL4hzKLgn0bApwx98YxJuqg43Kg03T033UErRWm0xGXAQML3skf%2Fmfibyrc527HrMUPkFygJWoxxxo6R5%2FPCKz8C%2BwDTYA%3D%3D&u2=j2bt0UOoZXChWzk1&width=2560",
-  },
-  {
-    name: "Unox",
-    logo: "https://sspark.genspark.ai/cfimages?u1=YCmIrx52Nny9r4PgezJARgK5pmSdAXGSRvmu9ioCArljD5epDgQdcEtGwv90SjypoIZtFeMv%2FLb5KsP3cIV6pWpN3yAXU1ooqGCUCH%2BzkbXgBgob7YG8qvgCABSGbuNck8aidgw6&u2=Snf86BqBqKUBkFzf&width=2560",
-  },
-  {
-    name: "Cozil",
-    logo: "https://sspark.genspark.ai/cfimages?u1=uTNt5s7VfkwV8SqD2Anr%2BNaozZu5TCE33swT84AZrE2VNVo0ZCmjDrhzkatDSaW5GglRuM%2BV4RO2%2FDlXILTGhOVmSpsC&u2=ITHjp2NErAkX4Nde&width=2560",
-  },
-  {
-    name: "Metalfrio",
-    logo: "https://sspark.genspark.ai/cfimages?u1=j7M6AedsylRl1ePxdcqx883sTwmqfyC71qfNKD%2FeH7nRSFaLRJUhsOGV40xCEADkjvXHXRxOzV5aEpU7DX5ooWhszvwGRlZfy5EhCnCGQeEgnJ6N2V7sjg%3D%3D&u2=hniTv06DTFmNK0%2B8&width=2560",
-  },
-  {
-    name: "Skymsen",
-    logo: "https://sspark.genspark.ai/cfimages?u1=257YOF3VHvHjtBou4IcU6JHh%2FxlgISvKAycZjni37s4dSIHsOgmvarvRAkRxd4uFjJVsGTKW8XYZYdEQP8ek9mgKwbcuwl1%2B4q7YUAaEpMfZZk%2Ffg8EmyJBBNGtnXrhiPw%3D%3D&u2=0exzdU3RjEJCOVme&width=2560",
-  },
-  {
-    name: "Robot Coupe",
-    logo: "https://sspark.genspark.ai/cfimages?u1=OpgadeR9imimUdYZKGdVaqHWZlf2WINEAFUNvMD%2B3q1dB1SPlHYqVrhKmd6UyTLdG%2BEDe1wGpbMCK6iuMgkfu3uE1Nf8mkbEUKJ4CvckXvb%2B5HMyV9MoWsP5aO%2BNZm6D2Q%3D%3D&u2=VjjmiWlwDgs0DKKV&width=2560",
-  },
-  {
-    name: "Middleby",
-    logo: "https://sspark.genspark.ai/cfimages?u1=Jl4LehPMshhGB77AmjGqfqb52vO7LLErdTIGhO5eCGx55sS1YTIFGdyX39HuGHyPr1utdz7LlegCutbr2tLVNK0jpp2u5Hj3Mg4N%2FQM0kCv8FMJ09Qjd4d7DvB9VZ2CfEkBWFkrrCGhBNXjFLTkdhKF5naLCe29Tdb%2F%2FDZz%2Fig%3D%3D&u2=Mmm%2BPF%2F6kGDG6gPm&width=2560",
-  },
-  {
-    name: "Irinox",
-    logo: "https://sspark.genspark.ai/cfimages?u1=JY4rFQbFR0yCmUvgNZxk1x3NVt8MT%2B1rpOjc6mILVQKjRTyzdBXDkGPDbRt7PzSfyFAP%2BwFLq7q75dHfDUOOxS7iGAo%3D&u2=t%2BMbB67BWXxehJjV&width=2560",
-  },
+const clientes = [
+  "Sodexo", "JBS", "Sapore", "GRSA", "SESI", "Cargill", 
+  "Ambev", "Coco Bambu", "Sesc", "Cristal Alimentos", "Pizza Hut"
+];
+
+const marcas = [
+  { name: "Rational", authorized: true },
+  { name: "ITW" },
+  { name: "Hobart" },
+  { name: "Prática Klimaquip" },
+  { name: "Tramontina" },
+  { name: "Unox" },
+  { name: "Cozil" },
+  { name: "Macom" },
+  { name: "Skymsen" },
+  { name: "Robot Coupe" },
+  { name: "Middleby" },
+  { name: "Irinox" },
 ];
 
 export default function BrandsSection() {
   return (
-    <section className="section-padding bg-primary">
+    <section className="section-padding bg-muted">
       <div className="container-wedo">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-            Marcas que Trabalhamos
-          </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            Assistência técnica especializada e peças originais
-          </p>
+        {/* Imagem com as logos */}
+        <div className="flex justify-center">
+          <img
+            src={logosImage}
+            alt="Principais Clientes e Marcas que Trabalhamos - Sodexo, JBS, Sapore, GRSA, SESI, Cargill, Ambev, Coco Bambu, Rational, Hobart, Tramontina, Unox e mais"
+            className="w-full max-w-4xl rounded-2xl shadow-lg"
+            loading="lazy"
+          />
         </div>
 
-        {/* Brands Grid - fundo branco */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {brands.map((brand, index) => (
-            <div
-              key={brand.name}
-              className="relative logo-card-dark animate-fade-in"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              {/* Badge Autorizado para Rational */}
-              {brand.authorized && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-destructive text-white text-xs font-bold rounded whitespace-nowrap">
-                    <CheckCircle className="w-3 h-3" />
-                    Autorizado
-                  </span>
-                </div>
-              )}
-              <img
-                src={brand.logo}
-                alt={`${brand.name} - Parceiro Autorizado`}
-                className="max-h-10 w-auto object-contain"
-                loading="lazy"
-              />
-            </div>
-          ))}
+        {/* Badge Rational */}
+        <div className="flex justify-center mt-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-destructive text-white rounded-lg font-bold text-sm">
+            <CheckCircle className="w-4 h-4" />
+            Parceiro Autorizado Rational
+          </div>
         </div>
       </div>
     </section>
