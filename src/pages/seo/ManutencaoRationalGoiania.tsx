@@ -30,7 +30,7 @@ export default function ManutencaoRationalGoiania() {
           </p>
 
           <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer" className="btn-wedo inline-flex items-center gap-2 mb-12">
-            Fale Conosco <ArrowRight className="w-5 h-5" />
+            Acessar Atendimento <ArrowRight className="w-5 h-5" />
           </a>
 
           <h3 className="font-heading font-bold text-xl mt-10 mb-4">Páginas relacionadas:</h3>

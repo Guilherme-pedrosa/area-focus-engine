@@ -114,7 +114,7 @@ export default function ContratosPCM() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
           >
-            Fale Conosco
+            Acessar Atendimento
             <ArrowRight className="w-6 h-6" />
           </a>
         </div>
