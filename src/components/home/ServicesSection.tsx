@@ -64,9 +64,9 @@ export default function ServicesSection() {
       <div className="container-wedo">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="title-section">Soluções Completas para Cozinhas Profissionais</h2>
+          <h2 className="title-section">Manutenção Completa para Cozinhas Profissionais</h2>
           <p className="subtitle-section mx-auto">
-            Expertise técnica em refrigeração industrial e equipamentos de cozinha profissional para toda sua operação.
+            Do forno combinado à câmara fria: expertise técnica multimarcas para manter sua operação funcionando sem paradas.
           </p>
         </div>
 
