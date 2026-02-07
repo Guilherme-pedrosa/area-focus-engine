@@ -31,15 +31,15 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* H1 Industrial Direto */}
           <h1 className="title-hero mb-6 animate-slide-up">
-            Cozinhas Industriais.<br />
-            Manutenção Completa.<br />
+            Manutenção de Cozinhas Industriais<br />
+            para Operações que Não Podem Parar.<br />
             Goiás e DF.
           </h1>
 
           {/* Subtítulo técnico direto */}
           <p className="text-xl md:text-2xl text-white/90 font-medium mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Forno, lavadora, processador, câmara fria parados = prejuízo.<br />
-            Resolvemos com técnicos NR10/12/13 e 15 anos de experiência.
+            Falhas em câmaras frias, fornos e equipamentos críticos impactam produção, segurança e custos.<br />
+            A WeDo atua com técnicos certificados, processos auditáveis e manutenção estruturada.
           </p>
 
           {/* Badge mobile */}
