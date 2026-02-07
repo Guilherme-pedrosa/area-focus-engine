@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoWedo from "@/assets/logo-wedo.png";
+import logoWedo from "@/assets/logo-wedo-full.jpg";
 
 const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
