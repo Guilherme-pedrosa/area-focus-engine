@@ -57,11 +57,29 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Cores customizadas WeDo
+        wedo: {
+          blue: "hsl(var(--wedo-blue))",
+          "blue-light": "hsl(var(--wedo-blue-light))",
+          "blue-dark": "hsl(var(--wedo-blue-dark))",
+          gray: "hsl(var(--wedo-gray))",
+          "gray-light": "hsl(var(--wedo-gray-light))",
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        heading: ['Montserrat', 'Inter', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'wedo': 'var(--shadow-md)',
+        'wedo-lg': 'var(--shadow-lg)',
+        'wedo-xl': 'var(--shadow-xl)',
+        'wedo-card': 'var(--shadow-card)',
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +98,25 @@ export default {
             height: "0",
           },
         },
+        "fade-in": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "slide-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-down": {
+          from: { opacity: "0", transform: "translateY(-10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+        "slide-up": "slide-up 0.6s ease-out forwards",
+        "slide-down": "slide-down 0.3s ease-out forwards",
       },
     },
   },
