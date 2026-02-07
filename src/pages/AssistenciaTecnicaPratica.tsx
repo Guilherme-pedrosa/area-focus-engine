@@ -216,7 +216,7 @@ const diferenciais = [
   {
     icon: Shield,
     titulo: "Peças Originais Prática",
-    descricao: "Estoque completo de componentes originais com garantia de fábrica.",
+    descricao: "Estoque completo de componentes originais para reposição imediata.",
   },
   {
     icon: FileCheck,

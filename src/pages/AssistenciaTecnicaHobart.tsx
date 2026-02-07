@@ -214,7 +214,7 @@ const diferenciais = [
   {
     icon: Shield,
     titulo: "Peças Originais",
-    descricao: "Estoque de componentes originais Hobart com garantia de fábrica.",
+    descricao: "Estoque de componentes originais Hobart para reposição imediata.",
   },
   {
     icon: FileCheck,

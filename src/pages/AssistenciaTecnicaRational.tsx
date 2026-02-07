@@ -32,12 +32,12 @@ const LINKTREE_URL = "https://linktr.ee/wedocorp";
 // Trust Bar Items
 const trustItems = [
   "Assistência Técnica Homologada Rational",
-  "Peças Originais com Garantia",
+  "Peças Originais Rational",
   "Técnicos Treinados pela Fábrica Rational",
   "Contratos PCM Personalizados",
   "Estoque Permanente de Peças",
   "Conectividade ConnectedCooking",
-  "Conectividade ConnectedCooking",
+  "Diagnóstico Remoto Avançado",
   "Diagnóstico Remoto Avançado",
 ];
 
@@ -355,7 +355,6 @@ const problemasComuns = [
       "Substituição SSR/sensores/resistências",
       "Calibração pós-reparo",
       "Validação curva aquecimento",
-      "Garantia 90 dias",
     ],
   },
   {
@@ -543,16 +542,12 @@ const faqItems = [
     resposta: "Sim, somos assistência técnica homologada pela Rational Brasil, com técnicos certificados através de treinamentos presenciais e online pela fábrica.",
   },
   {
-    pergunta: "Qual a garantia das peças originais Rational?",
-    resposta: "As peças originais substituídas pela WeDo possuem garantia de 90 dias contra defeitos de fabricação, seguindo o padrão do mercado de assistência técnica.",
+    pergunta: "Qual a garantia dos serviços da WeDo?",
+    resposta: "Todos os nossos serviços possuem garantia de 90 dias.",
   },
   {
     pergunta: "Quanto tempo demora um atendimento emergencial?",
     resposta: "Para clientes com contrato PCM em Goiás e Distrito Federal, nosso SLA de primeiro atendimento é até 2 horas. Para atendimentos avulsos, o agendamento ocorre em até 48 horas úteis.",
-  },
-  {
-    pergunta: "Vocês atendem equipamentos Rational em garantia de fábrica?",
-    resposta: "Sim, atendemos equipamentos em garantia mediante autorização prévia da Rational Brasil. Nesses casos, o reparo é coberto pela garantia de fábrica (peças e mão de obra).",
   },
   {
     pergunta: "Qual a frequência recomendada de manutenção preventiva em equipamentos Rational?",
@@ -571,8 +566,8 @@ const faqItems = [
     resposta: "Sim, para equipamentos conectados ao ConnectedCooking podemos fazer diagnóstico remoto via acesso portal Rational, visualizando códigos de erro, histórico operacional e dados HACCP. Em muitos casos, conseguimos orientar soluções simples remotamente.",
   },
   {
-    pergunta: "Vocês fornecem peças originais Rational para eu mesmo instalar?",
-    resposta: "Sim, fornecemos peças originais Rational com nota fiscal e garantia de fábrica. Porém, recomendamos fortemente instalação por técnico certificado para garantir funcionamento correto e preservação de garantias.",
+    pergunta: "Vocês fornecem peças originais Rational?",
+    resposta: "Sim, fornecemos peças originais Rational com nota fiscal. Recomendamos fortemente instalação por técnico certificado para garantir funcionamento correto.",
   },
   {
     pergunta: "É necessário sistema de tratamento de água para equipamentos Rational?",

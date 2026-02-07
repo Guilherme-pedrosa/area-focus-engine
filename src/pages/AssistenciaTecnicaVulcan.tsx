@@ -244,7 +244,7 @@ const diferenciais = [
   {
     icon: Shield,
     titulo: "Peças Originais",
-    descricao: "Componentes originais Vulcan com garantia de fábrica.",
+    descricao: "Componentes originais Vulcan para reposição imediata.",
   },
   {
     icon: FileCheck,
