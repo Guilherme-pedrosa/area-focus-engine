@@ -44,7 +44,7 @@ export default function Header() {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="header-wedo">
       <div className="container-wedo">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -52,13 +52,13 @@ export default function Header() {
             <img
               src={logoWedo}
               alt="WeDo - Sim, nós fazemos!"
-              className="h-12 w-auto"
+              className="h-14 w-auto"
               loading="eager"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -69,20 +69,23 @@ export default function Header() {
                 {item.children ? (
                   <>
                     <button
-                      className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors
-                        text-foreground hover:text-primary hover:bg-muted`}
+                      className="nav-link-wedo flex items-center gap-1.5"
                     >
                       {item.label}
-                      <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                      <ChevronDown 
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          openDropdown === item.label ? "rotate-180" : ""
+                        }`} 
+                      />
                     </button>
                     {openDropdown === item.label && (
-                      <div className="absolute top-full left-0 pt-2 z-50">
-                        <div className="bg-card rounded-xl shadow-xl border border-border py-2 min-w-[260px]">
+                      <div className="dropdown-wedo">
+                        <div className="dropdown-wedo-content">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               to={child.href}
-                              className="block px-5 py-3 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                              className="dropdown-wedo-item"
                             >
                               {child.label}
                             </Link>
@@ -94,8 +97,7 @@ export default function Header() {
                 ) : (
                   <Link
                     to={item.href!}
-                    className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-colors
-                      ${isActive(item.href!) ? "text-primary" : "text-foreground hover:text-primary hover:bg-muted"}`}
+                    className={`nav-link-wedo ${isActive(item.href!) ? "active" : ""}`}
                   >
                     {item.label}
                   </Link>
@@ -120,33 +122,41 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6 text-accent" />
+            )}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-background animate-slide-down">
-            <nav className="py-4 space-y-1">
+          <div className="lg:hidden fixed inset-0 top-20 bg-primary z-50 animate-fade-in">
+            <nav className="py-6 px-4 space-y-2">
               {navItems.map((item) => (
                 <div key={item.label}>
                   {item.children ? (
                     <div>
                       <button
                         onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-foreground hover:bg-muted rounded-lg"
+                        className="flex items-center justify-between w-full px-4 py-4 text-base font-medium text-primary-foreground hover:text-accent rounded-lg"
                       >
                         {item.label}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
+                        <ChevronDown 
+                          className={`w-5 h-5 transition-transform duration-200 ${
+                            openDropdown === item.label ? "rotate-180" : ""
+                          }`} 
+                        />
                       </button>
                       {openDropdown === item.label && (
-                        <div className="pl-4 py-2 space-y-1 bg-muted/50 rounded-lg mx-2">
+                        <div className="pl-4 py-2 space-y-1 bg-secondary/50 rounded-lg mx-2">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               to={child.href}
                               onClick={() => setMobileMenuOpen(false)}
-                              className="block px-4 py-2.5 text-sm text-muted-foreground hover:text-primary"
+                              className="block px-4 py-3 text-sm text-primary-foreground/80 hover:text-accent"
                             >
                               {child.label}
                             </Link>
@@ -158,7 +168,7 @@ export default function Header() {
                     <Link
                       to={item.href!}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block px-4 py-3 text-sm font-medium text-foreground hover:bg-muted rounded-lg"
+                      className="block px-4 py-4 text-base font-medium text-primary-foreground hover:text-accent rounded-lg"
                     >
                       {item.label}
                     </Link>
@@ -166,12 +176,13 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-            <div className="px-4 pb-4">
+            {/* CTA Mobile fixo no bottom */}
+            <div className="absolute bottom-8 left-4 right-4">
               <a
                 href={LINKTREE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-wedo w-full justify-center"
+                className="btn-wedo w-full justify-center text-lg py-4"
               >
                 Acessar Atendimento
               </a>
