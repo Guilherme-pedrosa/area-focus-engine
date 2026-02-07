@@ -53,7 +53,7 @@ export default function HeroSection() {
             className="btn-wedo-hero animate-slide-up"
             style={{ animationDelay: "0.4s" }}
           >
-            Fale Conosco
+            Acessar Atendimento
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>

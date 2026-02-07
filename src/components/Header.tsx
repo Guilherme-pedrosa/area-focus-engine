@@ -7,27 +7,32 @@ const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 interface NavItem {
   label: string;
-  href: string;
+  href?: string;
   children?: { label: string; href: string }[];
 }
 
 const navItems: NavItem[] = [
   {
-    label: "Refrigeração Industrial",
-    href: "#",
+    label: "Serviços",
     children: [
       { label: "Manutenção de Câmaras Frias", href: "/manutencao-camaras-frias" },
-      { label: "Manutenção Preventiva", href: "/manutencao-camaras-frias#preventiva" },
-      { label: "Manutenção Corretiva", href: "/manutencao-camaras-frias#corretiva" },
-      { label: "Contratos PCM", href: "/contratos-pcm" },
+      { label: "Assistência Técnica Rational", href: "/assistencia-tecnica-rational" },
+      { label: "Manutenção Multimarcas", href: "/cozinhas-industriais" },
+      { label: "Contratos de Manutenção (PCM)", href: "/contratos-pcm" },
+      { label: "Higienização de Coifas", href: "/higienizacao-coifas" },
     ],
   },
-  { label: "Assistência Técnica Rational", href: "/assistencia-tecnica-rational" },
-  { label: "Cozinhas Industriais", href: "/cozinhas-industriais" },
-  { label: "Contratos PCM", href: "/contratos-pcm" },
-  { label: "Higienização de Coifas", href: "/higienizacao-coifas" },
-  { label: "Sobre", href: "/sobre" },
+  {
+    label: "Especialidades",
+    children: [
+      { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
+      { label: "Cozinhas Profissionais", href: "/cozinhas-industriais" },
+      { label: "Manutenção Preventiva", href: "/manutencao-camaras-frias#preventiva" },
+      { label: "Manutenção Corretiva", href: "/manutencao-camaras-frias#corretiva" },
+    ],
+  },
   { label: "Clientes", href: "/clientes" },
+  { label: "Sobre", href: "/sobre" },
   { label: "Locais de Atendimento", href: "/locais-atendimento" },
 ];
 
@@ -64,20 +69,20 @@ export default function Header() {
                 {item.children ? (
                   <>
                     <button
-                      className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                        ${isActive(item.href) ? "text-primary" : "text-foreground hover:text-primary hover:bg-muted"}`}
+                      className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium rounded-lg transition-colors
+                        text-foreground hover:text-primary hover:bg-muted`}
                     >
                       {item.label}
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
                     </button>
                     {openDropdown === item.label && (
-                      <div className="absolute top-full left-0 pt-2 animate-slide-down">
-                        <div className="bg-card rounded-lg shadow-lg border border-border py-2 min-w-[240px]">
+                      <div className="absolute top-full left-0 pt-2 z-50">
+                        <div className="bg-card rounded-xl shadow-xl border border-border py-2 min-w-[260px]">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               to={child.href}
-                              className="block px-4 py-2.5 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
+                              className="block px-5 py-3 text-sm text-foreground hover:bg-muted hover:text-primary transition-colors"
                             >
                               {child.label}
                             </Link>
@@ -88,9 +93,9 @@ export default function Header() {
                   </>
                 ) : (
                   <Link
-                    to={item.href}
-                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors
-                      ${isActive(item.href) ? "text-primary" : "text-foreground hover:text-primary hover:bg-muted"}`}
+                    to={item.href!}
+                    className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-colors
+                      ${isActive(item.href!) ? "text-primary" : "text-foreground hover:text-primary hover:bg-muted"}`}
                   >
                     {item.label}
                   </Link>
@@ -106,7 +111,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden lg:inline-flex btn-wedo"
           >
-            Fale Conosco
+            Acessar Atendimento
           </a>
 
           {/* Mobile Menu Button */}
@@ -135,7 +140,7 @@ export default function Header() {
                         <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === item.label ? "rotate-180" : ""}`} />
                       </button>
                       {openDropdown === item.label && (
-                        <div className="pl-4 py-2 space-y-1">
+                        <div className="pl-4 py-2 space-y-1 bg-muted/50 rounded-lg mx-2">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
@@ -151,7 +156,7 @@ export default function Header() {
                     </div>
                   ) : (
                     <Link
-                      to={item.href}
+                      to={item.href!}
                       onClick={() => setMobileMenuOpen(false)}
                       className="block px-4 py-3 text-sm font-medium text-foreground hover:bg-muted rounded-lg"
                     >
@@ -168,7 +173,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="btn-wedo w-full justify-center"
               >
-                Fale Conosco
+                Acessar Atendimento
               </a>
             </div>
           </div>
