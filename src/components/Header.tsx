@@ -13,23 +13,26 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Serviços",
+    label: "Soluções",
     children: [
-      { label: "Manutenção de Câmaras Frias", href: "/manutencao-camaras-frias" },
-      { label: "Assistência Técnica Rational", href: "/assistencia-tecnica-rational" },
-      { label: "Manutenção Multimarcas", href: "/cozinhas-profissionais" },
-      { label: "Contratos de Manutenção (PCM)", href: "/contratos-pcm" },
-      { label: "Higienização de Coifas", href: "/higienizacao-coifas" },
+      { label: "Manutenção Preventiva", href: "/contratos-pcm" },
+      { label: "Manutenção Corretiva", href: "/contratos-pcm" },
+      { label: "Contratos PCM", href: "/contratos-pcm" },
+      { label: "Instalação Técnica", href: "/cozinhas-profissionais" },
+      { label: "Higienização Industrial", href: "/higienizacao-coifas" },
+      { label: "Locação Técnica", href: "/cozinhas-profissionais" },
     ],
   },
   {
-    label: "Especialidades",
+    label: "Principais Fabricantes",
     children: [
-      { label: "Manutenção Autorizada Rational", href: "/assistencia-tecnica-rational" },
-      { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
-      { label: "Cozinhas Profissionais", href: "/cozinhas-profissionais" },
-      { label: "Manutenção Preventiva", href: "/contratos-pcm" },
-      { label: "Manutenção Corretiva", href: "/contratos-pcm" },
+      { label: "Rational", href: "/assistencia-tecnica-rational" },
+      { label: "Hobart", href: "/cozinhas-profissionais" },
+      { label: "Robot Coupe", href: "/cozinhas-profissionais" },
+      { label: "Vulcan", href: "/cozinhas-profissionais" },
+      { label: "Metalfrio", href: "/manutencao-camaras-frias" },
+      { label: "Irinox", href: "/cozinhas-profissionais" },
+      { label: "Prática", href: "/cozinhas-profissionais" },
     ],
   },
   { label: "Clientes", href: "/clientes" },
