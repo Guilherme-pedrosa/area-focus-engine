@@ -1,7 +1,7 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
+import heroImage from "@/assets/hero-tecnico-wedo.jpg";
 
 const LINKTREE_URL = "https://linktr.ee/wedocorp";
-const HERO_IMAGE_URL = "https://www.genspark.ai/api/files/s/ohAjX5s5?token=Z0FBQUFBQnBoMUNPcnhlS1RQbE03ZnN1TUlsUUxnTWJrbUhLVVZiQXpkUm1XRjJuYkJUNFNWcnlrWU5iM2stN201eDNCMmM5c2dLSElhOVlvWjZ5VmdHeFZ1THRObjh5OUpDLWVmMFA3c25hTWhpLWRVaHptMkllbGFaNzBFYnhPSHFmQm81UUNab2lORWkzWXZPVEJWWGdWRGNNbkJfZ2VEV19TT3FQamlveXNPNVlqMnEtbGlGUmxLd0M2UU9ldjRsUXFTQVRqcjl3Ujdad0stX0RmWm1seFpDV1BRUzdPcWVzd2hkWlhZUk9PalViaEJVWkFSVHpYcXpRNTItSDlkNE56TkN6enVxbThqVHNadER6VUJuVks0WHZvX2FTQUE9PQ";
 
 export default function HeroSection() {
   return (
@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src={HERO_IMAGE_URL}
+          src={heroImage}
           alt="Técnico WeDo realizando manutenção em cozinha industrial"
           className="w-full h-full object-cover"
           loading="eager"
