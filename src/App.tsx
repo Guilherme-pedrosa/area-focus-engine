@@ -8,6 +8,11 @@ import Index from "./pages/Index";
 import ManutencaoCamarasFrias from "./pages/ManutencaoCamarasFrias";
 import LocaisAtendimento from "./pages/LocaisAtendimento";
 import AssistenciaTecnicaRational from "./pages/AssistenciaTecnicaRational";
+import AssistenciaTecnicaIrinox from "./pages/AssistenciaTecnicaIrinox";
+import AssistenciaTecnicaPratica from "./pages/AssistenciaTecnicaPratica";
+import AssistenciaTecnicaRobotCoupe from "./pages/AssistenciaTecnicaRobotCoupe";
+import AssistenciaTecnicaHobart from "./pages/AssistenciaTecnicaHobart";
+import AssistenciaTecnicaVulcan from "./pages/AssistenciaTecnicaVulcan";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
@@ -44,26 +49,27 @@ const App = () => (
             <Route path="/manutencao-camaras-frias" element={<ManutencaoCamarasFrias />} />
             <Route path="/locais-atendimento" element={<LocaisAtendimento />} />
             <Route path="/assistencia-tecnica-rational" element={<AssistenciaTecnicaRational />} />
+            <Route path="/assistencia-tecnica-irinox" element={<AssistenciaTecnicaIrinox />} />
+            <Route path="/assistencia-tecnica-pratica" element={<AssistenciaTecnicaPratica />} />
+            <Route path="/assistencia-tecnica-robot-coupe" element={<AssistenciaTecnicaRobotCoupe />} />
+            <Route path="/assistencia-tecnica-hobart" element={<AssistenciaTecnicaHobart />} />
+            <Route path="/assistencia-tecnica-vulcan" element={<AssistenciaTecnicaVulcan />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
 
-            {/* Páginas SEO Locais Antigas - NÃO aparecem no menu/footer */}
+            {/* Páginas SEO Locais Antigas */}
             <Route path="/servicos-local/manutencao-rational-anapolis" element={<SEOManutencaoRationalAnapolis />} />
             <Route path="/servicos-local/manutencao-camara-fria-rio-verde" element={<SEOManutencaoCamaraFriaRioVerde />} />
             <Route path="/servicos-local/manutencao-rational-goiania" element={<SEOManutencaoRationalGoiania />} />
             <Route path="/problemas/camara-fria-nao-gela-anapolis" element={<SEOCamaraFriaNaoGelaAnapolis />} />
             <Route path="/problemas/camara-fria-perda-temperatura-rio-verde" element={<SEOCamaraFriaPerdaTemperaturaRioVerde />} />
 
-            {/* Páginas SEO Dinâmicas baseadas em Sintomas (249 páginas) */}
+            {/* Páginas SEO Dinâmicas baseadas em Sintomas */}
             {seoSymptomsPages.map((page) => (
-              <Route 
-                key={page.slug} 
-                path={`/${page.slug}`} 
-                element={<SeoSymptomTemplate />} 
-              />
+              <Route key={page.slug} path={`/${page.slug}`} element={<SeoSymptomTemplate />} />
             ))}
 
             {/* 404 */}
