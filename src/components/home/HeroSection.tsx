@@ -31,14 +31,14 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* H1 Industrial Direto */}
           <h1 className="title-hero mb-6 animate-slide-up">
-            Refrigeração Industrial.<br />
-            Manutenção Técnica.<br />
+            Cozinhas Industriais.<br />
+            Manutenção Completa.<br />
             Goiás e DF.
           </h1>
 
           {/* Subtítulo técnico direto */}
           <p className="text-xl md:text-2xl text-white/90 font-medium mb-8 leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Câmara fria parada = prejuízo. Equipamento com problema = risco ANVISA.<br />
+            Forno, lavadora, processador, câmara fria parados = prejuízo.<br />
             Resolvemos com técnicos NR10/12/13 e 15 anos de experiência.
           </p>
 

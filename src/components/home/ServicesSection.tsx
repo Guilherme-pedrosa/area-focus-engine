@@ -3,9 +3,9 @@ import { ArrowRight, Star, CheckCircle } from "lucide-react";
 
 const services = [
   {
-    title: "Manutenção de Câmaras Frias",
-    description: "Manutenção preventiva, corretiva, instalação. Técnicos NR10/12. Contratos PCM. Atendimento Goiás e DF.",
-    href: "/manutencao-camaras-frias",
+    title: "Cozinhas Industriais Completas",
+    description: "Fornos, lavadoras, processadores, chapas, fritadeiras. Manutenção completa para sua operação. Goiás e DF.",
+    href: "/cozinhas-industriais",
     badge: "⭐ Especialidade #1",
     badgeColor: "bg-accent text-accent-foreground",
     featured: true,
