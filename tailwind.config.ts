@@ -57,18 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Cores customizadas WeDo
+        // Cores customizadas WeDo Industrial
         wedo: {
-          blue: "hsl(var(--wedo-blue))",
-          "blue-light": "hsl(var(--wedo-blue-light))",
           "blue-dark": "hsl(var(--wedo-blue-dark))",
-          gray: "hsl(var(--wedo-gray))",
+          "blue-medium": "hsl(var(--wedo-blue-medium))",
+          green: "hsl(var(--wedo-green))",
+          "gray-dark": "hsl(var(--wedo-gray-dark))",
           "gray-light": "hsl(var(--wedo-gray-light))",
+          danger: "hsl(var(--wedo-danger))",
         },
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        heading: ['Montserrat', 'Inter', '-apple-system', 'sans-serif'],
+        heading: ['Inter', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -79,24 +80,17 @@ export default {
         'wedo': 'var(--shadow-md)',
         'wedo-lg': 'var(--shadow-lg)',
         'wedo-xl': 'var(--shadow-xl)',
-        'wedo-card': 'var(--shadow-card)',
+        'wedo-header': 'var(--shadow-header)',
+        'wedo-dropdown': 'var(--shadow-dropdown)',
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
         "fade-in": {
           from: { opacity: "0" },
@@ -116,7 +110,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "slide-up": "slide-up 0.6s ease-out forwards",
-        "slide-down": "slide-down 0.3s ease-out forwards",
+        "slide-down": "slide-down 0.2s ease-out forwards",
       },
     },
   },

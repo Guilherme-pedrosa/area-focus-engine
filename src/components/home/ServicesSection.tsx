@@ -1,97 +1,93 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Snowflake, ChefHat, Wrench, FileText, Shield, Settings, Sparkles, ShoppingCart, Calendar } from "lucide-react";
+import { ArrowRight, Star, CheckCircle } from "lucide-react";
 
 const services = [
   {
-    icon: Snowflake,
     title: "Manutenção de Câmaras Frias",
-    description: "Manutenção preventiva e corretiva especializada. Atendemos todo o estado de Goiás e Distrito Federal.",
+    description: "Manutenção preventiva, corretiva, instalação. Técnicos NR10/12. Contratos PCM. Atendimento Goiás e DF.",
     href: "/manutencao-camaras-frias",
+    badge: "⭐ Especialidade #1",
+    badgeColor: "bg-accent text-accent-foreground",
+    featured: true,
   },
   {
-    icon: ChefHat,
-    title: "Assistência Técnica Rational",
-    description: "Manutenção especializada em iCombi Pro, iCombi Classic e iVario. Parceiro autorizado com técnicos certificados pela fábrica.",
+    title: "Parceiro Autorizado Rational",
+    description: "Combi Pro, iCombi Classic, iVario. Técnicos certificados pela fábrica. Peças originais.",
     href: "/assistencia-tecnica-rational",
+    badge: "✓ Autorizado",
+    badgeColor: "bg-destructive text-white",
   },
   {
-    icon: Wrench,
-    title: "Manutenção Multimarcas",
-    description: "Hobart, Vulcan, Robot Coupe, Irinox, Prática, Tramontina, Macon, Hoshizaki, Cozil, Fornoflex, Middleby.",
+    title: "Assistência Multimarcas",
+    description: "Hobart, Vulcan, Robot Coupe, Irinox, Prática, Tramontina, Macon, Cozil, Unox, Middleby.",
     href: "/cozinhas-industriais",
   },
   {
-    icon: FileText,
     title: "Contratos PCM",
-    description: "Plano de Controle de Manutenção preventiva. Reduza custos operacionais e aumente a vida útil dos equipamentos.",
+    description: "Redução de 40% custos. Economia 25% energia. Aumento 50% vida útil. Zero paradas.",
     href: "/contratos-pcm",
   },
   {
-    icon: Shield,
-    title: "Manutenção Preventiva",
-    description: "Inspeções programadas, limpezas técnicas, calibrações e troca preventiva de componentes.",
-    href: "/manutencao-camaras-frias#preventiva",
-  },
-  {
-    icon: Settings,
-    title: "Manutenção Corretiva",
-    description: "Assistência técnica para correção de falhas com peças originais e técnicos especializados.",
-    href: "/manutencao-camaras-frias#corretiva",
-  },
-  {
-    icon: Sparkles,
     title: "Higienização de Coifas",
-    description: "Limpeza técnica de coifas e dutos conforme RDC 216 ANVISA. Compliance total com laudos técnicos rastreáveis.",
+    description: "Limpeza técnica NR13. RDC 216. Dutos, filtros, exaustão. Laudo rastreável.",
     href: "/higienizacao-coifas",
   },
   {
-    icon: ShoppingCart,
-    title: "Venda de Equipamentos",
-    description: "Distribuidor autorizado Rational e fornecedor de equipamentos premium para cozinhas industriais.",
-    href: "/sobre",
-  },
-  {
-    icon: Calendar,
-    title: "Locação de Equipamentos",
-    description: "Locação de lavadoras, fornos, processadores para eventos e operações temporárias.",
+    title: "Peças Originais",
+    description: "Estoque próprio. Entrega rápida Goiás e DF.",
     href: "/sobre",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="section-padding">
+    <section className="section-padding bg-muted">
       <div className="container-wedo">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="title-section">Manutenção Completa para Cozinhas Profissionais</h2>
+          <h2 className="title-section">Serviços Técnicos</h2>
           <p className="subtitle-section mx-auto">
-            Do forno combinado à câmara fria: expertise técnica multimarcas para manter sua operação funcionando sem paradas.
+            Do forno combinado à câmara fria: manutenção completa para sua operação.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid-services">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <Link
               key={service.title}
               to={service.href}
-              className="card-wedo-highlight group animate-slide-up"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              className={`group relative overflow-hidden rounded-xl bg-primary transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-slide-up ${
+                service.featured ? "md:row-span-2" : ""
+              }`}
+              style={{ 
+                animationDelay: `${index * 0.05}s`,
+                minHeight: service.featured ? "400px" : "200px"
+              }}
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-secondary/60" />
+              
+              {/* Content */}
+              <div className="relative z-10 h-full p-8 flex flex-col justify-end">
+                {/* Badge */}
+                {service.badge && (
+                  <span className={`inline-flex items-center gap-1 px-3 py-1 rounded text-sm font-bold mb-4 w-fit ${service.badgeColor}`}>
+                    {service.badge}
+                  </span>
+                )}
+                
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                <span className="inline-flex items-center gap-2 text-accent font-bold text-sm group-hover:gap-3 transition-all">
+                  Ver Detalhes
+                  <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
-              <h3 className="font-heading font-bold text-lg text-foreground mb-2">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {service.description}
-              </p>
-              <span className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
-                Saiba Mais
-                <ArrowRight className="w-4 h-4" />
-              </span>
             </Link>
           ))}
         </div>

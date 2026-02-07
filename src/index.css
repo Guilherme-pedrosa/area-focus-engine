@@ -2,113 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-/* WeDo Design System - Azul Corporativo Profissional */
+/* WeDo Design System - Industrial Profissional */
 
 @layer base {
   :root {
-    /* Cores Principais - Azul Corporativo */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 20%;
+    /* Paleta Industrial WeDo */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 215 25% 27%;
 
-    /* Azul Corporativo WeDo #0066CC */
-    --primary: 210 100% 40%;
+    /* Azul Industrial Escuro #1a3a52 */
+    --primary: 205 52% 21%;
     --primary-foreground: 0 0% 100%;
 
-    /* Cinza Escuro #333333 */
-    --secondary: 0 0% 20%;
+    /* Azul Médio #2c5f7d */
+    --secondary: 201 48% 33%;
     --secondary-foreground: 0 0% 100%;
 
+    /* Verde Limão WeDo #a8d74e */
+    --accent: 82 62% 57%;
+    --accent-foreground: 215 25% 15%;
+
     /* Fundos */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 210 20% 97%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Acentos */
-    --accent: 210 100% 40%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     /* Bordas e inputs */
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 210 100% 40%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 82 62% 57%;
 
     --radius: 0.5rem;
 
     /* Cores customizadas WeDo */
-    --wedo-blue: 210 100% 40%;
-    --wedo-blue-light: 210 100% 50%;
-    --wedo-blue-dark: 210 100% 30%;
-    --wedo-gray: 0 0% 20%;
-    --wedo-gray-light: 0 0% 96%;
+    --wedo-blue-dark: 205 52% 21%;
+    --wedo-blue-medium: 201 48% 33%;
+    --wedo-green: 82 62% 57%;
+    --wedo-gray-dark: 215 16% 35%;
+    --wedo-gray-light: 210 20% 98%;
     --wedo-white: 0 0% 100%;
+    --wedo-danger: 0 72% 51%;
 
     /* Gradientes */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 40%) 0%, hsl(210 100% 30%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(205 52% 21% / 0.9) 0%, hsl(201 48% 33% / 0.8) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
 
     /* Sombras */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
-    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
-    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
-    --shadow-card: 0 4px 20px -2px hsl(210 100% 40% / 0.1);
+    --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.08);
+    --shadow-lg: 0 8px 24px hsl(0 0% 0% / 0.12);
+    --shadow-xl: 0 16px 40px hsl(0 0% 0% / 0.15);
+    --shadow-header: 0 2px 8px hsl(0 0% 0% / 0.08);
+    --shadow-dropdown: 0 4px 12px hsl(0 0% 0% / 0.12);
 
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 20%;
-    --sidebar-primary: 210 100% 40%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 96%;
-    --sidebar-accent-foreground: 0 0% 20%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 210 100% 40%;
+    --sidebar-background: 205 52% 21%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 82 62% 57%;
+    --sidebar-primary-foreground: 215 25% 15%;
+    --sidebar-accent: 201 48% 33%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 201 48% 28%;
+    --sidebar-ring: 82 62% 57%;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    --background: 215 25% 10%;
+    --foreground: 210 20% 95%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 215 25% 14%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 215 25% 14%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 82 62% 57%;
+    --primary-foreground: 215 25% 10%;
 
-    --secondary: 0 0% 20%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 201 48% 33%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
+    --accent: 82 62% 57%;
+    --accent-foreground: 215 25% 10%;
 
-    --accent: 210 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 210 20% 60%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 95%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 210 100% 50%;
-
-    --sidebar-background: 0 0% 10%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 210 100% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 210 100% 50%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 82 62% 57%;
   }
 }
 
@@ -123,35 +116,44 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     @apply font-bold tracking-tight;
+    letter-spacing: -0.02em;
   }
 }
 
 @layer components {
-  /* CTA Principal - Botão Azul WeDo */
+  /* CTA Principal - Verde Limão WeDo */
   .btn-wedo {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
-           bg-primary text-primary-foreground font-semibold rounded-lg
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 
+           bg-accent text-accent-foreground font-bold rounded-md
            transition-all duration-300 ease-out
-           hover:bg-primary/90 hover:shadow-lg hover:-translate-y-0.5
-           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+           hover:brightness-110 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2;
   }
 
   .btn-wedo-outline {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3
-           border-2 border-primary text-primary font-semibold rounded-lg
+           border-2 border-accent text-accent font-bold rounded-md
            transition-all duration-300 ease-out bg-transparent
-           hover:bg-primary hover:text-primary-foreground hover:shadow-lg
-           focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2;
+           hover:bg-accent hover:text-accent-foreground hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2;
   }
 
   .btn-wedo-hero {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4
-           bg-primary text-primary-foreground font-bold text-lg rounded-xl
+    @apply inline-flex items-center justify-center gap-3 px-12 py-4
+           bg-accent text-accent-foreground font-bold text-lg rounded-md
+           transition-all duration-300 ease-out shadow-lg
+           hover:shadow-xl hover:-translate-y-1 hover:brightness-110
+           focus:outline-none focus:ring-2 focus:ring-white/50;
+  }
+
+  .btn-wedo-dark {
+    @apply inline-flex items-center justify-center gap-3 px-12 py-4
+           bg-primary text-primary-foreground font-bold text-lg rounded-md
            transition-all duration-300 ease-out shadow-lg
            hover:shadow-xl hover:-translate-y-1 hover:bg-primary/90
-           focus:outline-none focus:ring-2 focus:ring-white/50;
+           focus:outline-none focus:ring-2 focus:ring-accent/50;
   }
 
   /* Cards */
@@ -162,9 +164,24 @@
   }
 
   .card-wedo-highlight {
-    @apply bg-card rounded-xl p-6 shadow-lg border-2 border-primary/20
+    @apply bg-card rounded-xl p-6 shadow-lg border-2 border-accent/20
            transition-all duration-300 ease-out
-           hover:shadow-xl hover:-translate-y-1 hover:border-primary/40;
+           hover:shadow-xl hover:-translate-y-1 hover:border-accent/40;
+  }
+
+  /* Card com foto de fundo industrial */
+  .card-industrial {
+    @apply relative overflow-hidden rounded-xl
+           transition-all duration-300 ease-out
+           hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .card-industrial-content {
+    @apply relative z-10 p-8 h-full flex flex-col justify-end;
+  }
+
+  .card-industrial-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-transparent;
   }
 
   /* Seções */
@@ -173,16 +190,16 @@
   }
 
   .container-wedo {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-[1400px] mx-auto;
   }
 
   /* Títulos */
   .title-section {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4;
   }
 
   .title-hero {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    @apply text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight text-white;
   }
 
   .subtitle-section {
@@ -191,8 +208,17 @@
 
   /* Badges */
   .badge-wedo {
-    @apply inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary 
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-accent/15 text-primary 
            rounded-full font-medium text-sm;
+  }
+
+  .badge-authorized {
+    @apply inline-flex items-center gap-2 px-5 py-3 bg-white text-primary 
+           rounded-md font-bold text-sm shadow-lg;
+  }
+
+  .badge-danger {
+    @apply inline-flex items-center gap-1 text-destructive font-bold;
   }
 
   /* Grid responsivo */
@@ -204,13 +230,49 @@
     @apply grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center;
   }
 
+  .grid-problems {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
   /* Botão Flutuante */
   .btn-float {
-    @apply fixed bottom-6 right-6 z-50 px-6 py-4 bg-primary text-primary-foreground
-           font-semibold rounded-full shadow-xl
+    @apply fixed bottom-6 right-6 z-50 px-6 py-4 bg-accent text-accent-foreground
+           font-bold rounded-full shadow-xl
            transition-all duration-300 ease-out
-           hover:shadow-2xl hover:scale-105 hover:bg-primary/90
-           focus:outline-none focus:ring-4 focus:ring-primary/30;
+           hover:shadow-2xl hover:scale-105 hover:brightness-110
+           focus:outline-none focus:ring-4 focus:ring-accent/30;
+  }
+
+  /* Header industrial */
+  .header-wedo {
+    @apply sticky top-0 z-50 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.08)];
+  }
+
+  .nav-link-wedo {
+    @apply px-4 py-2.5 text-base font-medium text-foreground
+           transition-all duration-200
+           hover:text-accent;
+  }
+
+  .nav-link-wedo.active {
+    @apply text-accent;
+  }
+
+  /* Dropdown industrial */
+  .dropdown-wedo {
+    @apply absolute top-full left-0 pt-2 z-50 min-w-[280px];
+  }
+
+  .dropdown-wedo-content {
+    @apply bg-white rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.12)] py-2
+           animate-slide-down;
+  }
+
+  .dropdown-wedo-item {
+    @apply block px-6 py-4 text-[15px] text-foreground
+           border-b border-border/50 last:border-b-0
+           transition-all duration-200
+           hover:bg-muted hover:text-accent;
   }
 
   /* Animações */
@@ -222,8 +284,35 @@
     animation: slideUp 0.6s ease-out forwards;
   }
 
+  .animate-slide-down {
+    animation: slideDown 0.2s ease-out forwards;
+  }
+
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  /* Números de impacto */
+  .number-impact {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold text-primary;
+  }
+
+  .number-impact-label {
+    @apply text-lg text-muted-foreground mt-2;
+  }
+
+  /* Logo cards */
+  .logo-card {
+    @apply bg-white border border-border rounded-lg p-6 h-[120px]
+           flex items-center justify-center
+           transition-all duration-300
+           grayscale hover:grayscale-0 hover:shadow-lg;
+  }
+
+  .logo-card-dark {
+    @apply bg-white rounded-lg p-5 h-[100px]
+           flex items-center justify-center
+           transition-all duration-300;
   }
 }
 
@@ -240,6 +329,17 @@
   from {
     opacity: 0;
     transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
@@ -271,10 +371,10 @@ img {
 
 /* Focus visible para acessibilidade */
 :focus-visible {
-  @apply outline-none ring-2 ring-primary ring-offset-2;
+  @apply outline-none ring-2 ring-accent ring-offset-2;
 }
 
 /* Selection */
 ::selection {
-  @apply bg-primary/20 text-foreground;
+  @apply bg-accent/20 text-foreground;
 }

@@ -1,64 +1,48 @@
-const numbers = [
+import { CheckCircle } from "lucide-react";
+
+const stats = [
   {
-    value: "+2.000",
-    label: "Clientes Atendidos",
-    description: "Restaurantes, hotéis, indústrias e food services",
+    number: "+2.000",
+    label: "Clientes atendidos",
   },
   {
-    value: "+15.000",
-    label: "Soluções Entregues",
-    description: "Manutenções, instalações e higienizações realizadas",
+    number: "+22",
+    label: "Técnicos NR10/12/13",
   },
   {
-    value: "6 Anos",
-    label: "De Experiência",
-    description: "Consolidados no mercado desde 2018",
+    number: "15",
+    label: "Anos no mercado",
   },
   {
-    value: "+22",
-    label: "Colaboradores",
-    description: "Técnicos certificados e especializados",
-  },
-  {
-    value: "Regional",
-    label: "Goiás e DF",
-    description: "Cobertura completa em duas unidades federativas",
+    number: "100%",
+    label: "Cobertura Goiás+DF",
   },
 ];
 
 export default function NumbersSection() {
   return (
-    <section className="section-padding bg-secondary text-secondary-foreground">
+    <section className="section-padding bg-white">
       <div className="container-wedo">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Resultado que Transforma Operações
-          </h2>
-          <p className="text-lg md:text-xl text-secondary-foreground/80 max-w-3xl mx-auto">
-            Números que refletem nosso compromisso com a excelência técnica e satisfação dos clientes.
-          </p>
-        </div>
-
-        {/* Numbers Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {numbers.map((item, index) => (
+        {/* Grid de números */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {stats.map((stat, index) => (
             <div
-              key={item.label}
+              key={stat.label}
               className="text-center animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2">
-                {item.value}
-              </div>
-              <div className="font-heading font-bold text-lg mb-1">
-                {item.label}
-              </div>
-              <p className="text-sm text-secondary-foreground/70">
-                {item.description}
-              </p>
+              <div className="number-impact">{stat.number}</div>
+              <div className="number-impact-label">{stat.label}</div>
             </div>
           ))}
+        </div>
+
+        {/* Badge de autoridade */}
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-primary rounded-full font-medium">
+            <CheckCircle className="w-5 h-5 text-accent" />
+            Parceiro Autorizado Rational desde 2018
+          </div>
         </div>
       </div>
     </section>
