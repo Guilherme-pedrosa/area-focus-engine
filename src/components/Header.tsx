@@ -18,6 +18,8 @@ const navItems: NavItem[] = [
       { label: "Manutenção Preventiva", href: "/contratos-pcm" },
       { label: "Manutenção Corretiva", href: "/contratos-pcm" },
       { label: "Contratos PCM", href: "/contratos-pcm" },
+      { label: "Refrigeração Comercial", href: "/manutencao-camaras-frias" },
+      { label: "Câmaras Frias", href: "/manutencao-camaras-frias" },
       { label: "Instalação Técnica", href: "/cozinhas-profissionais" },
       { label: "Higienização Industrial", href: "/higienizacao-coifas" },
       { label: "Locação Técnica", href: "/cozinhas-profissionais" },
