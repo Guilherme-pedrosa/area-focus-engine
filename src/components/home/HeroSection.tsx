@@ -28,21 +28,21 @@ export default function HeroSection() {
 
           {/* H1 */}
           <h1 className="title-hero text-primary-foreground mb-6 animate-slide-up">
-            Manutenção de Câmaras Frias e Refrigeração Industrial em Goiás e Distrito Federal
+            Manutenção de Cozinhas Industriais em Goiás e Distrito Federal
           </h1>
 
           {/* Subtítulo */}
           <p className="text-xl md:text-2xl text-primary-foreground/90 font-medium mb-6 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            Assistência técnica especializada | Contratos de manutenção | Parceiro Autorizado Rational
+            Assistência técnica multimarcas | Contratos de manutenção | Parceiro Autorizado Rational
           </p>
 
           {/* Texto principal */}
           <p className="text-lg text-primary-foreground/80 leading-relaxed mb-8 max-w-2xl animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            A WeDo resolve problemas críticos de refrigeração industrial: câmaras frias com perda de temperatura, falhas em sistemas de refrigeração, paradas não programadas e manutenção preventiva para evitar prejuízos operacionais.
+            A WeDo é especialista em manutenção completa de cozinhas profissionais: fornos combinados, lavadoras de louça, processadores, câmaras frias, balcões refrigerados e toda linha de equipamentos para food service.
           </p>
 
           <p className="text-base text-primary-foreground/70 leading-relaxed mb-10 max-w-2xl animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            Desde 2018, atendemos empresas em todo o estado de Goiás e Distrito Federal com manutenção técnica especializada: câmaras frias, balcões refrigerados, equipamentos de cozinha industrial e sistemas de climatização. Parceiro autorizado RATIONAL, especialistas em Hobart, Vulcan, Robot Coupe e refrigeração de todas as marcas.
+            Desde 2018, atendemos empresas em todo o estado de Goiás e Distrito Federal. Parceiro autorizado RATIONAL, especialistas em Hobart, Vulcan, Robot Coupe, Irinox, Prática, Tramontina e equipamentos de refrigeração de todas as marcas.
           </p>
 
           {/* CTA */}
