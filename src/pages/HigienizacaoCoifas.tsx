@@ -10,7 +10,7 @@ const servicos = [
   "Limpeza de dutos de exaustão",
   "Limpeza de filtros",
   "Laudo técnico rastreável",
-  "Conformidade RDC 216 ANVISA",
+  "Conformidade RDC 216 fiscalização",
   "Registro fotográfico completo",
 ];
 
@@ -18,8 +18,8 @@ export default function HigienizacaoCoifas() {
   return (
     <Layout>
       <Helmet>
-        <title>Higienização de Coifas | RDC 216 ANVISA | Goiás e DF | WeDo</title>
-        <meta name="description" content="Limpeza técnica de coifas e dutos conforme RDC 216 ANVISA. Compliance total com laudos técnicos rastreáveis. Goiás e DF." />
+        <title>Higienização de Coifas | RDC 216 | Goiás e DF | WeDo</title>
+        <meta name="description" content="Limpeza técnica de coifas e dutos conforme RDC 216. Compliance total com laudos técnicos rastreáveis para fiscalização. Goiás e DF." />
         <link rel="canonical" href="https://wedocorp.com/higienizacao-coifas" />
       </Helmet>
 
@@ -36,7 +36,7 @@ export default function HigienizacaoCoifas() {
               Higienização de Coifas
             </h1>
             <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-              Limpeza técnica de coifas e dutos conforme RDC 216 ANVISA. Compliance total com laudos técnicos rastreáveis.
+              Limpeza técnica de coifas e dutos conforme RDC 216. Compliance total com laudos técnicos rastreáveis para fiscalização.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function HigienizacaoCoifas() {
               </div>
               <h3 className="font-heading font-bold text-2xl mb-4">Compliance Total</h3>
               <p className="text-muted-foreground">
-                Conformidade com RDC 216 ANVISA e demais normas sanitárias. Laudos técnicos rastreáveis para auditorias e fiscalizações.
+                Conformidade com RDC 216 e demais normas sanitárias. Laudos técnicos rastreáveis para auditorias e fiscalização.
               </p>
             </div>
           </div>

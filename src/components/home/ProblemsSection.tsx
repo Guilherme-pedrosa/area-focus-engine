@@ -6,7 +6,7 @@ const problems = [
   },
   {
     number: "02",
-    title: "ANVISA na Porta",
+    title: "Fiscalização na Porta",
     description: "Equipamento sem laudo? Temperatura fora do padrão? Emitimos laudos técnicos rastreáveis NR13 + RDC 216.",
   },
   {

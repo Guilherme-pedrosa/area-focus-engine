@@ -14,7 +14,7 @@ const diferenciais = [
   {
     icon: ClipboardList,
     title: "Compliance Total",
-    description: "Laudos técnicos rastreáveis, certificações NR10/12/13, conformidade RDC 216 ANVISA.",
+    description: "Laudos técnicos rastreáveis, certificações NR10/12/13, conformidade RDC 216 para fiscalização.",
   },
   {
     icon: Package,
