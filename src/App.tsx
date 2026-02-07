@@ -13,6 +13,7 @@ import AssistenciaTecnicaPratica from "./pages/AssistenciaTecnicaPratica";
 import AssistenciaTecnicaRobotCoupe from "./pages/AssistenciaTecnicaRobotCoupe";
 import AssistenciaTecnicaHobart from "./pages/AssistenciaTecnicaHobart";
 import AssistenciaTecnicaVulcan from "./pages/AssistenciaTecnicaVulcan";
+import AssistenciaTecnicaTramontina from "./pages/AssistenciaTecnicaTramontina";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
@@ -54,6 +55,7 @@ const App = () => (
             <Route path="/assistencia-tecnica-robot-coupe" element={<AssistenciaTecnicaRobotCoupe />} />
             <Route path="/assistencia-tecnica-hobart" element={<AssistenciaTecnicaHobart />} />
             <Route path="/assistencia-tecnica-vulcan" element={<AssistenciaTecnicaVulcan />} />
+            <Route path="/assistencia-tecnica-tramontina" element={<AssistenciaTecnicaTramontina />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />

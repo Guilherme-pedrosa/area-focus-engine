@@ -34,6 +34,7 @@ const navItems: NavItem[] = [
       { label: "Vulcan", href: "/assistencia-tecnica-vulcan" },
       { label: "Irinox", href: "/assistencia-tecnica-irinox" },
       { label: "Prática", href: "/assistencia-tecnica-pratica" },
+      { label: "Tramontina", href: "/assistencia-tecnica-tramontina" },
     ],
   },
   { label: "Clientes", href: "/clientes" },
