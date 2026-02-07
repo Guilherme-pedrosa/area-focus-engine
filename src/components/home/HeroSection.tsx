@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* H1 Industrial Direto */}
           <h1 className="title-hero mb-6 animate-slide-up">
-            Manutenção de Cozinhas Industriais<br />
+            Manutenção de Cozinhas Profissionais<br />
             para Operações que Não Podem Parar.<br />
             Goiás e DF.
           </h1>

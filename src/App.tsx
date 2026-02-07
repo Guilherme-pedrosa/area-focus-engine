@@ -12,7 +12,7 @@ import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
 import Clientes from "./pages/Clientes";
-import CozinhasIndustriais from "./pages/CozinhasIndustriais";
+import CozinhasProfissionais from "./pages/CozinhasProfissionais";
 
 // Páginas SEO Locais (escondidas do menu)
 import SEOManutencaoRationalAnapolis from "./pages/seo/ManutencaoRationalAnapolis";
@@ -42,7 +42,7 @@ const App = () => (
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
-            <Route path="/cozinhas-industriais" element={<CozinhasIndustriais />} />
+            <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
 
             {/* Páginas SEO Locais - NÃO aparecem no menu/footer */}
             <Route path="/servicos-local/manutencao-rational-anapolis" element={<SEOManutencaoRationalAnapolis />} />

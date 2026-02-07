@@ -29,7 +29,7 @@ export default function ProblemsSection() {
         <div className="text-center mb-16">
           <h2 className="title-section">Problemas que Resolvemos</h2>
           <p className="subtitle-section mx-auto">
-            15 anos resolvendo os problemas mais críticos de refrigeração e cozinhas industriais.
+            15 anos resolvendo os problemas mais críticos de refrigeração e cozinhas profissionais.
           </p>
         </div>
 

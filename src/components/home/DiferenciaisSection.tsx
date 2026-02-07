@@ -14,7 +14,7 @@ const diferenciais = [
   {
     icon: ClipboardList,
     title: "Compliance Total",
-    description: "Laudos técnicos rastreáveis, certificações NR10/12/13, conformidade RDC 216 para fiscalização.",
+    description: "Equipe com nutricionistas e engenheiros especialistas em RDC 216, NR12, NR13, NBR 5410 e todas as normas técnicas para cozinhas profissionais.",
   },
   {
     icon: Package,

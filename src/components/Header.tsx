@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Manutenção de Câmaras Frias", href: "/manutencao-camaras-frias" },
       { label: "Assistência Técnica Rational", href: "/assistencia-tecnica-rational" },
-      { label: "Manutenção Multimarcas", href: "/cozinhas-industriais" },
+      { label: "Manutenção Multimarcas", href: "/cozinhas-profissionais" },
       { label: "Contratos de Manutenção (PCM)", href: "/contratos-pcm" },
       { label: "Higienização de Coifas", href: "/higienizacao-coifas" },
     ],
@@ -26,7 +26,7 @@ const navItems: NavItem[] = [
     label: "Especialidades",
     children: [
       { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
-      { label: "Cozinhas Profissionais", href: "/cozinhas-industriais" },
+      { label: "Cozinhas Profissionais", href: "/cozinhas-profissionais" },
       { label: "Manutenção Preventiva", href: "/manutencao-camaras-frias#preventiva" },
       { label: "Manutenção Corretiva", href: "/manutencao-camaras-frias#corretiva" },
     ],
