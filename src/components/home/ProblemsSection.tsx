@@ -1,8 +1,8 @@
 const problems = [
   {
     number: "01",
-    title: "Câmara Fria Parada",
-    description: "Compressor queimado, vazamento de gás, falha elétrica. Perda de estoque em horas. Atendemos urgente.",
+    title: "Equipamento Parado",
+    description: "Forno combinado, lavadora, processador ou câmara fria. Qualquer parada compromete sua operação. Atendemos urgente.",
   },
   {
     number: "02",
@@ -17,7 +17,7 @@ const problems = [
   {
     number: "04",
     title: "Equipamento Sem Peças",
-    description: "Peças originais Rational, Hobart, Robot Coupe. Estoque próprio para entrega rápida.",
+    description: "Peças originais Rational, Hobart, Robot Coupe, Vulcan. Estoque próprio para entrega rápida.",
   },
 ];
 
