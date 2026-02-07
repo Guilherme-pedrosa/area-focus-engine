@@ -265,7 +265,7 @@ const planosPCM = [
       "2 manutenções preventivas/ano",
       "Lubrificação e inspeção",
       "Desconto 20% peças",
-      "SLA 8h horário comercial",
+      "Atendimento em horário comercial",
     ],
   },
   {
@@ -276,7 +276,7 @@ const planosPCM = [
       "Afiação lâminas inclusa",
       "Desconto 30% peças",
       "1 corretiva inclusa/ano",
-      "SLA 4h atendimento",
+      "Atendimento prioritário",
     ],
   },
   {
@@ -286,7 +286,7 @@ const planosPCM = [
       "Afiação trimestral inclusa",
       "Desconto 40% peças",
       "Corretivas inclusas",
-      "SLA 2h atendimento",
+      "Atendimento express",
     ],
   },
 ];
