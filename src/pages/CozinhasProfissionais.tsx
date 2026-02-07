@@ -16,18 +16,18 @@ const equipamentos = [
   "Processadores de alimentos",
   "Cortadores e fatiadores",
   "Chapas e fritadeiras",
-  "Fogões industriais",
+  "Fogões profissionais",
   "Refrigeradores e freezers",
   "Balcões refrigerados",
 ];
 
-export default function CozinhasIndustriais() {
+export default function CozinhasProfissionais() {
   return (
     <Layout>
       <Helmet>
-        <title>Cozinhas Industriais | Manutenção Multimarcas | WeDo</title>
-        <meta name="description" content="Manutenção de equipamentos de cozinha industrial multimarcas. Hobart, Vulcan, Robot Coupe, Irinox e mais. Goiás e DF." />
-        <link rel="canonical" href="https://wedocorp.com/cozinhas-industriais" />
+        <title>Cozinhas Profissionais | Manutenção Multimarcas | WeDo</title>
+        <meta name="description" content="Manutenção de equipamentos de cozinha profissional multimarcas. Hobart, Vulcan, Robot Coupe, Irinox e mais. Goiás e DF." />
+        <link rel="canonical" href="https://wedocorp.com/cozinhas-profissionais" />
       </Helmet>
 
       {/* Hero */}
@@ -37,10 +37,10 @@ export default function CozinhasIndustriais() {
             <nav className="text-sm text-secondary-foreground/60 mb-6">
               <Link to="/" className="hover:text-primary">Home</Link>
               <span className="mx-2">/</span>
-              <span>Cozinhas Industriais</span>
+              <span>Cozinhas Profissionais</span>
             </nav>
             <h1 className="title-hero text-primary-foreground mb-6">
-              Cozinhas Industriais — Manutenção Multimarcas
+              Cozinhas Profissionais — Manutenção Multimarcas
             </h1>
             <p className="text-xl text-secondary-foreground/80 max-w-3xl">
               Expertise técnica em todas as principais marcas de equipamentos para cozinhas profissionais. Um único parceiro para toda sua operação.

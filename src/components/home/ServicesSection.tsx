@@ -3,9 +3,9 @@ import { ArrowRight, Star, CheckCircle } from "lucide-react";
 
 const services = [
   {
-    title: "Cozinhas Industriais Completas",
+    title: "Cozinhas Profissionais Completas",
     description: "Fornos, lavadoras, processadores, chapas, fritadeiras. Manutenção completa para sua operação. Goiás e DF.",
-    href: "/cozinhas-industriais",
+    href: "/cozinhas-profissionais",
     badge: "⭐ Especialidade #1",
     badgeColor: "bg-accent text-accent-foreground",
     featured: true,
@@ -20,7 +20,7 @@ const services = [
   {
     title: "Assistência Multimarcas",
     description: "Hobart, Vulcan, Robot Coupe, Irinox, Prática, Tramontina, Macon, Cozil, Unox, Middleby.",
-    href: "/cozinhas-industriais",
+    href: "/cozinhas-profissionais",
   },
   {
     title: "Contratos PCM",

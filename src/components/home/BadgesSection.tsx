@@ -13,8 +13,8 @@ const badges = [
   },
   {
     icon: UserCheck,
-    title: "Técnicos Certificados",
-    description: "Equipe capacitada com certificações NR10, NR12, NR13",
+    title: "Equipe Multidisciplinar",
+    description: "Nutricionistas e engenheiros especialistas em RDC 216, NR12, NR13, NBR 5410",
   },
   {
     icon: Package,
