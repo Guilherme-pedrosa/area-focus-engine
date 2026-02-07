@@ -320,14 +320,13 @@ const diferenciais = [
   },
   {
     icon: Clock,
-    titulo: "Atendimento Emergencial 24/7",
-    descricao: "Nossa promessa de SLA para equipamentos Rational.",
+    titulo: "Atendimento Ágil",
+    descricao: "Resposta rápida para equipamentos Rational.",
     items: [
-      "Clientes contrato PCM: Atendimento 24/7",
-      "Primeiro atendimento: até 2 horas (GO/DF)",
-      "Diagnóstico: até 4 horas",
-      "Resolução: até 24 horas (90% casos)",
-      "Clientes avulsos: agendamento até 48h",
+      "Clientes contrato PCM: Atendimento prioritário",
+      "Diagnóstico remoto via ConnectedCooking",
+      "Equipe técnica especializada",
+      "Clientes avulsos: agendamento programado",
     ],
   },
 ];
@@ -487,13 +486,12 @@ const planosPCM = [
     ideal: "1 a 2 equipamentos Rational • Operação padrão",
     beneficios: [
       "4 manutenções preventivas/ano (trimestral)",
-      "Atendimento emergencial horário comercial",
+      "Atendimento em horário comercial",
       "Desconto 20% em peças",
       "Desconto 15% mão de obra corretiva",
       "Relatório técnico digital",
       "HACCP básico",
     ],
-    sla: "Primeiro atendimento: até 8 horas",
     destaque: false,
   },
   {
@@ -501,7 +499,7 @@ const planosPCM = [
     ideal: "3 a 5 equipamentos • Operação intensiva",
     beneficios: [
       "6 manutenções preventivas/ano (bimestral)",
-      "Atendimento emergencial 24/7",
+      "Atendimento prioritário",
       "Desconto 30% em peças",
       "Desconto 25% mão de obra corretiva",
       "2 corretivas inclusas/ano",
@@ -510,7 +508,6 @@ const planosPCM = [
       "HACCP completo + relatórios gerenciais",
       "Treinamento semestral equipe",
     ],
-    sla: "Primeiro atendimento: até 4 horas • 24/7/365",
     destaque: true,
   },
   {
@@ -518,7 +515,7 @@ const planosPCM = [
     ideal: "6+ equipamentos • Múltiplas unidades • Rede food service",
     beneficios: [
       "Manutenções preventivas customizadas (até mensal)",
-      "Atendimento emergencial 24/7 prioritário",
+      "Atendimento express prioritário",
       "Desconto 40% em peças",
       "Mão de obra corretiva inclusa (ilimitada)",
       "Calibração semestral todos equipamentos",
@@ -530,7 +527,6 @@ const planosPCM = [
       "Spare parts estratégico in-loco",
       "Relatórios C-level mensais",
     ],
-    sla: "Primeiro atendimento: até 2 horas • Técnico on-site: até 4 horas",
     destaque: false,
   },
 ];
@@ -546,16 +542,16 @@ const faqItems = [
     resposta: "Todos os nossos serviços possuem garantia de 90 dias.",
   },
   {
-    pergunta: "Quanto tempo demora um atendimento emergencial?",
-    resposta: "Para clientes com contrato PCM em Goiás e Distrito Federal, nosso SLA de primeiro atendimento é até 2 horas. Para atendimentos avulsos, o agendamento ocorre em até 48 horas úteis.",
+    pergunta: "Quanto tempo demora um atendimento?",
+    resposta: "Para clientes com contrato PCM em Goiás e Distrito Federal, o atendimento é prioritário. Para atendimentos avulsos, fazemos agendamento programado.",
   },
   {
     pergunta: "Qual a frequência recomendada de manutenção preventiva em equipamentos Rational?",
-    resposta: "Para equipamentos iCombi Pro e Classic elétricos, recomendamos manutenção trimestral. Para modelos a gás, semestral. Para iVario Pro L e XL, semestral. O ideal é avaliar intensidade de uso - cozinhas com operação 24h podem necessitar manutenção mensal.",
+    resposta: "Para equipamentos iCombi Pro e Classic elétricos, recomendamos manutenção trimestral. Para modelos a gás, semestral. Para iVario Pro L e XL, semestral. O ideal é avaliar intensidade de uso - cozinhas com operação contínua podem necessitar manutenção mensal.",
   },
   {
     pergunta: "Meu equipamento Rational parou de funcionar. O que fazer?",
-    resposta: "Entre em contato imediatamente pelo nosso canal de atendimento. Nossa equipe fará diagnóstico remoto (quando possível via ConnectedCooking) e despachará técnico conforme seu SLA.",
+    resposta: "Entre em contato imediatamente pelo nosso canal de atendimento. Nossa equipe fará diagnóstico remoto (quando possível via ConnectedCooking) e agendará visita técnica.",
   },
   {
     pergunta: "Vocês instalam e fazem startup de equipamentos Rational novos?",
@@ -579,7 +575,7 @@ const faqItems = [
   },
   {
     pergunta: "O que está incluso no contrato PCM?",
-    resposta: "Depende do plano contratado. Geralmente inclui: manutenções preventivas programadas, atendimento emergencial com SLA, descontos em peças e serviços, gestão digital, relatórios, treinamentos. Veja detalhes na seção Contratos PCM.",
+    resposta: "Depende do plano contratado. Geralmente inclui: manutenções preventivas programadas, atendimento prioritário, descontos em peças e serviços, gestão digital, relatórios, treinamentos. Veja detalhes na seção Contratos PCM.",
   },
 ];
 
@@ -911,7 +907,7 @@ export default function AssistenciaTecnicaRational() {
                 <div className={`rounded-lg p-3 text-center text-sm ${
                   plano.destaque ? 'bg-primary-foreground/20' : 'bg-muted'
                 }`}>
-                  <strong>SLA:</strong> {plano.sla}
+                  <strong>Garantia de 90 dias em todos os serviços</strong>
                 </div>
               </div>
             ))}
@@ -966,7 +962,7 @@ export default function AssistenciaTecnicaRational() {
               Precisa de Assistência Técnica Rational?
             </h2>
             <p className="text-lg text-primary-foreground/90 mb-8">
-              Entre em contato com nossa equipe especializada. Atendemos todo o estado de Goiás, Distrito Federal e região Centro-Oeste com SLA prioritário para clientes PCM.
+              Entre em contato com nossa equipe especializada. Atendemos todo o estado de Goiás, Distrito Federal e região Centro-Oeste com atendimento prioritário para clientes PCM.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

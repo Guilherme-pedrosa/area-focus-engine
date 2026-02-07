@@ -480,7 +480,7 @@ export default function AssistenciaTecnicaTramontina() {
                 </li>
                 <li className="flex items-start gap-2 text-primary-foreground/90">
                   <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span>SLA 8h para emergências</span>
+                  <span>Atendimento prioritário</span>
                 </li>
               </ul>
               <p className="text-sm text-primary-foreground/70">Ideal para restaurantes e hotéis</p>
@@ -507,7 +507,7 @@ export default function AssistenciaTecnicaTramontina() {
                 </li>
                 <li className="flex items-start gap-2 text-muted-foreground">
                   <CheckCircle2 className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span>SLA 4h para emergências</span>
+                  <span>Atendimento express</span>
                 </li>
               </ul>
               <p className="text-sm text-muted-foreground">Ideal para redes e indústrias</p>

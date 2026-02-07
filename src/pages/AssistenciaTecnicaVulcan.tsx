@@ -260,7 +260,7 @@ const planosPCM = [
       "2 manutenções preventivas/ano",
       "Limpeza e inspeção gás",
       "Desconto 20% peças",
-      "SLA 8h horário comercial",
+      "Atendimento em horário comercial",
     ],
   },
   {
@@ -271,7 +271,7 @@ const planosPCM = [
       "Calibração temperatura",
       "Desconto 30% peças",
       "1 corretiva inclusa/ano",
-      "SLA 4h atendimento",
+      "Atendimento prioritário",
     ],
   },
   {
@@ -281,7 +281,7 @@ const planosPCM = [
       "Teste vazamentos incluso",
       "Desconto 40% peças",
       "Corretivas inclusas",
-      "SLA 2h atendimento",
+      "Atendimento express",
     ],
   },
 ];

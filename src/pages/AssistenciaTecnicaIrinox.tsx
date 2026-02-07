@@ -227,7 +227,7 @@ const planosPCM = [
       "Limpeza evaporador/condensador",
       "Calibração sondas",
       "Desconto 20% peças",
-      "SLA 8h horário comercial",
+      "Atendimento em horário comercial",
     ],
   },
   {
@@ -239,7 +239,7 @@ const planosPCM = [
       "Atualização software inclusa",
       "Desconto 30% peças",
       "2 corretivas inclusas/ano",
-      "SLA 4h atendimento 24/7",
+      "Atendimento prioritário",
     ],
   },
   {
@@ -250,7 +250,7 @@ const planosPCM = [
       "Gestão HACCP digital",
       "Desconto 40% peças",
       "Mão de obra corretiva inclusa",
-      "SLA 2h atendimento 24/7",
+      "Atendimento express",
       "Spare parts in-loco",
     ],
   },
