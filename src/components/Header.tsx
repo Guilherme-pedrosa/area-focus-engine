@@ -30,7 +30,6 @@ const navItems: NavItem[] = [
       { label: "Hobart", href: "/cozinhas-profissionais" },
       { label: "Robot Coupe", href: "/cozinhas-profissionais" },
       { label: "Vulcan", href: "/cozinhas-profissionais" },
-      { label: "Metalfrio", href: "/manutencao-camaras-frias" },
       { label: "Irinox", href: "/cozinhas-profissionais" },
       { label: "Prática", href: "/cozinhas-profissionais" },
     ],
