@@ -14,6 +14,7 @@ import AssistenciaTecnicaRobotCoupe from "./pages/AssistenciaTecnicaRobotCoupe";
 import AssistenciaTecnicaHobart from "./pages/AssistenciaTecnicaHobart";
 import AssistenciaTecnicaVulcan from "./pages/AssistenciaTecnicaVulcan";
 import AssistenciaTecnicaTramontina from "./pages/AssistenciaTecnicaTramontina";
+import AdminSeoImport from "./pages/AdminSeoImport";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
@@ -61,6 +62,9 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
+
+            {/* Admin (hidden) */}
+            <Route path="/admin/seo-import" element={<AdminSeoImport />} />
 
             {/* Páginas SEO Locais Antigas */}
             <Route path="/servicos-local/manutencao-rational-anapolis" element={<SEOManutencaoRationalAnapolis />} />
