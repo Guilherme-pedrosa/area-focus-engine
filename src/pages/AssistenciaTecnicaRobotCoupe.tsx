@@ -249,7 +249,7 @@ const diferenciais = [
   {
     icon: Shield,
     titulo: "Peças Originais",
-    descricao: "Estoque de componentes originais Robot Coupe com garantia.",
+    descricao: "Estoque de componentes originais Robot Coupe para reposição imediata.",
   },
   {
     icon: FileCheck,

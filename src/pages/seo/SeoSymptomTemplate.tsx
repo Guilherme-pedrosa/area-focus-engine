@@ -352,7 +352,7 @@ export default function SeoSymptomTemplate() {
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <Shield className="w-5 h-5 text-accent" />
-                <span>Garantia de 90 dias</span>
+                <span>Garantia de 90 dias no serviço</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <MapPin className="w-5 h-5 text-accent" />
@@ -459,9 +459,9 @@ export default function SeoSymptomTemplate() {
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Garantia Real</h3>
+                <h3 className="text-xl font-semibold mb-2">Garantia de Serviço</h3>
                 <p className="text-muted-foreground">
-                  90 dias de garantia em peças e serviços. Documentação completa para auditorias.
+                  90 dias de garantia em todos os nossos serviços. Documentação completa para auditorias.
                 </p>
               </CardContent>
             </Card>
