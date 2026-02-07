@@ -21,6 +21,12 @@ import SEOManutencaoRationalGoiania from "./pages/seo/ManutencaoRationalGoiania"
 import SEOCamaraFriaNaoGelaAnapolis from "./pages/seo/CamaraFriaNaoGelaAnapolis";
 import SEOCamaraFriaPerdaTemperaturaRioVerde from "./pages/seo/CamaraFriaPerdaTemperaturaRioVerde";
 
+// Template dinâmico para páginas SEO de sintomas
+import SeoSymptomTemplate from "./pages/seo/SeoSymptomTemplate";
+
+// Dados das páginas SEO
+import { seoSymptomsPages } from "./data/seoSymptomsData";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,12 +50,21 @@ const App = () => (
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
 
-            {/* Páginas SEO Locais - NÃO aparecem no menu/footer */}
+            {/* Páginas SEO Locais Antigas - NÃO aparecem no menu/footer */}
             <Route path="/servicos-local/manutencao-rational-anapolis" element={<SEOManutencaoRationalAnapolis />} />
             <Route path="/servicos-local/manutencao-camara-fria-rio-verde" element={<SEOManutencaoCamaraFriaRioVerde />} />
             <Route path="/servicos-local/manutencao-rational-goiania" element={<SEOManutencaoRationalGoiania />} />
             <Route path="/problemas/camara-fria-nao-gela-anapolis" element={<SEOCamaraFriaNaoGelaAnapolis />} />
             <Route path="/problemas/camara-fria-perda-temperatura-rio-verde" element={<SEOCamaraFriaPerdaTemperaturaRioVerde />} />
+
+            {/* Páginas SEO Dinâmicas baseadas em Sintomas (249 páginas) */}
+            {seoSymptomsPages.map((page) => (
+              <Route 
+                key={page.slug} 
+                path={`/${page.slug}`} 
+                element={<SeoSymptomTemplate />} 
+              />
+            ))}
 
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
