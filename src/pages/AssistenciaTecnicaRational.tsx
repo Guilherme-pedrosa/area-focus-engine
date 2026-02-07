@@ -32,11 +32,11 @@ const LINKTREE_URL = "https://linktr.ee/wedocorp";
 // Trust Bar Items
 const trustItems = [
   "Assistência Técnica Homologada Rational",
-  "10 Anos de Garantia em Peças Originais",
+  "Peças Originais com Garantia",
   "Técnicos Treinados pela Fábrica Rational",
-  "Atendimento Emergencial 24/7",
   "Contratos PCM Personalizados",
   "Estoque Permanente de Peças",
+  "Conectividade ConnectedCooking",
   "Conectividade ConnectedCooking",
   "Diagnóstico Remoto Avançado",
 ];
@@ -544,7 +544,7 @@ const faqItems = [
   },
   {
     pergunta: "Qual a garantia das peças originais Rational?",
-    resposta: "A Rational garante disponibilidade de peças por 10 anos a partir da data de fabricação do equipamento. As peças substituídas pela WeDo possuem garantia de 90 dias contra defeitos de fabricação.",
+    resposta: "As peças originais substituídas pela WeDo possuem garantia de 90 dias contra defeitos de fabricação, seguindo o padrão do mercado de assistência técnica.",
   },
   {
     pergunta: "Quanto tempo demora um atendimento emergencial?",
