@@ -24,7 +24,7 @@ const badges = [
   {
     icon: ClipboardCheck,
     title: "Compliance Total",
-    description: "Laudos técnicos rastreáveis | RDC 216 ANVISA | Processos auditáveis",
+    description: "Laudos técnicos rastreáveis | RDC 216 | Processos auditáveis para fiscalização",
   },
   {
     icon: Truck,
