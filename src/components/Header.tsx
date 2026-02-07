@@ -25,6 +25,7 @@ const navItems: NavItem[] = [
   {
     label: "Especialidades",
     children: [
+      { label: "Manutenção Autorizada Rational", href: "/assistencia-tecnica-rational" },
       { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
       { label: "Cozinhas Profissionais", href: "/cozinhas-profissionais" },
       { label: "Manutenção Preventiva", href: "/manutencao-camaras-frias#preventiva" },
