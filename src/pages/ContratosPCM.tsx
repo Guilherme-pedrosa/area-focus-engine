@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
-import { useCTASettings } from "@/hooks/useSiteSettings";
   ArrowRight, 
   CheckCircle, 
   TrendingDown, 
@@ -15,6 +14,7 @@ import { useCTASettings } from "@/hooks/useSiteSettings";
   UtensilsCrossed,
   ShieldCheck
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 const categorias = [

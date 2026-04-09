@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-import { useCTASettings } from "@/hooks/useSiteSettings";
   Flame,
   Clock,
   Shield,
@@ -21,6 +20,7 @@ import { useCTASettings } from "@/hooks/useSiteSettings";
   FileCheck,
   MessageCircle,
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 const WHATSAPP_URL = "https://wa.me/5562993775711";
 

@@ -9,7 +9,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-import { useCTASettings } from "@/hooks/useSiteSettings";
   Droplets,
   Snowflake,
   Clock,
@@ -23,6 +22,7 @@ import { useCTASettings } from "@/hooks/useSiteSettings";
   MessageCircle,
   ThermometerSnowflake,
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 const WHATSAPP_URL = "https://wa.me/5562993775711";
 

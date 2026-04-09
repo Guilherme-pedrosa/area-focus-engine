@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getPageBySlug, SeoSymptomPage } from "@/data/seoSymptomsData";
 import { 
-import { useCTASettings } from "@/hooks/useSiteSettings";
   Phone, 
   Clock, 
   Shield, 
@@ -16,6 +15,7 @@ import { useCTASettings } from "@/hooks/useSiteSettings";
   ArrowRight,
   MessageCircle
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 const WHATSAPP_URL = "https://wa.me/5562993775711";
 

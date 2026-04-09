@@ -21,12 +21,12 @@ import {
   ChevronDown
 } from "lucide-react";
 import {
-import { useCTASettings } from "@/hooks/useSiteSettings";
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 // Trust Bar Items
