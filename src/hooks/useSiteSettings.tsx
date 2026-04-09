@@ -43,3 +43,13 @@ export function SiteSettingsProvider({ children }: { children: ReactNode }) {
 export function useSiteSettings() {
   return useContext(SiteSettingsContext);
 }
+
+/** Convenience hook that returns the CTA URL and text from CMS settings */
+export function useCTASettings() {
+  const { get } = useSiteSettings();
+  return {
+    ctaUrl: get("linktree_url", "https://linktr.ee/wedocorp"),
+    ctaText: get("cta_texto_principal", "Acessar Atendimento"),
+    ctaTextSecondary: get("cta_texto_secundario", "Canais Oficiais WeDo"),
+  };
+}
