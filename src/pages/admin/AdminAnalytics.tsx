@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from "recharts";
-import { Eye, Users, Monitor, Globe, TrendingUp, Clock } from "lucide-react";
+import { Eye, Users, Monitor, Globe, TrendingUp, Clock, MapPin } from "lucide-react";
 
 type PageView = {
   id: string;
@@ -16,10 +16,14 @@ type PageView = {
   browser: string | null;
   os: string | null;
   session_id: string | null;
+  ip_address: string | null;
+  city: string | null;
+  region: string | null;
+  country: string | null;
   created_at: string;
 };
 
-const COLORS = ["hsl(205, 52%, 21%)", "hsl(82, 62%, 57%)", "hsl(201, 48%, 33%)", "hsl(0, 84%, 60%)", "hsl(215, 16%, 47%)", "hsl(30, 80%, 55%)"];
+const COLORS = ["hsl(205, 52%, 21%)", "hsl(82, 62%, 57%)", "hsl(201, 48%, 33%)", "hsl(0, 84%, 60%)", "hsl(215, 16%, 47%)", "hsl(30, 80%, 55%)", "hsl(280, 50%, 50%)", "hsl(160, 60%, 40%)"];
 
 const AdminAnalytics = () => {
   const [views, setViews] = useState<PageView[]>([]);
@@ -52,10 +56,7 @@ const AdminAnalytics = () => {
     // Views by page
     const byPage: Record<string, number> = {};
     views.forEach(v => { byPage[v.page_url] = (byPage[v.page_url] || 0) + 1; });
-    const topPages = Object.entries(byPage)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 10)
-      .map(([page, count]) => ({ page, count }));
+    const topPages = Object.entries(byPage).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([page, count]) => ({ page, count }));
 
     // Views by device
     const byDevice: Record<string, number> = {};
@@ -78,9 +79,7 @@ const AdminAnalytics = () => {
       const day = new Date(v.created_at).toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit" });
       byDay[day] = (byDay[day] || 0) + 1;
     });
-    const dailyData = Object.entries(byDay)
-      .map(([date, views]) => ({ date, views }))
-      .reverse();
+    const dailyData = Object.entries(byDay).map(([date, views]) => ({ date, views })).reverse();
 
     // Top referrers
     const byRef: Record<string, number> = {};
@@ -94,22 +93,44 @@ const AdminAnalytics = () => {
         }
       }
     });
-    const topReferrers = Object.entries(byRef)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([source, count]) => ({ source, count }));
+    const topReferrers = Object.entries(byRef).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([source, count]) => ({ source, count }));
+
+    // By city
+    const byCity: Record<string, number> = {};
+    views.forEach(v => { if (v.city) byCity[v.city] = (byCity[v.city] || 0) + 1; });
+    const cityData = Object.entries(byCity).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([city, count]) => ({ city, count }));
+
+    // By region
+    const byRegion: Record<string, number> = {};
+    views.forEach(v => { if (v.region) byRegion[v.region] = (byRegion[v.region] || 0) + 1; });
+    const regionData = Object.entries(byRegion).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([region, count]) => ({ region, count }));
+
+    // Unique IPs
+    const uniqueIps = new Set(views.map(v => v.ip_address).filter(Boolean));
+
+    // Recent visitors with location
+    const recentVisitors = views
+      .filter(v => v.ip_address && v.city)
+      .slice(0, 20)
+      .map(v => ({
+        ip: v.ip_address!.replace(/\.\d+$/, '.***'), // anonimizar último octeto
+        city: v.city,
+        region: v.region,
+        country: v.country,
+        page: v.page_url,
+        device: v.device_type,
+        browser: v.browser,
+        time: new Date(v.created_at).toLocaleString("pt-BR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }),
+      }));
 
     return {
       totalViews: views.length,
       uniqueSessions: sessions.size,
+      uniqueIps: uniqueIps.size,
       todayViews: todayViews.length,
       avgPerDay: Math.round(views.length / Math.max(parseInt(period), 1)),
-      topPages,
-      deviceData,
-      browserData,
-      osData,
-      dailyData,
-      topReferrers,
+      topPages, deviceData, browserData, osData, dailyData, topReferrers,
+      cityData, regionData, recentVisitors,
     };
   }, [views, period]);
 
@@ -136,7 +157,7 @@ const AdminAnalytics = () => {
       ) : (
         <>
           {/* KPI Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">Page Views</CardTitle>
@@ -146,10 +167,17 @@ const AdminAnalytics = () => {
             </Card>
             <Card>
               <CardHeader className="flex flex-row items-center justify-between pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">Sessões Únicas</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">Sessões</CardTitle>
                 <Users className="w-4 h-4 text-muted-foreground" />
               </CardHeader>
               <CardContent><div className="text-3xl font-bold">{stats.uniqueSessions}</div></CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-center justify-between pb-2">
+                <CardTitle className="text-sm font-medium text-muted-foreground">IPs Únicos</CardTitle>
+                <Globe className="w-4 h-4 text-muted-foreground" />
+              </CardHeader>
+              <CardContent><div className="text-3xl font-bold">{stats.uniqueIps}</div></CardContent>
             </Card>
             <Card>
               <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -181,6 +209,95 @@ const AdminAnalytics = () => {
                     <Line type="monotone" dataKey="views" stroke="hsl(205, 52%, 21%)" strokeWidth={2} dot={{ fill: "hsl(82, 62%, 57%)" }} />
                   </LineChart>
                 </ResponsiveContainer>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Location Section */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            {/* Cities */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <MapPin className="w-5 h-5" /> Cidades
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {stats.cityData.length === 0 ? (
+                  <p className="text-muted-foreground text-sm">Sem dados de localização ainda</p>
+                ) : (
+                  <ResponsiveContainer width="100%" height={300}>
+                    <BarChart data={stats.cityData} layout="vertical">
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis type="number" fontSize={12} />
+                      <YAxis type="category" dataKey="city" width={120} fontSize={11} />
+                      <Tooltip />
+                      <Bar dataKey="count" fill="hsl(82, 62%, 57%)" radius={[0, 4, 4, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Regions */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <MapPin className="w-5 h-5" /> Estados
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                {stats.regionData.length === 0 ? (
+                  <p className="text-muted-foreground text-sm">Sem dados de localização ainda</p>
+                ) : (
+                  <ResponsiveContainer width="100%" height={300}>
+                    <PieChart>
+                      <Pie data={stats.regionData.map(r => ({ name: r.region, value: r.count }))} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
+                        {stats.regionData.map((_, i) => <Cell key={i} fill={COLORS[i % COLORS.length]} />)}
+                      </Pie>
+                      <Tooltip />
+                    </PieChart>
+                  </ResponsiveContainer>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Recent Visitors with Location */}
+          {stats.recentVisitors.length > 0 && (
+            <Card className="mb-6">
+              <CardHeader>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <Globe className="w-5 h-5" /> Visitantes Recentes
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>IP</TableHead>
+                      <TableHead>Cidade</TableHead>
+                      <TableHead>Estado</TableHead>
+                      <TableHead>Página</TableHead>
+                      <TableHead>Dispositivo</TableHead>
+                      <TableHead>Navegador</TableHead>
+                      <TableHead>Quando</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {stats.recentVisitors.map((v, i) => (
+                      <TableRow key={i}>
+                        <TableCell className="font-mono text-xs">{v.ip}</TableCell>
+                        <TableCell>{v.city ?? "—"}</TableCell>
+                        <TableCell>{v.region ?? "—"}</TableCell>
+                        <TableCell className="font-mono text-xs max-w-[200px] truncate">{v.page}</TableCell>
+                        <TableCell className="capitalize">{v.device ?? "—"}</TableCell>
+                        <TableCell>{v.browser ?? "—"}</TableCell>
+                        <TableCell className="text-xs">{v.time}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
               </CardContent>
             </Card>
           )}

@@ -42,25 +42,25 @@ const PageTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Don't track admin pages
     if (location.pathname.startsWith("/admin")) return;
 
     const track = async () => {
-      await supabase.from("page_views").insert({
-        page_url: location.pathname,
-        page_title: document.title,
-        referrer: document.referrer || null,
-        user_agent: navigator.userAgent,
-        device_type: getDeviceType(),
-        browser: getBrowser(),
-        os: getOS(),
-        screen_width: window.innerWidth,
-        screen_height: window.innerHeight,
-        session_id: getSessionId(),
+      await supabase.functions.invoke("track-pageview", {
+        body: {
+          page_url: location.pathname,
+          page_title: document.title,
+          referrer: document.referrer || null,
+          user_agent: navigator.userAgent,
+          device_type: getDeviceType(),
+          browser: getBrowser(),
+          os: getOS(),
+          screen_width: window.innerWidth,
+          screen_height: window.innerHeight,
+          session_id: getSessionId(),
+        },
       });
     };
 
-    // Small delay to get correct title after route change
     const timeout = setTimeout(track, 500);
     return () => clearTimeout(timeout);
   }, [location.pathname]);
