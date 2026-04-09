@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      page_views: {
+        Row: {
+          browser: string | null
+          created_at: string
+          device_type: string | null
+          id: string
+          os: string | null
+          page_title: string | null
+          page_url: string
+          referrer: string | null
+          screen_height: number | null
+          screen_width: number | null
+          session_id: string | null
+          user_agent: string | null
+        }
+        Insert: {
+          browser?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          os?: string | null
+          page_title?: string | null
+          page_url: string
+          referrer?: string | null
+          screen_height?: number | null
+          screen_width?: number | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Update: {
+          browser?: string | null
+          created_at?: string
+          device_type?: string | null
+          id?: string
+          os?: string | null
+          page_title?: string | null
+          page_url?: string
+          referrer?: string | null
+          screen_height?: number | null
+          screen_width?: number | null
+          session_id?: string | null
+          user_agent?: string | null
+        }
+        Relationships: []
+      }
       seo_pages: {
         Row: {
           categoria: string | null

@@ -3,12 +3,13 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import {
-  LayoutDashboard, FileText, Image, Settings, Search, LogOut, Menu, X
+  LayoutDashboard, FileText, Image, Settings, Search, LogOut, Menu, X, BarChart3
 } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
   { path: "/admin", label: "Dashboard", icon: LayoutDashboard },
+  { path: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { path: "/admin/conteudo", label: "Conteúdo", icon: FileText },
   { path: "/admin/imagens", label: "Imagens", icon: Image },
   { path: "/admin/seo", label: "Páginas SEO", icon: Search },
