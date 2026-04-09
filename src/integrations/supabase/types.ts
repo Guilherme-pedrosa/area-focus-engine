@@ -17,13 +17,19 @@ export type Database = {
       page_views: {
         Row: {
           browser: string | null
+          city: string | null
+          country: string | null
           created_at: string
           device_type: string | null
           id: string
+          ip_address: string | null
+          latitude: number | null
+          longitude: number | null
           os: string | null
           page_title: string | null
           page_url: string
           referrer: string | null
+          region: string | null
           screen_height: number | null
           screen_width: number | null
           session_id: string | null
@@ -31,13 +37,19 @@ export type Database = {
         }
         Insert: {
           browser?: string | null
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           id?: string
+          ip_address?: string | null
+          latitude?: number | null
+          longitude?: number | null
           os?: string | null
           page_title?: string | null
           page_url: string
           referrer?: string | null
+          region?: string | null
           screen_height?: number | null
           screen_width?: number | null
           session_id?: string | null
@@ -45,13 +57,19 @@ export type Database = {
         }
         Update: {
           browser?: string | null
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           id?: string
+          ip_address?: string | null
+          latitude?: number | null
+          longitude?: number | null
           os?: string | null
           page_title?: string | null
           page_url?: string
           referrer?: string | null
+          region?: string | null
           screen_height?: number | null
           screen_width?: number | null
           session_id?: string | null
