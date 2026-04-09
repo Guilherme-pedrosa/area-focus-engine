@@ -21,6 +21,7 @@ import {
   ChevronDown
 } from "lucide-react";
 import {
+import { useCTASettings } from "@/hooks/useSiteSettings";
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -579,6 +580,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaRational() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>

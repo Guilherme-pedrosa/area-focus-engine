@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, CheckCircle, Wrench, Zap, ThermometerSnowflake, Wind, Gauge, Shield } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 const problemas = [
@@ -44,6 +45,7 @@ const corretivas = [
 ];
 
 export default function ManutencaoCamarasFrias() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, MapPin, Calendar } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 const valores = [
@@ -12,6 +13,7 @@ const valores = [
 ];
 
 export default function Sobre() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>

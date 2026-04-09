@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getPageBySlug, SeoSymptomPage } from "@/data/seoSymptomsData";
 import { 
+import { useCTASettings } from "@/hooks/useSiteSettings";
   Phone, 
   Clock, 
   Shield, 
@@ -215,6 +216,7 @@ const getCategoryContent = (page: SeoSymptomPage) => {
 };
 
 export default function SeoSymptomTemplate() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const { slug } = useParams<{ slug: string }>();
   
   if (!slug) {

@@ -1,9 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 export default function ManutencaoRationalAnapolis() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <div className="min-h-screen bg-background">
       <Helmet>

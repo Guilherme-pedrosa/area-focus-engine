@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+import { useCTASettings } from "@/hooks/useSiteSettings";
   Cog,
   Clock,
   Shield,
@@ -314,6 +315,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaRobotCoupe() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const whatsappMessage = encodeURIComponent(
     "Olá! Preciso de assistência técnica para meu equipamento Robot Coupe."
   );

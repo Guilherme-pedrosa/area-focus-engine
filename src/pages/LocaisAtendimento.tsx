@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, CheckCircle } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 const servicos = [
@@ -17,6 +18,7 @@ const servicos = [
 ];
 
 export default function LocaisAtendimento() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>

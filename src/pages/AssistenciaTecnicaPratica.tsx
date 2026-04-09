@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+import { useCTASettings } from "@/hooks/useSiteSettings";
   Droplets,
   Snowflake,
   Clock,
@@ -326,6 +327,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaPratica() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const whatsappMessage = encodeURIComponent(
     "Olá! Preciso de assistência técnica para meu equipamento Prática."
   );

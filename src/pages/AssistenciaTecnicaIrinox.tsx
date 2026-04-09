@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
+import { useCTASettings } from "@/hooks/useSiteSettings";
   Snowflake,
   ThermometerSnowflake,
   Clock,
@@ -291,6 +292,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaIrinox() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const whatsappMessage = encodeURIComponent(
     "Olá! Preciso de assistência técnica para meu equipamento Irinox."
   );

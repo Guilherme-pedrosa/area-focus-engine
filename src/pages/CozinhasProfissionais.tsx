@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 
 const marcas = [
@@ -21,6 +22,7 @@ const equipamentos = [
 ];
 
 export default function CozinhasProfissionais() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>

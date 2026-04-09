@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { 
+import { useCTASettings } from "@/hooks/useSiteSettings";
   ArrowRight, 
   CheckCircle, 
   TrendingDown, 
@@ -101,6 +102,7 @@ const resultados = [
 ];
 
 export default function ContratosPCM() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>
