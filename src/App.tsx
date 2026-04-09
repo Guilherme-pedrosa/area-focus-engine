@@ -70,6 +70,13 @@ const App = () => (
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
 
             {/* Admin (hidden) */}
+            {/* Admin CMS */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/conteudo" element={<AdminContent />} />
+            <Route path="/admin/imagens" element={<AdminImages />} />
+            <Route path="/admin/seo" element={<AdminSeoPages />} />
+            <Route path="/admin/configuracoes" element={<AdminSettings />} />
             <Route path="/admin/seo-import" element={<AdminSeoImport />} />
 
             {/* Páginas SEO Locais Antigas */}
