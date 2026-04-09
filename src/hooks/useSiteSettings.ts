@@ -8,18 +8,18 @@ async function fetchSettings(): Promise<Record<string, string>> {
   if (cachedSettings) return cachedSettings;
   if (fetchPromise) return fetchPromise;
 
-  fetchPromise = supabase
-    .from("site_settings")
-    .select("setting_key, setting_value")
-    .then(({ data }) => {
-      const map: Record<string, string> = {};
-      (data ?? []).forEach((row) => {
-        map[row.setting_key] = row.setting_value ?? "";
-      });
-      cachedSettings = map;
-      fetchPromise = null;
-      return map;
+  fetchPromise = (async () => {
+    const { data } = await supabase
+      .from("site_settings")
+      .select("setting_key, setting_value");
+    const map: Record<string, string> = {};
+    (data ?? []).forEach((row) => {
+      map[row.setting_key] = row.setting_value ?? "";
     });
+    cachedSettings = map;
+    fetchPromise = null;
+    return map;
+  })();
 
   return fetchPromise;
 }
