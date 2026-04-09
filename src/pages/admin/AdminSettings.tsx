@@ -21,6 +21,9 @@ const DEFAULT_SETTINGS = [
   { key: "linkedin", label: "LinkedIn", group: "redes_sociais" },
   { key: "meta_title_home", label: "Meta Title (Home)", group: "seo" },
   { key: "meta_description_home", label: "Meta Description (Home)", group: "seo" },
+  { key: "linktree_url", label: "URL do Linktree (CTA principal)", group: "links" },
+  { key: "cta_texto_principal", label: "Texto do Botão CTA Principal", group: "links" },
+  { key: "cta_texto_secundario", label: "Texto do CTA Secundário", group: "links" },
 ];
 
 const AdminSettings = () => {
@@ -71,6 +74,7 @@ const AdminSettings = () => {
   };
 
   const groups = [
+    { key: "links", title: "Links de Contato / CTAs" },
     { key: "contato", title: "Informações de Contato" },
     { key: "redes_sociais", title: "Redes Sociais" },
     { key: "seo", title: "SEO Global" },
