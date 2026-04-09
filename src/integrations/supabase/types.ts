@@ -14,7 +14,147 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      seo_pages: {
+        Row: {
+          categoria: string | null
+          content: Json | null
+          created_at: string
+          dificuldade: string | null
+          id: string
+          intencao: string | null
+          keyword: string | null
+          meta_description: string | null
+          prioridade: string | null
+          slug: string
+          status: string
+          title: string
+          updated_at: string
+          volume: string | null
+        }
+        Insert: {
+          categoria?: string | null
+          content?: Json | null
+          created_at?: string
+          dificuldade?: string | null
+          id?: string
+          intencao?: string | null
+          keyword?: string | null
+          meta_description?: string | null
+          prioridade?: string | null
+          slug: string
+          status?: string
+          title: string
+          updated_at?: string
+          volume?: string | null
+        }
+        Update: {
+          categoria?: string | null
+          content?: Json | null
+          created_at?: string
+          dificuldade?: string | null
+          id?: string
+          intencao?: string | null
+          keyword?: string | null
+          meta_description?: string | null
+          prioridade?: string | null
+          slug?: string
+          status?: string
+          title?: string
+          updated_at?: string
+          volume?: string | null
+        }
+        Relationships: []
+      }
+      site_content: {
+        Row: {
+          content_key: string
+          content_type: string
+          content_value: string | null
+          created_at: string
+          id: string
+          page: string
+          section: string
+          updated_at: string
+        }
+        Insert: {
+          content_key: string
+          content_type?: string
+          content_value?: string | null
+          created_at?: string
+          id?: string
+          page: string
+          section: string
+          updated_at?: string
+        }
+        Update: {
+          content_key?: string
+          content_type?: string
+          content_value?: string | null
+          created_at?: string
+          id?: string
+          page?: string
+          section?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      site_images: {
+        Row: {
+          alt_text: string | null
+          category: string
+          created_at: string
+          file_path: string
+          id: string
+          name: string
+          url: string
+        }
+        Insert: {
+          alt_text?: string | null
+          category?: string
+          created_at?: string
+          file_path: string
+          id?: string
+          name: string
+          url: string
+        }
+        Update: {
+          alt_text?: string | null
+          category?: string
+          created_at?: string
+          file_path?: string
+          id?: string
+          name?: string
+          url?: string
+        }
+        Relationships: []
+      }
+      site_settings: {
+        Row: {
+          created_at: string
+          id: string
+          setting_group: string
+          setting_key: string
+          setting_value: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          setting_group?: string
+          setting_key: string
+          setting_value?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          setting_group?: string
+          setting_key?: string
+          setting_value?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

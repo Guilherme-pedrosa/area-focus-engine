@@ -15,6 +15,12 @@ import AssistenciaTecnicaHobart from "./pages/AssistenciaTecnicaHobart";
 import AssistenciaTecnicaVulcan from "./pages/AssistenciaTecnicaVulcan";
 import AssistenciaTecnicaTramontina from "./pages/AssistenciaTecnicaTramontina";
 import AdminSeoImport from "./pages/AdminSeoImport";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminContent from "./pages/admin/AdminContent";
+import AdminImages from "./pages/admin/AdminImages";
+import AdminSeoPages from "./pages/admin/AdminSeoPages";
+import AdminSettings from "./pages/admin/AdminSettings";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
@@ -64,6 +70,13 @@ const App = () => (
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
 
             {/* Admin (hidden) */}
+            {/* Admin CMS */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/admin/conteudo" element={<AdminContent />} />
+            <Route path="/admin/imagens" element={<AdminImages />} />
+            <Route path="/admin/seo" element={<AdminSeoPages />} />
+            <Route path="/admin/configuracoes" element={<AdminSettings />} />
             <Route path="/admin/seo-import" element={<AdminSeoImport />} />
 
             {/* Páginas SEO Locais Antigas */}
