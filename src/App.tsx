@@ -21,6 +21,8 @@ import AdminContent from "./pages/admin/AdminContent";
 import AdminImages from "./pages/admin/AdminImages";
 import AdminSeoPages from "./pages/admin/AdminSeoPages";
 import AdminSettings from "./pages/admin/AdminSettings";
+import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import PageTracker from "./components/PageTracker";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
@@ -77,6 +79,7 @@ const App = () => (
             <Route path="/admin/imagens" element={<AdminImages />} />
             <Route path="/admin/seo" element={<AdminSeoPages />} />
             <Route path="/admin/configuracoes" element={<AdminSettings />} />
+            <Route path="/admin/analytics" element={<AdminAnalytics />} />
             <Route path="/admin/seo-import" element={<AdminSeoImport />} />
 
             {/* Páginas SEO Locais Antigas */}
@@ -94,6 +97,7 @@ const App = () => (
             {/* 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <PageTracker />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
