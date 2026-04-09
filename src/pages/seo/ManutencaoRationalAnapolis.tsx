@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 export default function ManutencaoRationalAnapolis() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -50,7 +51,7 @@ export default function ManutencaoRationalAnapolis() {
             <strong>Localização:</strong> Anápolis e região (Nerópolis, Petrolina de Goiás, Campo Limpo de Goiás).
           </p>
 
-          <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer" className="btn-wedo inline-flex items-center gap-2 mb-12">
+          <a href={ctaUrl} target="_blank" rel="noopener noreferrer" className="btn-wedo inline-flex items-center gap-2 mb-12">
             Acessar Atendimento <ArrowRight className="w-5 h-5" />
           </a>
 

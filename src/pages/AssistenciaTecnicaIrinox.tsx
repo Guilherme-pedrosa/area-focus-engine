@@ -22,8 +22,8 @@ import {
   FileCheck,
   MessageCircle,
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 const WHATSAPP_URL = "https://wa.me/5562993775711";
 
 const equipamentos = [
@@ -292,6 +292,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaIrinox() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const whatsappMessage = encodeURIComponent(
     "Olá! Preciso de assistência técnica para meu equipamento Irinox."
   );
@@ -576,7 +577,7 @@ export default function AssistenciaTecnicaIrinox() {
                     className={`w-full mt-6 ${plano.destaque ? "bg-accent hover:bg-accent/90" : ""}`}
                     variant={plano.destaque ? "default" : "outline"}
                   >
-                    <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer">
+                    <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                       Solicitar Proposta
                     </a>
                   </Button>
@@ -643,7 +644,7 @@ export default function AssistenciaTecnicaIrinox() {
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer">
+                <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                   Todos os Canais de Atendimento
                 </a>
               </Button>

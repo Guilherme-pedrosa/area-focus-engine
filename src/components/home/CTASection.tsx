@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 export default function CTASection() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <section className="section-padding bg-accent">
       <div className="container-wedo text-center">
@@ -13,12 +13,12 @@ export default function CTASection() {
           Atendimento técnico Goiás e Distrito Federal
         </p>
         <a
-          href={LINKTREE_URL}
+          href={ctaUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-wedo-dark"
         >
-          Acessar Atendimento
+          {ctaText}
           <ArrowRight className="w-6 h-6" />
         </a>
       </div>

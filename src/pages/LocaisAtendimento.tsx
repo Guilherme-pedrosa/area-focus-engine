@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, CheckCircle } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 const servicos = [
   "Manutenção de Câmaras Frias",
@@ -18,6 +18,7 @@ const servicos = [
 ];
 
 export default function LocaisAtendimento() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>
@@ -103,7 +104,7 @@ export default function LocaisAtendimento() {
             Nossa equipe está pronta para atender sua empresa em Goiás e Distrito Federal.
           </p>
           <a
-            href={LINKTREE_URL}
+            href={ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"

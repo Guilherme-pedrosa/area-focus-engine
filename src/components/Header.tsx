@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logoWedo from "@/assets/logo-wedo-full.jpg";
-
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
 interface NavItem {
   label: string;
@@ -46,6 +45,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { ctaUrl, ctaText } = useCTASettings();
 
   const isActive = (href: string) => location.pathname === href;
 
@@ -53,7 +53,6 @@ export default function Header() {
     <header className="header-wedo">
       <div className="container-wedo">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <img
               src={logoWedo}
@@ -63,7 +62,6 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2">
             {navItems.map((item) => (
               <div
@@ -74,14 +72,12 @@ export default function Header() {
               >
                 {item.children ? (
                   <>
-                    <button
-                      className="nav-link-wedo flex items-center gap-1.5"
-                    >
+                    <button className="nav-link-wedo flex items-center gap-1.5">
                       {item.label}
-                      <ChevronDown 
+                      <ChevronDown
                         className={`w-4 h-4 transition-transform duration-200 ${
                           openDropdown === item.label ? "rotate-180" : ""
-                        }`} 
+                        }`}
                       />
                     </button>
                     {openDropdown === item.label && (
@@ -112,17 +108,15 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Desktop */}
           <a
-            href={LINKTREE_URL}
+            href={ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-flex btn-wedo"
           >
-            Acessar Atendimento
+            {ctaText}
           </a>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 rounded-lg text-foreground hover:bg-muted"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -136,7 +130,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-0 top-20 bg-primary z-50 animate-fade-in">
             <nav className="py-6 px-4 space-y-2">
@@ -149,10 +142,10 @@ export default function Header() {
                         className="flex items-center justify-between w-full px-4 py-4 text-base font-medium text-primary-foreground hover:text-accent rounded-lg"
                       >
                         {item.label}
-                        <ChevronDown 
+                        <ChevronDown
                           className={`w-5 h-5 transition-transform duration-200 ${
                             openDropdown === item.label ? "rotate-180" : ""
-                          }`} 
+                          }`}
                         />
                       </button>
                       {openDropdown === item.label && (
@@ -182,15 +175,14 @@ export default function Header() {
                 </div>
               ))}
             </nav>
-            {/* CTA Mobile fixo no bottom */}
             <div className="absolute bottom-8 left-4 right-4">
               <a
-                href={LINKTREE_URL}
+                href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wedo w-full justify-center text-lg py-4"
               >
-                Acessar Atendimento
+                {ctaText}
               </a>
             </div>
           </div>

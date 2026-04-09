@@ -26,8 +26,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 // Trust Bar Items
 const trustItems = [
@@ -580,6 +580,7 @@ const faqItems = [
 ];
 
 export default function AssistenciaTecnicaRational() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>
@@ -626,7 +627,7 @@ export default function AssistenciaTecnicaRational() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href={LINKTREE_URL}
+                href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wedo inline-flex items-center gap-2"
@@ -915,7 +916,7 @@ export default function AssistenciaTecnicaRational() {
 
           <div className="text-center mt-10">
             <a
-              href={LINKTREE_URL}
+              href={ctaUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-primary text-primary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
@@ -966,7 +967,7 @@ export default function AssistenciaTecnicaRational() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href={LINKTREE_URL}
+                href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"

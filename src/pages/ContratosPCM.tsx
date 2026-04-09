@@ -14,8 +14,8 @@ import {
   UtensilsCrossed,
   ShieldCheck
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 const categorias = [
   {
@@ -102,6 +102,7 @@ const resultados = [
 ];
 
 export default function ContratosPCM() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>
@@ -320,7 +321,7 @@ export default function ContratosPCM() {
             Entre em contato para uma avaliação personalizada da sua cozinha profissional. Atendemos todo o estado de Goiás e Distrito Federal.
           </p>
           <a
-            href={LINKTREE_URL}
+            href={ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"

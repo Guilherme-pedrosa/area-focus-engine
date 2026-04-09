@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Award, Users, MapPin, Calendar } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 const valores = [
   { icon: Award, title: "Excelência Técnica", desc: "Compromisso com a qualidade em cada serviço prestado." },
@@ -13,6 +13,7 @@ const valores = [
 ];
 
 export default function Sobre() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <Layout>
       <Helmet>
@@ -80,7 +81,7 @@ export default function Sobre() {
             Conheça Nossos Serviços
           </h2>
           <a
-            href={LINKTREE_URL}
+            href={ctaUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"

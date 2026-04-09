@@ -15,8 +15,8 @@ import {
   ArrowRight,
   MessageCircle
 } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 const WHATSAPP_URL = "https://wa.me/5562993775711";
 
 // Conteúdo dinâmico baseado na categoria
@@ -216,6 +216,7 @@ const getCategoryContent = (page: SeoSymptomPage) => {
 };
 
 export default function SeoSymptomTemplate() {
+  const { ctaUrl, ctaText } = useCTASettings();
   const { slug } = useParams<{ slug: string }>();
   
   if (!slug) {
@@ -498,7 +499,7 @@ export default function SeoSymptomTemplate() {
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
-                <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer">
+                <a href={ctaUrl} target="_blank" rel="noopener noreferrer">
                   Ver Todos os Canais
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>

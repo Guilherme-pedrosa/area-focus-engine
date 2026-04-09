@@ -1,10 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const LINKTREE_URL = "https://linktr.ee/wedocorp";
 
 export default function CamaraFriaNaoGelaAnapolis() {
+  const { ctaUrl, ctaText } = useCTASettings();
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -39,7 +40,7 @@ export default function CamaraFriaNaoGelaAnapolis() {
             Nossa equipe técnica realiza diagnóstico completo, identifica a causa raiz e executa o reparo com peças originais. Atendemos Anápolis e região.
           </p>
 
-          <a href={LINKTREE_URL} target="_blank" rel="noopener noreferrer" className="btn-wedo inline-flex items-center gap-2 mb-12">
+          <a href={ctaUrl} target="_blank" rel="noopener noreferrer" className="btn-wedo inline-flex items-center gap-2 mb-12">
             Solicitar Diagnóstico <ArrowRight className="w-5 h-5" />
           </a>
 
