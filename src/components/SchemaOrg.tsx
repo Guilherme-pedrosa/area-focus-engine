@@ -23,7 +23,7 @@ export default function SchemaOrg({
     "name": "WeDo Comércio e Importação Ltda",
     "description": "Assistência técnica especializada em equipamentos para cozinhas profissionais",
     "url": BASE_URL,
-    "image": `${BASE_URL}/assets/logo-wedo-full-BQUUEgvy.jpg`,
+    "image": `${BASE_URL}/images/logo-wedo-full.jpg`,
     "telephone": "+55-62-99377-5711",
     "address": {
       "@type": "PostalAddress",
