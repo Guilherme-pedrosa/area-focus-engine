@@ -253,8 +253,16 @@ const AdminContent = () => {
                 <Badge variant="outline">{editItem.section}</Badge>
                 <Badge variant="outline">{editItem.content_key}</Badge>
               </div>
-              
-              {isImageKey(editItem.content_key, editItem.content_value) && editItem.content_value && (
+              {editItem.section === "cta" && (
+                <div className="rounded-lg bg-muted/50 border p-3 space-y-1">
+                  <p className="text-xs font-medium text-muted-foreground">🔗 Link de destino (editável em Configurações)</p>
+                  <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline flex items-center gap-1.5">
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    {ctaLink}
+                  </a>
+                </div>
+              )}
+
                 <div className="rounded-lg overflow-hidden bg-muted border">
                   <img 
                     src={editItem.content_value.startsWith("src/") ? `/${editItem.content_value}` : editItem.content_value} 
