@@ -21,6 +21,9 @@ import AssistenciaTecnicaUnox from "./pages/AssistenciaTecnicaUnox";
 import AssistenciaTecnicaSkymsen from "./pages/AssistenciaTecnicaSkymsen";
 import AssistenciaTecnicaMacom from "./pages/AssistenciaTecnicaMacom";
 import AssistenciaTecnicaBecker from "./pages/AssistenciaTecnicaBecker";
+import AssistenciaTecnicaRamalhos from "./pages/AssistenciaTecnicaRamalhos";
+import AssistenciaTecnicaProgas from "./pages/AssistenciaTecnicaProgas";
+import AssistenciaTecnicaGpaniz from "./pages/AssistenciaTecnicaGpaniz";
 import AdminSeoImport from "./pages/AdminSeoImport";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -79,6 +82,9 @@ const App = () => (
             <Route path="/assistencia-tecnica-skymsen" element={<AssistenciaTecnicaSkymsen />} />
             <Route path="/assistencia-tecnica-macom" element={<AssistenciaTecnicaMacom />} />
             <Route path="/assistencia-tecnica-becker" element={<AssistenciaTecnicaBecker />} />
+            <Route path="/assistencia-tecnica-ramalhos" element={<AssistenciaTecnicaRamalhos />} />
+            <Route path="/assistencia-tecnica-progas" element={<AssistenciaTecnicaProgas />} />
+            <Route path="/assistencia-tecnica-gpaniz" element={<AssistenciaTecnicaGpaniz />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />

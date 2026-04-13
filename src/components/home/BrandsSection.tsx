@@ -9,18 +9,21 @@ const clientes = [
 const marcas = [
   { name: "Rational", authorized: true },
   { name: "Becker", authorized: true },
+  { name: "Cozil" },
+  { name: "G.Paniz" },
   { name: "Hobart" },
+  { name: "Irinox" },
+  { name: "Macom" },
+  { name: "Middleby" },
   { name: "Prática Klimaquip" },
+  { name: "Progás" },
+  { name: "Ramalhos" },
+  { name: "Robot Coupe" },
+  { name: "Rodriaço" },
+  { name: "Skymsen" },
   { name: "Tramontina" },
   { name: "Unox" },
-  { name: "Cozil" },
-  { name: "Macom" },
-  { name: "Skymsen" },
-  { name: "Robot Coupe" },
-  { name: "Middleby" },
-  { name: "Irinox" },
   { name: "Vulcan" },
-  { name: "Rodriaço" },
 ];
 
 export default function BrandsSection() {
@@ -31,7 +34,7 @@ export default function BrandsSection() {
         <div className="flex justify-center">
           <img
             src={logosImage}
-            alt="Principais Clientes e Marcas - Sodexo, JBS, Sapore, GRSA, SESI, Cargill, Ambev, Coco Bambu, Rational, Becker, Hobart, Tramontina, Unox, Cozil, Macom, Skymsen, Robot Coupe, Middleby, Irinox, Vulcan e mais"
+            alt="Principais Clientes e Marcas - Sodexo, JBS, Sapore, GRSA, SESI, Cargill, Ambev, Coco Bambu, Rational, Becker, Hobart, Tramontina, Unox, Cozil, Irinox, Robot Coupe, Middleby, Vulcan, G.Paniz, Ramalhos, Progás, Skymsen, Macom, Rodriaço e mais"
             className="w-full max-w-4xl rounded-2xl shadow-lg"
             loading="lazy"
           />
