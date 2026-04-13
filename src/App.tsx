@@ -15,6 +15,12 @@ import AssistenciaTecnicaRobotCoupe from "./pages/AssistenciaTecnicaRobotCoupe";
 import AssistenciaTecnicaHobart from "./pages/AssistenciaTecnicaHobart";
 import AssistenciaTecnicaVulcan from "./pages/AssistenciaTecnicaVulcan";
 import AssistenciaTecnicaTramontina from "./pages/AssistenciaTecnicaTramontina";
+import AssistenciaTecnicaMiddleby from "./pages/AssistenciaTecnicaMiddleby";
+import AssistenciaTecnicaCozil from "./pages/AssistenciaTecnicaCozil";
+import AssistenciaTecnicaUnox from "./pages/AssistenciaTecnicaUnox";
+import AssistenciaTecnicaSkymsen from "./pages/AssistenciaTecnicaSkymsen";
+import AssistenciaTecnicaMacom from "./pages/AssistenciaTecnicaMacom";
+import AssistenciaTecnicaBecker from "./pages/AssistenciaTecnicaBecker";
 import AdminSeoImport from "./pages/AdminSeoImport";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -67,6 +73,12 @@ const App = () => (
             <Route path="/assistencia-tecnica-hobart" element={<AssistenciaTecnicaHobart />} />
             <Route path="/assistencia-tecnica-vulcan" element={<AssistenciaTecnicaVulcan />} />
             <Route path="/assistencia-tecnica-tramontina" element={<AssistenciaTecnicaTramontina />} />
+            <Route path="/assistencia-tecnica-middleby" element={<AssistenciaTecnicaMiddleby />} />
+            <Route path="/assistencia-tecnica-cozil" element={<AssistenciaTecnicaCozil />} />
+            <Route path="/assistencia-tecnica-unox" element={<AssistenciaTecnicaUnox />} />
+            <Route path="/assistencia-tecnica-skymsen" element={<AssistenciaTecnicaSkymsen />} />
+            <Route path="/assistencia-tecnica-macom" element={<AssistenciaTecnicaMacom />} />
+            <Route path="/assistencia-tecnica-becker" element={<AssistenciaTecnicaBecker />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />
