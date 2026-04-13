@@ -16,7 +16,7 @@ export default function SchemaOrg({
     "@type": "LocalBusiness",
     "name": "WeDo Comércio e Importação Ltda",
     "description": "Assistência técnica especializada em equipamentos para cozinhas profissionais",
-    "url": "https://wedocorp.com",
+    "url": "https://wedocozinhas.com.br",
     "image": "https://www.genspark.ai/api/files/s/0neoBBK6?token=Z0FBQUFBQnBoMUQ0SkJfNm1adHROYS00RU45VDVmcFRMenVRendrUnFpNE55bGU5ZEhzWHBkRUFLcW9wb05CX2tiOGw3a3VXYllGZC05QjJrY25Fc2FCbnpMVFd5SS04TUNfTjlVRzRkVVZrbHVob3pyaHdBYkJBajVRZlVYcUMwQUd1MktzTm4zRkZjV3QxU2Q1YlFtOGlpNEVnc2NYT2JsaEVQZkY5N2JSTTlXdEtOVU5ZREduU0VMeUQwZzhGdVhkRFZOUXpfbXF4QTZtMlRsZndNa0VhS2hZWjZ5Y0Z3eHlhTnhKaHU2cThDbGhPM19PVkI4ZVVCTVcwckFiNUxzZ01zX3Y3OERXYUZ5WnE5V2dFbG4yWXFtZkJ0ZlBrQ1E9PQ",
     "areaServed": [
       {
@@ -66,13 +66,13 @@ export default function SchemaOrg({
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://wedocorp.com" />
+      <link rel="canonical" href="https://wedocozinhas.com.br" />
       
       {/* Open Graph */}
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://wedocorp.com" />
+      <meta property="og:url" content="https://wedocozinhas.com.br" />
       
       {/* Schema.org */}
       <script type="application/ld+json">

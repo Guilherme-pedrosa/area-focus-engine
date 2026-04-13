@@ -344,7 +344,7 @@ export default function AssistenciaTecnicaPratica() {
           name="keywords"
           content="assistência técnica prática, manutenção prática, lavadora louças prcop, prcop 504 manutenção, ultracongelador prática"
         />
-        <link rel="canonical" href="https://wedocorp.com.br/assistencia-tecnica-pratica" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-pratica" />
       </Helmet>
 
       {/* Hero Section */}

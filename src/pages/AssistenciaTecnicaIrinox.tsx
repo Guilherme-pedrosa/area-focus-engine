@@ -309,7 +309,7 @@ export default function AssistenciaTecnicaIrinox() {
           name="keywords"
           content="assistência técnica irinox, manutenção irinox, abatedor temperatura irinox, multifresh manutenção, easyfresh assistência, ultracongelador irinox"
         />
-        <link rel="canonical" href="https://wedocorp.com.br/assistencia-tecnica-irinox" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-irinox" />
       </Helmet>
 
       {/* Hero Section */}

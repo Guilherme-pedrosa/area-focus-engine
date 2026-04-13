@@ -297,7 +297,7 @@ export default function AssistenciaTecnicaHobart() {
           name="keywords"
           content="assistência técnica hobart, manutenção hobart, lava-louças hobart, ecomax manutenção, fx40 hobart"
         />
-        <link rel="canonical" href="https://wedocorp.com.br/assistencia-tecnica-hobart" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-hobart" />
       </Helmet>
 
       {/* Hero Section */}

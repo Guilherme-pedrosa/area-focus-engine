@@ -11,7 +11,7 @@ export default function CamaraFriaNaoGelaAnapolis() {
       <Helmet>
         <title>Câmara Fria Não Gela em Anápolis | Diagnóstico e Reparo Técnico</title>
         <meta name="description" content="Sua câmara fria não está gelando em Anápolis? Diagnóstico técnico especializado. Identificamos e corrigimos problemas de refrigeração." />
-        <link rel="canonical" href="https://wedocorp.com/problemas/camara-fria-nao-gela-anapolis" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/problemas/camara-fria-nao-gela-anapolis" />
       </Helmet>
 
       <div className="container-wedo section-padding">

@@ -19,7 +19,7 @@ export default function Sobre() {
       <Helmet>
         <title>Sobre a WeDo | Manutenção de Equipamentos Industriais | Goiás e DF</title>
         <meta name="description" content="Conheça a WeDo: desde 2018 oferecendo assistência técnica especializada em câmaras frias e equipamentos industriais em Goiás e DF." />
-        <link rel="canonical" href="https://wedocorp.com/sobre" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/sobre" />
       </Helmet>
 
       {/* Hero */}

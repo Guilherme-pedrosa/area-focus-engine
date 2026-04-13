@@ -24,7 +24,7 @@ export default function LocaisAtendimento() {
       <Helmet>
         <title>Locais de Atendimento WeDo | Goiás e Distrito Federal</title>
         <meta name="description" content="Atendemos todo o estado de Goiás e Distrito Federal. Manutenção de câmaras frias e equipamentos industriais com equipe especializada." />
-        <link rel="canonical" href="https://wedocorp.com/locais-atendimento" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/locais-atendimento" />
       </Helmet>
 
       {/* Hero */}

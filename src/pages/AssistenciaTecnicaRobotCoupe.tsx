@@ -332,7 +332,7 @@ export default function AssistenciaTecnicaRobotCoupe() {
           name="keywords"
           content="assistência técnica robot coupe, manutenção robot coupe, processador alimentos robot coupe, cutter robot coupe, robot coupe brasil"
         />
-        <link rel="canonical" href="https://wedocorp.com.br/assistencia-tecnica-robot-coupe" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-robot-coupe" />
       </Helmet>
 
       {/* Hero Section */}

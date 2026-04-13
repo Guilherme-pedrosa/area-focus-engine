@@ -586,7 +586,7 @@ export default function AssistenciaTecnicaRational() {
       <Helmet>
         <title>Assistência Técnica Rational | Parceiro Autorizado | Goiás e DF | WeDo</title>
         <meta name="description" content="Assistência técnica autorizada Rational em Goiás e DF. Manutenção iCombi Pro, iCombi Classic, SelfCookingCenter, iVario Pro. Técnicos certificados pela fábrica, peças originais, atendimento 24/7." />
-        <link rel="canonical" href="https://wedocorp.com/assistencia-tecnica-rational" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-rational" />
         <meta name="keywords" content="assistência técnica rational, manutenção rational, manutenção icombi pro, selfcookingcenter scc, ivario pro manutenção, rational brasil, peças rational originais, conserto forno rational, técnico rational certificado" />
       </Helmet>
 

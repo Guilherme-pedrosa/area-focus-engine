@@ -11,7 +11,7 @@ export default function ManutencaoRationalGoiania() {
       <Helmet>
         <title>Manutenção Rational Goiânia | Assistência Técnica Autorizada</title>
         <meta name="description" content="Assistência técnica Rational autorizada em Goiânia. Manutenção iCombi Pro, iCombi Classic, iVario. Técnicos certificados." />
-        <link rel="canonical" href="https://wedocorp.com/servicos-local/manutencao-rational-goiania" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/servicos-local/manutencao-rational-goiania" />
       </Helmet>
 
       <div className="container-wedo section-padding">

@@ -21,7 +21,7 @@ export default function Clientes() {
       <Helmet>
         <title>Clientes | WeDo Manutenção de Equipamentos Industriais</title>
         <meta name="description" content="Conheça os segmentos atendidos pela WeDo: restaurantes, hotéis, supermercados, indústrias, hospitais e food services." />
-        <link rel="canonical" href="https://wedocorp.com/clientes" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/clientes" />
       </Helmet>
 
       {/* Hero */}

@@ -21,7 +21,7 @@ export default function HigienizacaoCoifas() {
       <Helmet>
         <title>Higienização de Coifas | RDC 216 | Goiás e DF | WeDo</title>
         <meta name="description" content="Limpeza técnica de coifas e dutos conforme RDC 216. Compliance total com laudos técnicos rastreáveis para fiscalização. Goiás e DF." />
-        <link rel="canonical" href="https://wedocorp.com/higienizacao-coifas" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/higienizacao-coifas" />
       </Helmet>
 
       {/* Hero */}
