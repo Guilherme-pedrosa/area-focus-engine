@@ -5,6 +5,33 @@ import { usePostBySlug } from "@/hooks/useBlog";
 import { Calendar, Tag, ArrowLeft, User } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 
+function formatContent(raw: string): string {
+  if (!raw) return "";
+  // If content already has HTML block tags, return as-is
+  if (/<(p|h[1-6]|ul|ol|div|blockquote|section|article)\b/i.test(raw)) {
+    return raw;
+  }
+  // Plain text: split by double line breaks into paragraphs
+  return raw
+    .split(/\n{2,}/)
+    .map((block) => {
+      const trimmed = block.trim();
+      if (!trimmed) return "";
+      // Detect lines that look like headings (short, no period at end, or ALL CAPS)
+      if (trimmed.length < 120 && !trimmed.endsWith(".") && /^[A-ZÁÀÃÉÊÍÓÔÕÚÇ\d\s:–—\-,]+$/i.test(trimmed) && trimmed === trimmed.replace(/\. /g, '')) {
+        // Check if it's likely a subtitle/heading
+        if (trimmed.length < 80) {
+          return `<h2>${trimmed}</h2>`;
+        }
+      }
+      // Regular paragraph - also convert single line breaks to <br>
+      const withBreaks = trimmed.replace(/\n/g, "<br />");
+      return `<p>${withBreaks}</p>`;
+    })
+    .filter(Boolean)
+    .join("\n");
+}
+
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { data: post, isLoading, error } = usePostBySlug(slug || "");
@@ -108,8 +135,15 @@ export default function BlogPost() {
 
           {/* Content rendered as HTML */}
           <div
-            className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-accent prose-strong:text-foreground prose-li:text-muted-foreground"
-            dangerouslySetInnerHTML={{ __html: post.content || "" }}
+            className="prose prose-lg max-w-none
+              prose-headings:text-foreground prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-4
+              prose-h2:text-2xl prose-h2:border-l-4 prose-h2:border-accent prose-h2:pl-4
+              prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
+              prose-a:text-accent prose-a:underline
+              prose-strong:text-foreground
+              prose-li:text-muted-foreground
+              prose-blockquote:border-l-4 prose-blockquote:border-accent/50 prose-blockquote:italic prose-blockquote:text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: formatContent(post.content || "") }}
           />
 
           {/* CTA */}
