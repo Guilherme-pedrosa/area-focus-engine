@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const WHATSAPP_URL = "https://wa.me/5562993775711";
+const CONTACT_URL = "https://contatoswedo.lovable.app/";
 
 // Conteúdo dinâmico baseado na categoria
 const getCategoryContent = (page: SeoSymptomPage) => {
@@ -230,9 +230,6 @@ export default function SeoSymptomTemplate() {
   }
 
   const content = getCategoryContent(page);
-  const whatsappMessage = encodeURIComponent(
-    `Olá! Preciso de ajuda urgente. Meu ${page.equipamento} está com problema: ${page.sintoma}. Estou em ${page.cidade}.`
-  );
 
   // Schema.org LocalBusiness + Service
   const schemaOrg = {
@@ -327,7 +324,7 @@ export default function SeoSymptomTemplate() {
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8"
               >
-                <a href={`${WHATSAPP_URL}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                <a href={`${CONTACT_URL}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chamar no WhatsApp
                 </a>
@@ -338,9 +335,9 @@ export default function SeoSymptomTemplate() {
                 variant="outline"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8"
               >
-                <a href="tel:+5562993775711">
+                <a href="https://contatoswedo.lovable.app/" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-5 h-5 mr-2" />
-                  (62) 99377-5711
+                  Canais de Contato
                 </a>
               </Button>
             </div>
@@ -488,7 +485,7 @@ export default function SeoSymptomTemplate() {
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8"
               >
-                <a href={`${WHATSAPP_URL}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                <a href={`${CONTACT_URL}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Solicitar Orçamento Grátis
                 </a>
