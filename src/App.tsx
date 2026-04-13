@@ -38,12 +38,15 @@ import AdminImages from "./pages/admin/AdminImages";
 import AdminSeoPages from "./pages/admin/AdminSeoPages";
 import AdminSettings from "./pages/admin/AdminSettings";
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import AdminBlog from "./pages/admin/AdminBlog";
 import PageTracker from "./components/PageTracker";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
 import Clientes from "./pages/Clientes";
 import CozinhasProfissionais from "./pages/CozinhasProfissionais";
+import Blog from "./pages/Blog";
+import BlogPostPage from "./pages/BlogPost";
 
 // Páginas SEO Locais (escondidas do menu)
 import SEOManutencaoRationalAnapolis from "./pages/seo/ManutencaoRationalAnapolis";
@@ -102,6 +105,8 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
 
             {/* Admin (hidden) */}
             {/* Admin CMS */}
@@ -112,6 +117,7 @@ const App = () => (
             <Route path="/admin/seo" element={<AdminSeoPages />} />
             <Route path="/admin/configuracoes" element={<AdminSettings />} />
             <Route path="/admin/analytics" element={<AdminAnalytics />} />
+            <Route path="/admin/blog" element={<AdminBlog />} />
             <Route path="/admin/seo-import" element={<AdminSeoImport />} />
 
             {/* Páginas SEO Locais Antigas */}
