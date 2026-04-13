@@ -48,7 +48,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva semestral",
-        "Troca lâminas/discos (afiação ou substituição)",
+        "Troca de lâminas/discos (substituição completa)",
         "Reparo motor (rolamentos, escovas)",
         "Substituição selo mecânico cuba",
         "Troca micro switches tampa",
@@ -86,7 +86,7 @@ const equipamentos = [
         "Alta potência (3 a 5,5 HP)",
       ],
       servicos: [
-        "Afiação profissional lâmina S",
+        "Substituição de lâmina S",
         "Balanceamento lâmina (evita vibração)",
         "Troca rolamentos eixo principal",
         "Reparo selo cuba",
@@ -123,7 +123,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva trimestral",
-        "Afiação/substituição discos",
+        "Substituição de discos",
         "Troca motor (queima por sobrecarga)",
         "Substituição sistema segurança",
         "Reparo ejetor vegetais",
@@ -243,8 +243,8 @@ const diferenciais = [
   },
   {
     icon: Leaf,
-    titulo: "Afiação Profissional",
-    descricao: "Serviço de afiação de lâminas S e discos com equipamento especializado.",
+    titulo: "Troca de Lâminas",
+    descricao: "Substituição de lâminas S e discos com peças originais Robot Coupe.",
   },
   {
     icon: Shield,
@@ -273,7 +273,7 @@ const planosPCM = [
     destaque: true,
     beneficios: [
       "4 manutenções preventivas/ano",
-      "Afiação lâminas inclusa",
+      "Troca de lâminas inclusa",
       "Desconto 30% peças",
       "1 corretiva inclusa/ano",
       "Atendimento prioritário",
@@ -283,7 +283,7 @@ const planosPCM = [
     nome: "Corporativo",
     beneficios: [
       "6 manutenções preventivas/ano",
-      "Afiação trimestral inclusa",
+      "Revisão trimestral de lâminas inclusa",
       "Desconto 40% peças",
       "Corretivas inclusas",
       "Atendimento express",
@@ -301,8 +301,8 @@ const faqItems = [
     resposta: "Processador (Linha R com discos): corta, fatia, rala, julienne (cortes definidos). Cutter (Linha R com lâmina S): tritura, emulsifica, faz pastas, patês, mousses (processamento fino homogêneo).",
   },
   {
-    pergunta: "Posso afiar lâminas Robot Coupe?",
-    resposta: "Lâminas S de cutters: sim, afiação profissional. Discos de corte desgastados: substituição recomendada (afiação pode desbalancear). WeDo faz ambos serviços.",
+    pergunta: "Quando devo trocar as lâminas Robot Coupe?",
+    resposta: "Lâminas S de cutters e discos de corte devem ser substituídos quando apresentam desgaste, corte irregular ou vibração excessiva. A WeDo realiza a troca com peças originais.",
   },
   {
     pergunta: "Qual a frequência de manutenção Robot Coupe?",
@@ -353,7 +353,7 @@ export default function AssistenciaTecnicaRobotCoupe() {
 
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
               Manutenção especializada em toda linha Robot Coupe. 
-              Afiação de lâminas, troca de peças originais e atendimento técnico certificado.
+              Troca de lâminas, peças originais e atendimento técnico certificado.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -392,7 +392,7 @@ export default function AssistenciaTecnicaRobotCoupe() {
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/70">
                 <Zap className="w-5 h-5 text-accent" />
-                <span>Afiação Profissional</span>
+                <span>Troca de Lâminas</span>
               </div>
             </div>
           </div>
