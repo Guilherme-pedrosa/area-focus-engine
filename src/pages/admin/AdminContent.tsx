@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AdminLayout from "@/components/admin/AdminLayout";
 import { supabase } from "@/integrations/supabase/client";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "sonner";
-import { Pencil, Save, Plus, Trash2, Image as ImageIcon, FileText, Type } from "lucide-react";
+import { Pencil, Save, Plus, Trash2, Image as ImageIcon, FileText, Type, ExternalLink } from "lucide-react";
 
 type ContentItem = {
   id: string;
@@ -64,6 +65,7 @@ const isImageKey = (key: string, value: string | null) => {
 };
 
 const AdminContent = () => {
+  const { get: getSetting } = useSiteSettings();
   const [items, setItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [editItem, setEditItem] = useState<ContentItem | null>(null);
@@ -71,6 +73,7 @@ const AdminContent = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [newDialog, setNewDialog] = useState(false);
   const [newForm, setNewForm] = useState({ page: "", section: "", content_key: "", content_value: "", content_type: "text" });
+  const ctaLink = getSetting("linktree_url", "https://linktr.ee/wedocozinhas");
 
   const fetchItems = async () => {
     setLoading(true);
@@ -209,6 +212,14 @@ const AdminContent = () => {
                               </span>
                             </div>
                             {renderValue(item)}
+                            {item.section === "cta" && (
+                              <div className="flex items-center gap-1.5 mt-1">
+                                <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline truncate max-w-[250px]">
+                                  {ctaLink}
+                                </a>
+                              </div>
+                            )}
                           </div>
                           <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
                             <Button variant="ghost" size="icon" onClick={() => handleEdit(item)} title="Editar">
@@ -242,7 +253,15 @@ const AdminContent = () => {
                 <Badge variant="outline">{editItem.section}</Badge>
                 <Badge variant="outline">{editItem.content_key}</Badge>
               </div>
-              
+              {editItem.section === "cta" && (
+                <div className="rounded-lg bg-muted/50 border p-3 space-y-1">
+                  <p className="text-xs font-medium text-muted-foreground">🔗 Link de destino (editável em Configurações)</p>
+                  <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline flex items-center gap-1.5">
+                    <ExternalLink className="w-3.5 h-3.5" />
+                    {ctaLink}
+                  </a>
+                </div>
+              )}
               {isImageKey(editItem.content_key, editItem.content_value) && editItem.content_value && (
                 <div className="rounded-lg overflow-hidden bg-muted border">
                   <img 
