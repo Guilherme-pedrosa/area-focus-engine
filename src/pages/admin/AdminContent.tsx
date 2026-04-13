@@ -262,7 +262,7 @@ const AdminContent = () => {
                   </a>
                 </div>
               )}
-
+              {isImageKey(editItem.content_key, editItem.content_value) && editItem.content_value && (
                 <div className="rounded-lg overflow-hidden bg-muted border">
                   <img 
                     src={editItem.content_value.startsWith("src/") ? `/${editItem.content_value}` : editItem.content_value} 
