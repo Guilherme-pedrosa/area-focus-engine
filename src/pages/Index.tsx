@@ -10,7 +10,10 @@ import SchemaOrg from "@/components/SchemaOrg";
 export default function Index() {
   return (
     <Layout>
-      <SchemaOrg />
+      <SchemaOrg
+        pageTitle="WeDo | Manutenção para Cozinhas Profissionais em Goiás e DF"
+        pageDescription="Manutenção especializada para cozinhas profissionais, refrigeração e equipamentos críticos em Goiás e DF. Atendimento técnico para operações que não podem parar."
+      />
       <HeroSection />
       <ProblemsSection />
       <ServicesSection />
