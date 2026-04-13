@@ -15,6 +15,7 @@ const marcas = [
   { name: "Irinox" },
   { name: "Macom" },
   { name: "Middleby" },
+  { name: "Netter" },
   { name: "Prática Klimaquip" },
   { name: "Progás" },
   { name: "Ramalhos" },
@@ -24,6 +25,7 @@ const marcas = [
   { name: "Tramontina" },
   { name: "Unox" },
   { name: "Vulcan" },
+  { name: "Winterhalter" },
 ];
 
 export default function BrandsSection() {
