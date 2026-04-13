@@ -73,6 +73,12 @@ const App = () => (
             <Route path="/assistencia-tecnica-hobart" element={<AssistenciaTecnicaHobart />} />
             <Route path="/assistencia-tecnica-vulcan" element={<AssistenciaTecnicaVulcan />} />
             <Route path="/assistencia-tecnica-tramontina" element={<AssistenciaTecnicaTramontina />} />
+            <Route path="/assistencia-tecnica-middleby" element={<AssistenciaTecnicaMiddleby />} />
+            <Route path="/assistencia-tecnica-cozil" element={<AssistenciaTecnicaCozil />} />
+            <Route path="/assistencia-tecnica-unox" element={<AssistenciaTecnicaUnox />} />
+            <Route path="/assistencia-tecnica-skymsen" element={<AssistenciaTecnicaSkymsen />} />
+            <Route path="/assistencia-tecnica-macom" element={<AssistenciaTecnicaMacom />} />
+            <Route path="/assistencia-tecnica-becker" element={<AssistenciaTecnicaBecker />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />
