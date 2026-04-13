@@ -83,7 +83,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva semestral",
-        "Afiação e troca de facas/lâminas",
+        "Troca de facas/lâminas",
         "Ajuste de cilindros e rolos",
         "Troca de correias transportadoras",
         "Calibração de divisão/peso",
