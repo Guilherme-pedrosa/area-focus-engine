@@ -88,8 +88,8 @@ export default function SeoPreviewModal({ url, open, onClose, onEdit, onPublish 
                 <p className="font-semibold text-foreground">{conteudo.prazo}</p>
               </div>
               <div className="text-center">
-                <strong className="text-sm text-muted-foreground">📞 Atendimento 24h</strong>
-                <p className="font-semibold text-accent">(62) 98269-0073</p>
+                <strong className="text-sm text-muted-foreground">📞 Atendimento</strong>
+                <a href="https://contatoswedo.lovable.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">Canais de Contato</a>
               </div>
             </div>
 

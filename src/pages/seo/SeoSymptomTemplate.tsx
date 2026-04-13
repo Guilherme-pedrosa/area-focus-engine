@@ -238,7 +238,7 @@ export default function SeoSymptomTemplate() {
     "name": "WeDo Manutenção de Cozinhas Profissionais",
     "description": page.metaDescription,
     "url": `https://wedocozinhas.com.br/${page.slug}`,
-    "telephone": "+55 62 99377-5711",
+    "telephone": "https://contatoswedo.lovable.app/",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": page.cidade,
