@@ -265,7 +265,7 @@
 
   .dropdown-wedo-content {
     @apply bg-white rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.12)] py-2
-           animate-slide-down;
+           animate-slide-down max-h-[70vh] overflow-y-auto;
   }
 
   .dropdown-wedo-item {
