@@ -65,6 +65,7 @@ const isImageKey = (key: string, value: string | null) => {
 };
 
 const AdminContent = () => {
+  const { get: getSetting } = useSiteSettings();
   const [items, setItems] = useState<ContentItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [editItem, setEditItem] = useState<ContentItem | null>(null);
@@ -72,6 +73,7 @@ const AdminContent = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [newDialog, setNewDialog] = useState(false);
   const [newForm, setNewForm] = useState({ page: "", section: "", content_key: "", content_value: "", content_type: "text" });
+  const ctaLink = getSetting("linktree_url", "https://linktr.ee/wedocozinhas");
 
   const fetchItems = async () => {
     setLoading(true);
