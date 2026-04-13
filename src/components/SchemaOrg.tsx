@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 interface SchemaOrgProps {
   type?: "LocalBusiness" | "Service";
@@ -6,18 +7,37 @@ interface SchemaOrgProps {
   pageDescription?: string;
 }
 
+const BASE_URL = "https://wedocozinhas.com.br";
+
 export default function SchemaOrg({ 
   type = "LocalBusiness",
   pageTitle = "Manutenção de Câmaras Frias e Cozinhas Profissionais | Goiás e DF | WeDo",
   pageDescription = "Manutenção preventiva e corretiva de câmaras frias, refrigeração e equipamentos profissionais. Parceiro Rational. Atendemos Goiás e Distrito Federal."
 }: SchemaOrgProps) {
+  const location = useLocation();
+  const canonicalUrl = `${BASE_URL}${location.pathname === "/" ? "" : location.pathname}`;
+
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "WeDo Comércio e Importação Ltda",
     "description": "Assistência técnica especializada em equipamentos para cozinhas profissionais",
-    "url": "https://wedocozinhas.com.br",
-    "image": "https://wedocozinhas.com.br/assets/logo-wedo-full-BQUUEgvy.jpg",
+    "url": BASE_URL,
+    "image": `${BASE_URL}/assets/logo-wedo-full-BQUUEgvy.jpg`,
+    "telephone": "+55-62-99377-5711",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua 5",
+      "addressLocality": "Anápolis",
+      "addressRegion": "GO",
+      "postalCode": "75000-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -16.3281,
+      "longitude": -48.9530
+    },
     "areaServed": [
       {
         "@type": "State",
@@ -39,13 +59,22 @@ export default function SchemaOrg({
       }
     ],
     "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
     "knowsAbout": [
       "Manutenção de Câmaras Frias",
       "Refrigeração Profissional",
       "Assistência Técnica Rational",
+      "Assistência Técnica Autorizada Becker",
       "Equipamentos de Cozinha Profissional",
       "Manutenção Preventiva",
-      "Manutenção Corretiva"
+      "Manutenção Corretiva",
+      "Higienização de Coifas",
+      "Contratos PCM"
     ]
   };
 
@@ -55,7 +84,8 @@ export default function SchemaOrg({
     "serviceType": "Manutenção de Equipamentos para Cozinhas Profissionais",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "WeDo Comércio e Importação Ltda"
+      "name": "WeDo Comércio e Importação Ltda",
+      "url": BASE_URL
     },
     "areaServed": ["Goiás", "Distrito Federal"],
     "description": pageDescription
@@ -66,13 +96,15 @@ export default function SchemaOrg({
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href="https://wedocozinhas.com.br" />
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph */}
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://wedocozinhas.com.br" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="WeDo Cozinhas Profissionais" />
+      <meta property="og:locale" content="pt_BR" />
       
       {/* Schema.org */}
       <script type="application/ld+json">
