@@ -20,7 +20,7 @@ const navItems: NavItem[] = [
       { label: "Refrigeração Comercial", href: "/manutencao-camaras-frias" },
       { label: "Câmaras Frias", href: "/manutencao-camaras-frias" },
       { label: "Instalação Técnica", href: "/cozinhas-profissionais" },
-      { label: "Higienização Industrial", href: "/higienizacao-coifas" },
+      { label: "Limpeza de Coifa", href: "/higienizacao-coifas" },
       { label: "Locação Técnica", href: "/cozinhas-profissionais" },
     ],
   },
