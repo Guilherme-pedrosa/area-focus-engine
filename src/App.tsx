@@ -26,6 +26,10 @@ import AssistenciaTecnicaProgas from "./pages/AssistenciaTecnicaProgas";
 import AssistenciaTecnicaGpaniz from "./pages/AssistenciaTecnicaGpaniz";
 import AssistenciaTecnicaWinterhalter from "./pages/AssistenciaTecnicaWinterhalter";
 import AssistenciaTecnicaNetter from "./pages/AssistenciaTecnicaNetter";
+import AssistenciaTecnicaRodriaco from "./pages/AssistenciaTecnicaRodriaco";
+import AssistenciaTecnicaImbera from "./pages/AssistenciaTecnicaImbera";
+import AssistenciaTecnicaGelopar from "./pages/AssistenciaTecnicaGelopar";
+import AssistenciaTecnicaHoshizaki from "./pages/AssistenciaTecnicaHoshizaki";
 import AdminSeoImport from "./pages/AdminSeoImport";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -89,6 +93,10 @@ const App = () => (
             <Route path="/assistencia-tecnica-gpaniz" element={<AssistenciaTecnicaGpaniz />} />
             <Route path="/assistencia-tecnica-winterhalter" element={<AssistenciaTecnicaWinterhalter />} />
             <Route path="/assistencia-tecnica-netter" element={<AssistenciaTecnicaNetter />} />
+            <Route path="/assistencia-tecnica-rodriaco" element={<AssistenciaTecnicaRodriaco />} />
+            <Route path="/assistencia-tecnica-imbera" element={<AssistenciaTecnicaImbera />} />
+            <Route path="/assistencia-tecnica-gelopar" element={<AssistenciaTecnicaGelopar />} />
+            <Route path="/assistencia-tecnica-hoshizaki" element={<AssistenciaTecnicaHoshizaki />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/sobre" element={<Sobre />} />
