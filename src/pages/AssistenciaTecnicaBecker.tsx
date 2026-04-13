@@ -85,7 +85,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva semestral",
-        "Afiação e troca de facas",
+        "Troca de facas",
         "Ajuste de pressão e uniformidade",
         "Troca de molas e pistões",
         "Substituição de rolamentos",
@@ -176,7 +176,7 @@ const problemasComuns = [
       "Prato de divisão gasto",
     ],
     solucoes: [
-      "Afiação ou troca de facas",
+      "Troca de facas",
       "Substituição de molas",
       "Reparo do sistema de pressão",
       "Troca do prato de divisão",

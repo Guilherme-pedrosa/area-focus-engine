@@ -45,7 +45,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva semestral",
-        "Afiação e troca de lâminas/discos",
+        "Troca de lâminas/discos",
         "Troca de rolamentos e correias",
         "Substituição de capacitores e motores",
         "Verificação sistema de segurança",
@@ -119,7 +119,7 @@ const equipamentos = [
       ],
       servicos: [
         "Manutenção preventiva programada",
-        "Afiação profissional de lâminas",
+        "Troca de lâminas",
         "Troca de correias e engrenagens",
         "Substituição de abrasivos (descascador)",
         "Reparo elétrico e mecânico",
@@ -172,7 +172,7 @@ const problemasComuns = [
       "Correia frouxa ou partida",
     ],
     solucoes: [
-      "Afiação ou troca de lâminas",
+      "Troca de lâminas",
       "Substituição de rolamentos",
       "Realinhamento do eixo",
       "Troca de correias",
@@ -228,7 +228,7 @@ const planosPCM = [
     nome: "Essencial",
     beneficios: [
       "2 manutenções preventivas/ano",
-      "Afiação de lâminas inclusa",
+      "Troca de lâminas inclusa",
       "Desconto 20% peças",
       "Atendimento em horário comercial",
     ],
@@ -238,7 +238,7 @@ const planosPCM = [
     destaque: true,
     beneficios: [
       "4 manutenções preventivas/ano",
-      "Afiação + lubrificação inclusos",
+      "Troca de lâminas + lubrificação inclusos",
       "Desconto 30% peças",
       "1 corretiva inclusa/ano",
       "Atendimento prioritário",
@@ -262,8 +262,8 @@ const faqItems = [
     resposta: "A Skymsen faz parte do grupo Metalfrio/Siemsen, sendo uma das marcas mais tradicionais do Brasil em equipamentos de processamento de alimentos para cozinhas profissionais.",
   },
   {
-    pergunta: "Com que frequência devo afiar as lâminas do processador?",
-    resposta: "Uso intensivo (>8h/dia): mensal. Uso padrão: trimestral. Lâminas desgastadas forçam o motor e comprometem a qualidade do corte. Oferecemos serviço profissional de afiação.",
+    pergunta: "Com que frequência devo trocar as lâminas do processador?",
+    resposta: "Uso intensivo (>8h/dia): mensal. Uso padrão: trimestral. Lâminas desgastadas forçam o motor e comprometem a qualidade do corte. Realizamos a substituição com peças originais.",
   },
   {
     pergunta: "Meu liquidificador industrial está vazando pela base. O que pode ser?",
@@ -325,7 +325,7 @@ export default function AssistenciaTecnicaSkymsen() {
               <span className="block text-accent mt-2">Processadores, Liquidificadores e Equipamentos de Preparo</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Manutenção especializada em toda linha Skymsen de equipamentos de processamento. Afiação, troca de peças e assistência completa.
+              Manutenção especializada em toda linha Skymsen de equipamentos de processamento. Troca de peças, lâminas e assistência completa.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8">
