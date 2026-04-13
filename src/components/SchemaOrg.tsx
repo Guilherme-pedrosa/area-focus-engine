@@ -17,7 +17,7 @@ export default function SchemaOrg({
     "name": "WeDo Comércio e Importação Ltda",
     "description": "Assistência técnica especializada em equipamentos para cozinhas profissionais",
     "url": "https://wedocozinhas.com.br",
-    "image": "https://www.genspark.ai/api/files/s/0neoBBK6?token=Z0FBQUFBQnBoMUQ0SkJfNm1adHROYS00RU45VDVmcFRMenVRendrUnFpNE55bGU5ZEhzWHBkRUFLcW9wb05CX2tiOGw3a3VXYllGZC05QjJrY25Fc2FCbnpMVFd5SS04TUNfTjlVRzRkVVZrbHVob3pyaHdBYkJBajVRZlVYcUMwQUd1MktzTm4zRkZjV3QxU2Q1YlFtOGlpNEVnc2NYT2JsaEVQZkY5N2JSTTlXdEtOVU5ZREduU0VMeUQwZzhGdVhkRFZOUXpfbXF4QTZtMlRsZndNa0VhS2hZWjZ5Y0Z3eHlhTnhKaHU2cThDbGhPM19PVkI4ZVVCTVcwckFiNUxzZ01zX3Y3OERXYUZ5WnE5V2dFbG4yWXFtZkJ0ZlBrQ1E9PQ",
+    "image": "https://wedocozinhas.com.br/assets/logo-wedo-full-BQUUEgvy.jpg",
     "areaServed": [
       {
         "@type": "State",
