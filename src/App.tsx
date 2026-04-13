@@ -24,6 +24,8 @@ import AssistenciaTecnicaBecker from "./pages/AssistenciaTecnicaBecker";
 import AssistenciaTecnicaRamalhos from "./pages/AssistenciaTecnicaRamalhos";
 import AssistenciaTecnicaProgas from "./pages/AssistenciaTecnicaProgas";
 import AssistenciaTecnicaGpaniz from "./pages/AssistenciaTecnicaGpaniz";
+import AssistenciaTecnicaWinterhalter from "./pages/AssistenciaTecnicaWinterhalter";
+import AssistenciaTecnicaNetter from "./pages/AssistenciaTecnicaNetter";
 import AdminSeoImport from "./pages/AdminSeoImport";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard";
