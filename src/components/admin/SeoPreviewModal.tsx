@@ -88,8 +88,8 @@ export default function SeoPreviewModal({ url, open, onClose, onEdit, onPublish 
                 <p className="font-semibold text-foreground">{conteudo.prazo}</p>
               </div>
               <div className="text-center">
-                <strong className="text-sm text-muted-foreground">📞 Atendimento 24h</strong>
-                <p className="font-semibold text-accent">(62) 98269-0073</p>
+                <strong className="text-sm text-muted-foreground">📞 Atendimento</strong>
+                <a href="https://contatoswedo.lovable.app/" target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">Canais de Contato</a>
               </div>
             </div>
 
@@ -98,19 +98,13 @@ export default function SeoPreviewModal({ url, open, onClose, onEdit, onPublish 
               <h3 className="text-lg font-semibold">Precisa de Atendimento Agora?</h3>
               <div className="flex flex-wrap gap-3 justify-center">
                 <a
-                  href="tel:+5562982690073"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90"
-                >
-                  <Phone className="w-5 h-5" />
-                  LIGUE: (62) 98269-0073
-                </a>
-                <a
-                  href="https://wa.me/5562982690073"
+                  href="https://contatoswedo.lovable.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90"
                 >
-                  💬 WHATSAPP
+                  <ExternalLink className="w-5 h-5" />
+                  ACESSAR CANAIS DE CONTATO
                 </a>
               </div>
             </footer>

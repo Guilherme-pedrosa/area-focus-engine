@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 
-const WHATSAPP_URL = "https://wa.me/5562993775711";
+const CONTACT_URL = "https://contatoswedo.lovable.app/";
 
 const equipamentos = [
   {
@@ -290,9 +290,6 @@ const faqItems = [
 
 export default function AssistenciaTecnicaCozil() {
   const { ctaUrl, ctaText } = useCTASettings();
-  const whatsappMessage = encodeURIComponent(
-    "Olá! Preciso de assistência técnica para meu equipamento Cozil."
-  );
 
   return (
     <Layout>
@@ -330,12 +327,12 @@ export default function AssistenciaTecnicaCozil() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8">
-                <a href={`${WHATSAPP_URL}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                <a href={`${CONTACT_URL}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />Solicitar Orçamento
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="tel:+5562993775711"><Phone className="w-5 h-5 mr-2" />(62) 99377-5711</a>
+                <a href="https://contatoswedo.lovable.app/" target="_blank" rel="noopener noreferrer"><Phone className="w-5 h-5 mr-2" />Canais de Contato</a>
               </Button>
             </div>
             <div className="flex flex-wrap justify-center gap-6 mt-10">
@@ -536,7 +533,7 @@ export default function AssistenciaTecnicaCozil() {
             <p className="text-lg text-primary-foreground/80 mb-8">Entre em contato agora e receba atendimento especializado para fogões, bancadas refrigeradas e infraestrutura inox.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <a href={`${WHATSAPP_URL}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                <a href={`${CONTACT_URL}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-5 h-5 mr-2" />Falar com Especialista
                 </a>
               </Button>
