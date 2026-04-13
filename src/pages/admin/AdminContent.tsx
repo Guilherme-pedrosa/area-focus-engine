@@ -212,6 +212,14 @@ const AdminContent = () => {
                               </span>
                             </div>
                             {renderValue(item)}
+                            {item.section === "cta" && (
+                              <div className="flex items-center gap-1.5 mt-1">
+                                <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                                <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="text-xs text-primary hover:underline truncate max-w-[250px]">
+                                  {ctaLink}
+                                </a>
+                              </div>
+                            )}
                           </div>
                           <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
                             <Button variant="ghost" size="icon" onClick={() => handleEdit(item)} title="Editar">
