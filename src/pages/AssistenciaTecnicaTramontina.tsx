@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const WHATSAPP_URL = "https://wa.me/5562982690073?text=Olá!%20Preciso%20de%20assistência%20técnica%20para%20equipamento%20Tramontina.";
+const CONTACT_URL = "https://contatoswedo.lovable.app/";
 
 export default function AssistenciaTecnicaTramontina() {
   return (
@@ -40,7 +40,7 @@ export default function AssistenciaTecnicaTramontina() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={WHATSAPP_URL}
+                href={CONTACT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-wedo text-lg px-8 py-4"
@@ -49,7 +49,7 @@ export default function AssistenciaTecnicaTramontina() {
                 Solicitar Atendimento
               </a>
               <a
-                href="tel:+5562982690073"
+                href="https://contatoswedo.lovable.app/" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-primary-foreground px-8 py-4 rounded-xl font-semibold transition-all"
               >
                 <Clock className="w-5 h-5" />
@@ -592,7 +592,7 @@ export default function AssistenciaTecnicaTramontina() {
             Entre em contato agora e receba atendimento especializado para seus equipamentos Tramontina.
           </p>
           <a
-            href={WHATSAPP_URL}
+            href={CONTACT_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-wedo text-lg px-8 py-4"
