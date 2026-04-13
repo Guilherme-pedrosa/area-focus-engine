@@ -108,7 +108,7 @@ export default function ContratosPCM() {
       <Helmet>
         <title>Contratos PCM | Manutenção Preventiva Cozinha Profissional | WeDo</title>
         <meta name="description" content="Contratos de manutenção preventiva para cozinhas profissionais completas. Fogões, refrigeração, câmaras frias, lava-louças e mais. Reduza até 76% dos custos." />
-        <link rel="canonical" href="https://wedocorp.com/contratos-pcm" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/contratos-pcm" />
       </Helmet>
 
       {/* Hero */}

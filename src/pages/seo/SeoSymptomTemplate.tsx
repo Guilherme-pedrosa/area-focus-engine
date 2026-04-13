@@ -240,7 +240,7 @@ export default function SeoSymptomTemplate() {
     "@type": "LocalBusiness",
     "name": "WeDo Manutenção de Cozinhas Profissionais",
     "description": page.metaDescription,
-    "url": `https://wedocorp.com.br/${page.slug}`,
+    "url": `https://wedocozinhas.com.br/${page.slug}`,
     "telephone": "+55 62 99377-5711",
     "address": {
       "@type": "PostalAddress",
@@ -274,13 +274,13 @@ export default function SeoSymptomTemplate() {
         <title>{page.title}</title>
         <meta name="description" content={page.metaDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://wedocorp.com.br/${page.slug}`} />
+        <link rel="canonical" href={`https://wedocozinhas.com.br/${page.slug}`} />
         
         {/* Open Graph */}
         <meta property="og:title" content={page.title} />
         <meta property="og:description" content={page.metaDescription} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://wedocorp.com.br/${page.slug}`} />
+        <meta property="og:url" content={`https://wedocozinhas.com.br/${page.slug}`} />
         
         {/* Schema.org */}
         <script type="application/ld+json">

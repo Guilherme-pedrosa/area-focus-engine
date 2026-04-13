@@ -28,7 +28,7 @@ export default function CozinhasProfissionais() {
       <Helmet>
         <title>Cozinhas Profissionais | Manutenção Multimarcas | WeDo</title>
         <meta name="description" content="Manutenção de equipamentos de cozinha profissional multimarcas. Hobart, Vulcan, Robot Coupe, Irinox e mais. Goiás e DF." />
-        <link rel="canonical" href="https://wedocorp.com/cozinhas-profissionais" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/cozinhas-profissionais" />
       </Helmet>
 
       {/* Hero */}

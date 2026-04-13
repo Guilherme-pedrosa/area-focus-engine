@@ -11,7 +11,7 @@ export default function CamaraFriaPerdaTemperaturaRioVerde() {
       <Helmet>
         <title>Câmara Fria com Perda de Temperatura em Rio Verde | Reparo Técnico</title>
         <meta name="description" content="Câmara fria perdendo temperatura em Rio Verde? Diagnóstico e reparo técnico especializado. Evite perdas de estoque." />
-        <link rel="canonical" href="https://wedocorp.com/problemas/camara-fria-perda-temperatura-rio-verde" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/problemas/camara-fria-perda-temperatura-rio-verde" />
       </Helmet>
 
       <div className="container-wedo section-padding">

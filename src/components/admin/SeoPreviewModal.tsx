@@ -28,7 +28,7 @@ export default function SeoPreviewModal({ url, open, onClose, onEdit, onPublish 
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2 text-lg">
             <ExternalLink className="w-5 h-5" />
-            Preview: wedocorp.com{url.url}
+            Preview: wedocozinhas.com.br{url.url}
           </DialogTitle>
         </DialogHeader>
 

@@ -11,7 +11,7 @@ export default function ManutencaoCamaraFriaRioVerde() {
       <Helmet>
         <title>Manutenção de Câmara Fria em Rio Verde | Assistência Técnica Especializada</title>
         <meta name="description" content="Manutenção de câmaras frias em Rio Verde: preventiva, corretiva, todas as marcas. Técnicos certificados, peças originais." />
-        <link rel="canonical" href="https://wedocorp.com/servicos-local/manutencao-camara-fria-rio-verde" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/servicos-local/manutencao-camara-fria-rio-verde" />
       </Helmet>
 
       <div className="container-wedo section-padding">

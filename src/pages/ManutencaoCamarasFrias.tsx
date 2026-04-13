@@ -51,7 +51,7 @@ export default function ManutencaoCamarasFrias() {
       <Helmet>
         <title>Manutenção de Câmaras Frias | Preventiva e Corretiva | Goiás e DF | WeDo</title>
         <meta name="description" content="Manutenção especializada em câmaras frias: preventiva e corretiva. Atendemos todo o estado de Goiás e Distrito Federal. Parceiro Rational." />
-        <link rel="canonical" href="https://wedocorp.com/manutencao-camaras-frias" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/manutencao-camaras-frias" />
       </Helmet>
 
       {/* Hero */}

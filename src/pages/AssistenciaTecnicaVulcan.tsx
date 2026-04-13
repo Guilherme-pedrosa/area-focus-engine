@@ -327,7 +327,7 @@ export default function AssistenciaTecnicaVulcan() {
           name="keywords"
           content="assistência técnica vulcan, manutenção vulcan, fogão vulcan, chapa vulcan, fritadeira vulcan industrial"
         />
-        <link rel="canonical" href="https://wedocorp.com.br/assistencia-tecnica-vulcan" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-vulcan" />
       </Helmet>
 
       {/* Hero Section */}

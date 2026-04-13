@@ -11,7 +11,7 @@ export default function ManutencaoRationalAnapolis() {
       <Helmet>
         <title>Manutenção Rational Anápolis | Assistência Técnica Autorizada iCombi Pro</title>
         <meta name="description" content="Assistência técnica Rational autorizada em Anápolis. Manutenção iCombi Pro, iCombi Classic, iVario. Parceiro oficial, técnicos certificados." />
-        <link rel="canonical" href="https://wedocorp.com/servicos-local/manutencao-rational-anapolis" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/servicos-local/manutencao-rational-anapolis" />
       </Helmet>
 
       <div className="container-wedo section-padding">
