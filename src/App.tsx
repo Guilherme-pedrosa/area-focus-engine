@@ -32,6 +32,7 @@ import AdminImages from "./pages/admin/AdminImages";
 import AdminSeoPages from "./pages/admin/AdminSeoPages";
 import AdminSettings from "./pages/admin/AdminSettings";
 import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import AdminBlog from "./pages/admin/AdminBlog";
 import PageTracker from "./components/PageTracker";
 import ContratosPCM from "./pages/ContratosPCM";
 import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
