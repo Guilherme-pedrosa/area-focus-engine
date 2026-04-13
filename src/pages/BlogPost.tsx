@@ -81,7 +81,7 @@ export default function BlogPost() {
             publisher: {
               "@type": "Organization",
               name: "WeDo Comércio e Importação Ltda",
-              logo: { "@type": "ImageObject", url: "https://wedocozinhas.com.br/assets/logo-wedo-full-BQUUEgvy.jpg" },
+              logo: { "@type": "ImageObject", url: "https://wedocozinhas.com.br/images/logo-wedo-full.jpg" },
             },
           })}
         </script>
