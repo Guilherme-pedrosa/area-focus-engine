@@ -12,7 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { toast } from "sonner";
-import { Pencil, Save, Plus, Trash2, Image as ImageIcon, FileText, Type } from "lucide-react";
+import { Pencil, Save, Plus, Trash2, Image as ImageIcon, FileText, Type, ExternalLink } from "lucide-react";
 
 type ContentItem = {
   id: string;
