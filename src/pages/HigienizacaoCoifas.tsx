@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Shield } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 
-
 const servicos = [
   "Limpeza técnica de coifas",
   "Limpeza de dutos de exaustão",
@@ -19,7 +18,7 @@ export default function HigienizacaoCoifas() {
   return (
     <Layout>
       <Helmet>
-        <title>Higienização de Coifas | RDC 216 | Goiás e DF | WeDo</title>
+        <title>Limpeza de Coifas | RDC 216 | Goiás e DF | WeDo</title>
         <meta name="description" content="Limpeza técnica de coifas e dutos conforme RDC 216. Compliance total com laudos técnicos rastreáveis para fiscalização. Goiás e DF." />
         <link rel="canonical" href="https://wedocozinhas.com.br/higienizacao-coifas" />
       </Helmet>
@@ -31,14 +30,32 @@ export default function HigienizacaoCoifas() {
             <nav className="text-sm text-secondary-foreground/60 mb-6">
               <Link to="/" className="hover:text-primary">Home</Link>
               <span className="mx-2">/</span>
-              <span>Higienização de Coifas</span>
+              <span>Limpeza de Coifas</span>
             </nav>
             <h1 className="title-hero text-primary-foreground mb-6">
-              Higienização de Coifas
+              Limpeza de Coifas
             </h1>
             <p className="text-xl text-secondary-foreground/80 max-w-3xl">
               Limpeza técnica de coifas e dutos conforme RDC 216. Compliance total com laudos técnicos rastreáveis para fiscalização.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Vídeo */}
+      <section className="section-padding bg-muted">
+        <div className="container-wedo">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="title-section mb-8">Veja nosso trabalho</h2>
+            <div className="relative w-full max-w-[360px] mx-auto rounded-2xl overflow-hidden shadow-xl" style={{ aspectRatio: '9/16' }}>
+              <iframe
+                src="https://www.youtube.com/embed/fWxttV9DHTY"
+                title="Limpeza de Coifas - WeDo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -48,7 +65,7 @@ export default function HigienizacaoCoifas() {
         <div className="container-wedo">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="title-section mb-6">Serviços de Higienização</h2>
+              <h2 className="title-section mb-6">Serviços de Limpeza de Coifas</h2>
               <p className="text-muted-foreground mb-8">
                 Garantimos a conformidade da sua cozinha com as normas sanitárias vigentes, documentando todo o processo com laudos técnicos.
               </p>

@@ -29,7 +29,7 @@ const services = [
   },
   {
     title: "Higienização de Coifas",
-    description: "Limpeza técnica NR13. RDC 216. Dutos, filtros, exaustão. Laudo rastreável.",
+    description: "Limpeza técnica de coifas. RDC 216. Dutos, filtros, exaustão. Laudo rastreável.",
     href: "/higienizacao-coifas",
   },
   {
