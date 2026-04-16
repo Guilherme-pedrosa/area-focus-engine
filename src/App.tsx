@@ -101,7 +101,8 @@ const App = () => (
             <Route path="/assistencia-tecnica-gelopar" element={<AssistenciaTecnicaGelopar />} />
             <Route path="/assistencia-tecnica-hoshizaki" element={<AssistenciaTecnicaHoshizaki />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
-            <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
+            <Route path="/limpeza-de-coifas" element={<HigienizacaoCoifas />} />
+            <Route path="/higienizacao-coifas" element={<Navigate to="/limpeza-de-coifas" replace />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
