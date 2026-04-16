@@ -354,6 +354,7 @@ export default function HigienizacaoCoifas() {
       </section>
 
 
+      <section className="section-padding bg-primary">
         <div className="container-wedo text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             Solicite um Orçamento de Limpeza de Coifas
