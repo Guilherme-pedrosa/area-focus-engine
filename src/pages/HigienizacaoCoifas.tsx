@@ -325,7 +325,35 @@ export default function HigienizacaoCoifas() {
         </div>
       </section>
 
-      <section className="section-padding bg-primary">
+      {/* Links por cidade */}
+      <section className="section-padding bg-muted">
+        <div className="container-wedo">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="title-section mb-6">Limpeza de Coifas por Cidade</h2>
+            <p className="text-muted-foreground mb-8">
+              Atendemos as principais cidades de Goiás e Distrito Federal com equipe especializada.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { to: "/limpeza-de-coifas-goiania", label: "Limpeza de Coifas em Goiânia", desc: "Capital e região metropolitana" },
+                { to: "/limpeza-de-coifas-anapolis", label: "Limpeza de Coifas em Anápolis", desc: "DAIA e região" },
+                { to: "/limpeza-de-coifas-brasilia", label: "Limpeza de Coifas em Brasília", desc: "Plano Piloto e Entorno do DF" },
+              ].map((c) => (
+                <Link
+                  key={c.to}
+                  to={c.to}
+                  className="bg-card border border-border rounded-xl p-6 hover:border-primary transition-colors text-left"
+                >
+                  <h3 className="font-heading font-bold text-lg mb-2">{c.label}</h3>
+                  <p className="text-sm text-muted-foreground">{c.desc}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
         <div className="container-wedo text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
             Solicite um Orçamento de Limpeza de Coifas
