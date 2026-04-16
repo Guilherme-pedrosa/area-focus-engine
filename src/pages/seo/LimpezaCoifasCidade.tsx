@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
-import { Link, useParams, Navigate } from "react-router-dom";
+import { Link, useLocation, Navigate } from "react-router-dom";
 import { ArrowRight, CheckCircle, Shield, MapPin } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 import { cidadesCoifas, type CidadeCoifasData } from "@/data/limpezaCoifasCidades";
@@ -232,8 +232,9 @@ function CidadeContent({ data }: { data: CidadeCoifasData }) {
 }
 
 export default function LimpezaCoifasCidade() {
-  const params = useParams<{ slug: string }>();
-  const data = cidadesCoifas.find(c => c.slug === params.slug);
+  const location = useLocation();
+  const slug = location.pathname.replace(/^\//, "");
+  const data = cidadesCoifas.find(c => c.slug === slug);
   
   if (!data) {
     return <Navigate to="/limpeza-de-coifas" replace />;
