@@ -57,6 +57,7 @@ import SEOCamaraFriaPerdaTemperaturaRioVerde from "./pages/seo/CamaraFriaPerdaTe
 
 // Template dinâmico para páginas SEO de sintomas
 import SeoSymptomTemplate from "./pages/seo/SeoSymptomTemplate";
+import LimpezaCoifasCidade from "./pages/seo/LimpezaCoifasCidade";
 
 // Dados das páginas SEO
 import { seoSymptomsPages } from "./data/seoSymptomsData";
@@ -103,6 +104,9 @@ const App = () => (
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
             <Route path="/limpeza-de-coifas" element={<HigienizacaoCoifas />} />
             <Route path="/higienizacao-coifas" element={<Navigate to="/limpeza-de-coifas" replace />} />
+            <Route path="/limpeza-de-coifas-goiania" element={<LimpezaCoifasCidade />} />
+            <Route path="/limpeza-de-coifas-anapolis" element={<LimpezaCoifasCidade />} />
+            <Route path="/limpeza-de-coifas-brasilia" element={<LimpezaCoifasCidade />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
