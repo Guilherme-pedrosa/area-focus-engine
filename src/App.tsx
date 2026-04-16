@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SiteSettingsProvider } from "@/hooks/useSiteSettings";
 import Index from "./pages/Index";
@@ -101,7 +101,8 @@ const App = () => (
             <Route path="/assistencia-tecnica-gelopar" element={<AssistenciaTecnicaGelopar />} />
             <Route path="/assistencia-tecnica-hoshizaki" element={<AssistenciaTecnicaHoshizaki />} />
             <Route path="/contratos-pcm" element={<ContratosPCM />} />
-            <Route path="/higienizacao-coifas" element={<HigienizacaoCoifas />} />
+            <Route path="/limpeza-de-coifas" element={<HigienizacaoCoifas />} />
+            <Route path="/higienizacao-coifas" element={<Navigate to="/limpeza-de-coifas" replace />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />

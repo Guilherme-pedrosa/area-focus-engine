@@ -61,9 +61,79 @@ export default function HigienizacaoCoifas() {
   return (
     <Layout>
       <Helmet>
-        <title>Limpeza de Coifas e Dutos | RDC 216 | Goiás e DF | WeDo</title>
-        <meta name="description" content="Limpeza profissional de coifas, dutos e exaustores conforme RDC 216 ANVISA. Prevenção de incêndios, laudos técnicos rastreáveis. Atendemos Goiás e DF." />
-        <link rel="canonical" href="https://wedocozinhas.com.br/higienizacao-coifas" />
+        <title>Limpeza de Coifas Anápolis e Goiânia | RDC 216 | WeDo</title>
+        <meta name="description" content="Limpeza de coifas, dutos e exaustores em Anápolis, Goiânia e DF. Conformidade RDC 216 ANVISA. Laudos técnicos, prevenção de incêndios. Solicite orçamento." />
+        <link rel="canonical" href="https://wedocozinhas.com.br/limpeza-de-coifas" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Limpeza de Coifas e Dutos de Exaustão",
+            "serviceType": "Limpeza de Coifas",
+            "description": "Limpeza profissional de coifas, dutos e exaustores para cozinhas profissionais conforme RDC 216 da ANVISA. Laudos técnicos rastreáveis.",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "WeDo Comércio e Importação Ltda",
+              "url": "https://wedocozinhas.com.br",
+              "telephone": "+55-62-99377-5711",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua 5",
+                "addressLocality": "Anápolis",
+                "addressRegion": "GO",
+                "postalCode": "75000-000",
+                "addressCountry": "BR"
+              }
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Anápolis" },
+              { "@type": "City", "name": "Goiânia" },
+              { "@type": "City", "name": "Brasília" },
+              { "@type": "State", "name": "Goiás" },
+              { "@type": "State", "name": "Distrito Federal" }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Qual o valor da limpeza de uma coifa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O valor da limpeza de coifa varia conforme o tamanho do sistema de exaustão, extensão dos dutos e quantidade de coifas. Entre em contato com a WeDo para um orçamento personalizado."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O que é feito na limpeza de coifa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A limpeza de coifa inclui inspeção técnica do sistema de exaustão, remoção completa de gordura dos dutos, filtros e exaustores, e emissão de laudo técnico rastreável com registro fotográfico conforme RDC 216 da ANVISA."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "De quanto em quanto tempo deve ser feita a limpeza da coifa?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A frequência recomendada depende do volume de uso da cozinha. Em geral, cozinhas profissionais de alto volume devem realizar a limpeza a cada 3 a 6 meses. A RDC 216 da ANVISA exige manutenção periódica documentada."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Por que a limpeza de coifa é obrigatória?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A limpeza de coifa é obrigatória por questões de segurança (prevenção de incêndios), saúde (qualidade do ar) e conformidade sanitária. A RDC 216 da ANVISA exige que estabelecimentos mantenham o sistema de exaustão limpo e documentado."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       {/* Hero */}
@@ -216,7 +286,45 @@ export default function HigienizacaoCoifas() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Perguntas Frequentes */}
+      <section className="section-padding">
+        <div className="container-wedo">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="title-section mb-8 text-center">Perguntas Frequentes sobre Limpeza de Coifas</h2>
+            <div className="space-y-6">
+              {[
+                {
+                  q: "Qual o valor da limpeza de uma coifa?",
+                  a: "O valor da limpeza de coifa varia conforme o tamanho do sistema de exaustão, extensão dos dutos e quantidade de coifas. Entre em contato com a WeDo para um orçamento personalizado para sua cozinha profissional."
+                },
+                {
+                  q: "O que é feito na limpeza de coifa?",
+                  a: "A limpeza de coifa inclui inspeção técnica do sistema de exaustão, remoção completa de gordura dos dutos, filtros e exaustores, e emissão de laudo técnico rastreável com registro fotográfico conforme RDC 216 da ANVISA."
+                },
+                {
+                  q: "De quanto em quanto tempo deve ser feita a limpeza da coifa?",
+                  a: "A frequência recomendada depende do volume de uso da cozinha. Em geral, cozinhas profissionais de alto volume devem realizar a limpeza a cada 3 a 6 meses. A RDC 216 da ANVISA exige manutenção periódica documentada."
+                },
+                {
+                  q: "Por que a limpeza de coifa é obrigatória?",
+                  a: "A limpeza de coifa é obrigatória por questões de segurança (prevenção de incêndios), saúde (qualidade do ar) e conformidade sanitária. A RDC 216 da ANVISA exige que estabelecimentos mantenham o sistema de exaustão limpo e documentado."
+                }
+              ].map((faq) => (
+                <details key={faq.q} className="group bg-card border border-border rounded-xl overflow-hidden">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer font-heading font-bold text-lg hover:text-primary transition-colors">
+                    {faq.q}
+                    <ArrowRight className="w-5 h-5 text-muted-foreground group-open:rotate-90 transition-transform" />
+                  </summary>
+                  <div className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-primary">
         <div className="container-wedo text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
