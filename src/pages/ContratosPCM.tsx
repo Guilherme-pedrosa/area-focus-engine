@@ -15,8 +15,27 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
+import FAQSection from "@/components/FAQSection";
+import ServiceSchema from "@/components/ServiceSchema";
 
-
+const faqsPCM = [
+  {
+    q: "O que é um contrato PCM?",
+    a: "PCM (Planejamento e Controle de Manutenção) é um contrato de manutenção preventiva programada, com checklists técnicos específicos por categoria de equipamento, periodicidade definida, relatórios fotografados e atendimento prioritário.",
+  },
+  {
+    q: "Qual a diferença entre manutenção preventiva e corretiva?",
+    a: "A manutenção preventiva é programada para evitar falhas — calibragens, limpezas técnicas, troca de itens de desgaste. A corretiva é o reparo após a falha. O PCM reduz drasticamente a necessidade de corretivas e o custo total de manutenção.",
+  },
+  {
+    q: "Em quanto tempo recupero o investimento no contrato PCM?",
+    a: "Nossos clientes em rede registram, em média, 68% de redução em chamadas emergenciais e até 76% de queda no custo total de manutenção, com economia mensal média de R$9.604 por rede — o ROI costuma ocorrer já nos primeiros meses.",
+  },
+  {
+    q: "Vocês atendem em Brasília e DF?",
+    a: "Sim, contratos PCM atendem todo o estado de Goiás e Distrito Federal, incluindo Goiânia, Anápolis, Aparecida de Goiânia, Brasília e Entorno do DF.",
+  },
+];
 const categorias = [
   {
     icon: Flame,
@@ -110,6 +129,12 @@ export default function ContratosPCM() {
         <meta name="description" content="Contratos de manutenção preventiva para cozinhas profissionais completas. Fogões, refrigeração, câmaras frias, lava-louças e mais. Reduza até 76% dos custos." />
         <link rel="canonical" href="https://wedocozinhas.com.br/contratos-pcm" />
       </Helmet>
+
+      <ServiceSchema
+        serviceType="Contratos PCM — Manutenção Preventiva para Cozinhas Profissionais"
+        description="Contratos de manutenção preventiva (PCM) para cozinhas profissionais completas, com checklists por categoria, equipe certificada NR10/NR12/NR13/NBR 5410 e redução comprovada de até 76% nos custos."
+        slug="contratos-pcm"
+      />
 
       {/* Hero */}
       <section className="bg-secondary text-secondary-foreground section-padding">
@@ -310,6 +335,12 @@ export default function ContratosPCM() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        title="Perguntas Frequentes sobre Contratos PCM"
+        faqs={faqsPCM}
+        className="bg-muted"
+      />
 
       {/* CTA */}
       <section className="section-padding bg-primary">

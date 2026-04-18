@@ -3,8 +3,27 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, AlertTriangle, CheckCircle, Wrench, Zap, ThermometerSnowflake, Wind, Gauge, Shield } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
+import FAQSection from "@/components/FAQSection";
+import ServiceSchema from "@/components/ServiceSchema";
 
-
+const faqsCamaras = [
+  {
+    q: "Quais os sinais de que minha câmara fria precisa de manutenção?",
+    a: "Perda gradual de temperatura, formação excessiva de gelo, ruídos anormais, alto consumo de energia, compressor funcionando sem resfriar adequadamente e portas com vedação comprometida são sinais claros de que a câmara precisa de avaliação técnica.",
+  },
+  {
+    q: "Vocês atendem com câmara fria parada?",
+    a: "Sim, fazemos atendimento corretivo prioritário para câmaras paradas, com diagnóstico no local, peças originais em estoque e equipe técnica especializada em refrigeração industrial.",
+  },
+  {
+    q: "O que é NR13 para vasos de pressão em câmaras frias?",
+    a: "A NR13 é a Norma Regulamentadora que trata de caldeiras e vasos de pressão. Em sistemas de refrigeração, os componentes pressurizados exigem inspeção e documentação conforme a norma. Nossa equipe é certificada para atender esses requisitos.",
+  },
+  {
+    q: "Atendem em Brasília e DF?",
+    a: "Sim, atendemos câmaras frias em Brasília, Plano Piloto, regiões administrativas e Entorno do DF, além de toda a região de Goiás (Goiânia, Anápolis, Aparecida de Goiânia, Rio Verde e mais).",
+  },
+];
 const problemas = [
   "Perda gradual de temperatura",
   "Formação excessiva de gelo",
@@ -53,6 +72,12 @@ export default function ManutencaoCamarasFrias() {
         <meta name="description" content="Manutenção especializada em câmaras frias: preventiva e corretiva. Atendemos todo o estado de Goiás e Distrito Federal. Parceiro Rational." />
         <link rel="canonical" href="https://wedocozinhas.com.br/manutencao-camaras-frias" />
       </Helmet>
+
+      <ServiceSchema
+        serviceType="Manutenção de Câmaras Frias e Refrigeração Industrial"
+        description="Manutenção preventiva e corretiva de câmaras frias, refrigeradores e sistemas de refrigeração comercial e industrial em Goiás e Distrito Federal, com peças originais e equipe certificada."
+        slug="manutencao-camaras-frias"
+      />
 
       {/* Hero */}
       <section className="bg-secondary text-secondary-foreground section-padding">
@@ -172,6 +197,11 @@ export default function ManutencaoCamarasFrias() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        title="Perguntas Frequentes sobre Manutenção de Câmaras Frias"
+        faqs={faqsCamaras}
+      />
 
       {/* CTA */}
       <section className="section-padding bg-primary">

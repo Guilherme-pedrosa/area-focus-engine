@@ -3,7 +3,27 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
+import FAQSection from "@/components/FAQSection";
+import ServiceSchema from "@/components/ServiceSchema";
 
+const faqs = [
+  {
+    q: "Quais equipamentos de cozinha profissional vocês mantêm?",
+    a: "Atendemos toda a linha: fornos combinados, lavadoras de louça, processadores, cortadores, chapas, fritadeiras, fogões profissionais, refrigeradores, freezers e balcões refrigerados — multimarcas.",
+  },
+  {
+    q: "Atendem urgência com equipamento parado?",
+    a: "Sim, fazemos atendimento programado prioritário para equipamentos parados, com diagnóstico técnico e estoque próprio de peças originais para reduzir o tempo de inatividade.",
+  },
+  {
+    q: "Atendem restaurantes, hospitais e indústrias?",
+    a: "Sim. Atendemos restaurantes, redes de food service, hotéis, supermercados, frigoríficos, hospitais e indústrias alimentícias em Goiás e Distrito Federal.",
+  },
+  {
+    q: "Qual a área de cobertura?",
+    a: "Atendemos Goiânia, Anápolis, Aparecida de Goiânia, Brasília, Entorno do DF e demais cidades de Goiás com equipe técnica própria.",
+  },
+];
 
 const marcas = [
   "Rational", "Hobart", "Vulcan", "Robot Coupe", "Irinox", "Prática",
@@ -30,6 +50,12 @@ export default function CozinhasProfissionais() {
         <meta name="description" content="Manutenção de equipamentos de cozinha profissional multimarcas. Hobart, Vulcan, Robot Coupe, Irinox e mais. Goiás e DF." />
         <link rel="canonical" href="https://wedocozinhas.com.br/cozinhas-profissionais" />
       </Helmet>
+
+      <ServiceSchema
+        serviceType="Manutenção de Cozinhas Profissionais Multimarcas"
+        description="Manutenção preventiva e corretiva de equipamentos de cozinha profissional multimarcas para restaurantes, hotéis, hospitais e indústrias em Goiás e Distrito Federal."
+        slug="cozinhas-profissionais"
+      />
 
       {/* Hero */}
       <section className="bg-secondary text-secondary-foreground section-padding">
@@ -76,6 +102,12 @@ export default function CozinhasProfissionais() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        title="Perguntas Frequentes sobre Cozinhas Profissionais"
+        faqs={faqs}
+        className="bg-background"
+      />
 
       {/* CTA */}
       <section className="section-padding bg-primary">
