@@ -12,16 +12,15 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Soluções",
+    label: "Serviços",
     children: [
-      { label: "Manutenção Preventiva", href: "/contratos-pcm" },
-      { label: "Manutenção Corretiva", href: "/contratos-pcm" },
+      { label: "Cozinhas Profissionais", href: "/cozinhas-profissionais" },
+      { label: "Assistência Técnica Rational", href: "/assistencia-tecnica-rational" },
+      { label: "Assistência Multimarcas", href: "/assistencia-multimarcas" },
       { label: "Contratos PCM", href: "/contratos-pcm" },
-      { label: "Refrigeração Comercial", href: "/manutencao-camaras-frias" },
-      { label: "Câmaras Frias", href: "/manutencao-camaras-frias" },
-      { label: "Instalação Técnica", href: "/cozinhas-profissionais" },
-      { label: "Limpeza de Coifa", href: "/higienizacao-coifas" },
-      { label: "Locação Técnica", href: "/cozinhas-profissionais" },
+      { label: "Higienização de Coifas", href: "/limpeza-de-coifas" },
+      { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
+      { label: "Peças Originais", href: "/pecas-originais" },
     ],
   },
   {

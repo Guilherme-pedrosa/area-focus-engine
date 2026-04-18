@@ -20,7 +20,7 @@ const services = [
   {
     title: "Assistência Multimarcas",
     description: "Hobart, Vulcan, Robot Coupe, Irinox, Prática, Tramontina, Macon, Cozil, Unox, Middleby.",
-    href: "/cozinhas-profissionais",
+    href: "/assistencia-multimarcas",
   },
   {
     title: "Contratos PCM",
@@ -35,7 +35,7 @@ const services = [
   {
     title: "Peças Originais",
     description: "Estoque próprio. Entrega rápida Goiás e DF.",
-    href: "/sobre",
+    href: "/pecas-originais",
   },
 ];
 
