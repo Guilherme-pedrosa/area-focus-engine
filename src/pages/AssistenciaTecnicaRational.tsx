@@ -27,8 +27,27 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useCTASettings } from "@/hooks/useSiteSettings";
+import FAQSection from "@/components/FAQSection";
+import ServiceSchema from "@/components/ServiceSchema";
 
-
+const faqsRational = [
+  {
+    q: "Vocês são parceiros autorizados Rational?",
+    a: "Sim, somos assistência técnica homologada Rational, com técnicos certificados pela própria fábrica através de treinamentos presenciais e online, acesso ao portal Rational Toolbox 2.0 e suporte direto da engenharia Rational Brasil.",
+  },
+  {
+    q: "Quais modelos Rational vocês atendem?",
+    a: "Atendemos toda a linha: iCombi Pro (6/10/20 GN, elétrico e a gás), iCombi Classic, SelfCookingCenter (SCC) XS, 60-202, CombiMaster Plus, iVario Pro 2-XS, 2-S, L e XL, e o sistema de exaustão UltraVent Plus.",
+  },
+  {
+    q: "Usam peças originais Rational?",
+    a: "Sim, trabalhamos exclusivamente com peças originais Rational: vedações de porta, sensores B1/B2/B4/P1, válvulas solenoides, SSRs, filtros, kits de limpeza Care/Detergente e placas eletrônicas PCB.",
+  },
+  {
+    q: "Qual o prazo de atendimento?",
+    a: "Clientes com contrato PCM têm atendimento prioritário, com diagnóstico remoto via ConnectedCooking quando aplicável. Clientes avulsos são atendidos com agendamento programado conforme disponibilidade técnica em Goiás e DF.",
+  },
+];
 // Trust Bar Items
 const trustItems = [
   "Assistência Técnica Homologada Rational",
@@ -585,10 +604,16 @@ export default function AssistenciaTecnicaRational() {
     <Layout>
       <Helmet>
         <title>Assistência Técnica Rational | Parceiro Autorizado | Goiás e DF | WeDo</title>
-        <meta name="description" content="Assistência técnica autorizada Rational em Goiás e DF. Manutenção iCombi Pro, iCombi Classic, SelfCookingCenter, iVario Pro. Técnicos certificados pela fábrica, peças originais, atendimento 24/7." />
+        <meta name="description" content="Assistência técnica autorizada Rational em Goiás e DF. Manutenção iCombi Pro, iCombi Classic, SelfCookingCenter, iVario Pro. Técnicos certificados pela fábrica e peças originais." />
         <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-rational" />
         <meta name="keywords" content="assistência técnica rational, manutenção rational, manutenção icombi pro, selfcookingcenter scc, ivario pro manutenção, rational brasil, peças rational originais, conserto forno rational, técnico rational certificado" />
       </Helmet>
+
+      <ServiceSchema
+        serviceType="Assistência Técnica Autorizada Rational"
+        description="Assistência técnica homologada Rational para iCombi Pro, iCombi Classic, SelfCookingCenter (SCC), iVario Pro e UltraVent Plus em Goiás e Distrito Federal, com técnicos certificados pela fábrica e peças originais."
+        slug="assistencia-tecnica-rational"
+      />
 
       {/* Hero Section */}
       <section className="bg-secondary text-secondary-foreground section-padding">
@@ -954,6 +979,12 @@ export default function AssistenciaTecnicaRational() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        title="Perguntas Frequentes sobre Assistência Técnica Rational"
+        faqs={faqsRational}
+        className="bg-muted/30"
+      />
 
       {/* CTA Final */}
       <section className="section-padding bg-primary">

@@ -45,6 +45,8 @@ import HigienizacaoCoifas from "./pages/HigienizacaoCoifas";
 import Sobre from "./pages/Sobre";
 import Clientes from "./pages/Clientes";
 import CozinhasProfissionais from "./pages/CozinhasProfissionais";
+import AssistenciaMultimarcas from "./pages/AssistenciaMultimarcas";
+import PecasOriginais from "./pages/PecasOriginais";
 import Blog from "./pages/Blog";
 import BlogPostPage from "./pages/BlogPost";
 
@@ -110,6 +112,8 @@ const App = () => (
             <Route path="/sobre" element={<Sobre />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/cozinhas-profissionais" element={<CozinhasProfissionais />} />
+            <Route path="/assistencia-multimarcas" element={<AssistenciaMultimarcas />} />
+            <Route path="/pecas-originais" element={<PecasOriginais />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
 
