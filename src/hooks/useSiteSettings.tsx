@@ -48,7 +48,7 @@ export function useSiteSettings() {
 export function useCTASettings() {
   const { get } = useSiteSettings();
   return {
-    ctaUrl: get("linktree_url", "https://linktr.ee/wedocozinhas"),
+    ctaUrl: get("linktree_url", "https://contatoswedo.lovable.app"),
     ctaText: get("cta_texto_principal", "Acessar Atendimento"),
     ctaTextSecondary: get("cta_texto_secundario", "Canais Oficiais WeDo"),
   };
