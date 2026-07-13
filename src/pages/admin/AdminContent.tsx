@@ -73,7 +73,7 @@ const AdminContent = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [newDialog, setNewDialog] = useState(false);
   const [newForm, setNewForm] = useState({ page: "", section: "", content_key: "", content_value: "", content_type: "text" });
-  const ctaLink = getSetting("linktree_url", "https://linktr.ee/wedocozinhas");
+  const ctaLink = getSetting("linktree_url", "https://contatoswedo.lovable.app");
 
   const fetchItems = async () => {
     setLoading(true);
