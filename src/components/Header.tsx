@@ -26,6 +26,7 @@ const navItems: NavItem[] = [
   {
     label: "Principais Fabricantes",
     children: [
+      { label: "Todas as marcas e equipamentos", href: "/marcas-e-equipamentos" },
       { label: "Rational", href: "/assistencia-tecnica-rational" },
       { label: "Becker", href: "/assistencia-tecnica-becker" },
       { label: "Cozil", href: "/assistencia-tecnica-cozil" },

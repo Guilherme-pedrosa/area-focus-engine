@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   align-items: center;
-  gap: 70px;
+  gap: 34px 70px;
 }
 
 .wd-institutional .wd-home-hero-copy {
@@ -76,6 +76,38 @@
   color: #53616c;
   font-size: 12px;
   line-height: 1.4;
+}
+
+.wd-institutional .wd-home-hero-photo.wd-home-hero-photo-wide {
+  grid-column: 1 / -1;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+}
+.wd-institutional .wd-home-hero-photo-wide img {
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.wd-institutional .wd-home-hero-photo-wide figcaption {
+  position: static;
+  padding: 8px 0 0;
+  color: #78828b;
+  background: transparent;
+  font-size: 10px;
+  text-align: right;
+}
+.wd-institutional .wd-home-all-brands {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
 }
 
 .wd-institutional .wd-home-brands {

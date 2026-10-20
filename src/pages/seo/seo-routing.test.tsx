@@ -33,11 +33,12 @@ const robots = readFileSync(resolve(process.cwd(), "public/robots.txt"), "utf8")
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 
 describe("Preservação das URLs indexáveis", () => {
-  it("preserva 160 URLs únicas no domínio e cobre cada uma com uma rota real", () => {
+  it("preserva as URLs anteriores e inclui a página de marcas nas 161 URLs únicas com rotas reais", () => {
     const literalPaths = [...appSource.matchAll(/<Route\s+path="([^"]+)"/g)].map((match) => match[1]);
     const knownPaths = new Set([...literalPaths, ...seoSymptomsPages.map((page) => `/${page.slug}`)]);
-    expect(sitemapUrls).toHaveLength(160);
-    expect(new Set(sitemapUrls).size).toBe(160);
+    expect(sitemapUrls).toHaveLength(161);
+    expect(new Set(sitemapUrls).size).toBe(161);
+    expect(sitemapUrls).toContain("https://wedocozinhas.com.br/marcas-e-equipamentos");
     for (const value of sitemapUrls) {
       const url = new URL(value);
       expect(url.origin).toBe("https://wedocozinhas.com.br");
@@ -54,6 +55,23 @@ describe("Preservação das URLs indexáveis", () => {
     expect(robots).toContain("Allow: /");
     expect(robots).not.toMatch(/^Disallow:\s*\/\s*$/m);
     expect(robots).toContain("Sitemap: https://wedocozinhas.com.br/sitemap.xml");
+  });
+});
+
+describe("Página de marcas e equipamentos", () => {
+  it("abre a nova rota com H1 e metadados próprios e permite indexação", async () => {
+    window.history.replaceState(null, "", "/marcas-e-equipamentos");
+    render(<App />);
+    expect(screen.getByRole("heading", { level: 1, name: "Marcas e equipamentos que atendemos." })).toBeInTheDocument();
+    expect(window.location.pathname).toBe("/marcas-e-equipamentos");
+    await waitFor(() => {
+      expect(document.title).toBe("Marcas e equipamentos atendidos em Goiás e DF | WeDo");
+      expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute("href", "https://wedocozinhas.com.br/marcas-e-equipamentos");
+      expect(document.querySelector('meta[name="description"]')?.getAttribute("content")?.trim()).toBeTruthy();
+      expect(document.querySelector('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+    });
+    expect(document.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
+    expect(document.querySelectorAll("h1")).toHaveLength(1);
   });
 });
 
@@ -128,6 +146,22 @@ describe("Alias histórico de coifas", () => {
 });
 
 describe("Canonical de marca", () => {
+  it("apresenta os tipos reais da Macom com H1 e canonical próprios", async () => {
+    window.history.replaceState(null, "", "/assistencia-tecnica-macom");
+    render(<App />);
+    expect(screen.getByRole("heading", { level: 1, name: "Assistência técnica Macom em Goiás e DF." })).toBeInTheDocument();
+    expect(screen.getByText("Fogões industriais")).toBeInTheDocument();
+    expect(screen.getByText("Refrigeradores horizontais")).toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/panifica[cç][aã]o|amassadeiras?|divisoras?/i);
+    expect(screen.getByRole("link", { name: "Consultar a Macom no catálogo" })).toHaveAttribute("href", "/marcas-e-equipamentos#marca-macom");
+    await waitFor(() => {
+      expect(document.title).toBe("Assistência técnica Macom em Goiás e DF | WeDo");
+      expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute("href", "https://wedocozinhas.com.br/assistencia-tecnica-macom");
+      expect(document.querySelector('meta[name="robots"]')).toHaveAttribute("content", "index, follow");
+    });
+    expect(document.querySelectorAll("h1")).toHaveLength(1);
+  });
+
   it("aponta a assistência Tramontina ao domínio próprio", async () => {
     window.history.replaceState(null, "", "/assistencia-tecnica-tramontina");
     render(<App />);

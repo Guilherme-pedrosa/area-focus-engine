@@ -1,6 +1,6 @@
 {
   "treatment": "Presentation assets were only converted/resized. The two portfolio-v2 files use earlier imagegen treatments of user-supplied photos, described individually below. No new image generation in this revision.",
-  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded.",
+  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded. New catalogue release uses the user-requested Tramontina/Rational composition in the home hero, a real Rational photo on assistance, and a real internal training photo on About. Earlier synthetic kitchen variants were rejected and not added to the website.",
   "comparisons": [
     {
       "service": "Fogão profissional",
@@ -312,6 +312,42 @@
       "height": 960,
       "bytes": 111116,
       "sha256": "e06414bb0b3a9632ac3f420ed24749f4546f7eb5ec5af3aa9c7d5e541d03d579"
+    },
+    {
+      "asset": "cozinha-tramontina-rational.webp",
+      "source": "exec-a9142655-c1ca-48a3-899c-947c6d22dbd2.png",
+      "source_sha256": "ad04c94b9f05d788f53dac940eccb6fa413df5d6f47b546b35d53c15267b2230",
+      "treatment": "User-requested illustrative photographic composition from new portfolio photos03 (Tramontina line) and11 (Rational iCombi Pro). Equipment arrangement/hood modified using built-in image_gen; not an exact record of a completed WeDo installation.",
+      "width": 1599,
+      "height": 900,
+      "bytes": 242546,
+      "sha256": "e8cccaabc9653bb0cd1ad8539880cc2a478694455d2e6066a20475ad2af788b6",
+      "bundled_source": "src/assets/cozinha-tramontina-rational.webp",
+      "reference_photos": [
+        "03-codex-clipboard-819cef50-f9dd-463c-8ed6-60d5146ff43f.jpg",
+        "11-codex-clipboard-a3740d47-d5c8-46aa-bf0d-4978388645d7.jpg"
+      ],
+      "prompt": "Faithful photographic composite: retain the real Tramontina cooking line and blue tiles, add the actual Rational iCombi Pro from user photo11, preserve recognizable controls and proportions, and place the complete hot line including the oven beneath a continuous extraction canopy. Retain natural photo textures, without people, clutter or hanging utensils."
+    },
+    {
+      "asset": "rational-icombi-pro-portfolio.webp",
+      "source": "10-codex-clipboard-81a9f428-18db-47d6-8b5e-88d4c41572a7.jpg",
+      "source_sha256": "6c1f8d9e6dd5077391faa8d4b144aed17e434cbc1c8c22d0683fc87e604e7bf8",
+      "treatment": "Real photo supplied by user. Format conversion and proportional resize only; no generated equipment, brand or environment.",
+      "width": 800,
+      "height": 1066,
+      "bytes": 51810,
+      "sha256": "16d75fc128aa35175652d79fcaf308cf59526ae16d804c91bda65bcefa87f653"
+    },
+    {
+      "asset": "treinamento-equipe-wedo-real.webp",
+      "source": "codex-clipboard-406e0b41-071c-42a3-9386-6ec5c8663a53.png",
+      "source_sha256": "4ccbc2d819f1d438b31f88d0b43465c632f590fa71b2d95faa5f4d226874e172",
+      "treatment": "Real training photo supplied by user. Format conversion and proportional resize only; instructor and participants not reconstructed.",
+      "width": 1440,
+      "height": 810,
+      "bytes": 165738,
+      "sha256": "3db3b4cc20303f9b5f786544d4623024eb7c889f4c788b5dd717339f6f9b27fe"
     }
   ]
 }

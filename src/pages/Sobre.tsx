@@ -74,6 +74,21 @@ export default function Sobre() {
         </div>
       </section>
 
+      <section className="wd-about-training" aria-labelledby="wd-training-title">
+        <div className="wd-container wd-about-training-grid">
+          <div className="wd-about-training-copy">
+            <p className="wd-kicker">Desenvolvimento da equipe</p>
+            <h2 id="wd-training-title">Treinamento técnico da equipe.</h2>
+            <p>O estudo dos componentes e do funcionamento dos equipamentos faz parte do desenvolvimento da nossa equipe técnica.</p>
+            <p>Nos encontros presenciais na oficina, compartilhamos conhecimento e revisamos a rotina de diagnóstico aplicada aos atendimentos.</p>
+          </div>
+          <figure className="wd-about-training-photo">
+            <img src="/images/institucional/treinamento-equipe-wedo-real.webp" alt="Equipe técnica da WeDo em treinamento presencial na oficina" width="1440" height="810" loading="lazy" decoding="async" />
+            <figcaption>Capacitação técnica da equipe WeDo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="wd-about-services">
         <div className="wd-container wd-about-work-grid">
           <div><p className="wd-kicker">O que fazemos</p><h2>Conheça os serviços da WeDo.</h2><p className="wd-about-services-intro">Consulte o serviço e fale com a nossa equipe sobre a necessidade da sua operação.</p></div>

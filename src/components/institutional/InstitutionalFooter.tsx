@@ -11,7 +11,7 @@ export default function InstitutionalFooter() {
         </div>
         <nav aria-label="Serviços e empresa" className="wd-footer-links">
           <p className="wd-footer-label">Conheça a WeDo</p>
-          {INSTITUTIONAL_NAV.map((item) => <Link key={item.href} to={item.href}>{item.label}</Link>)}
+          {INSTITUTIONAL_NAV.map((item) => <Link key={item.href} to={item.href}>{item.href === "/marcas-e-equipamentos" ? "Marcas e equipamentos" : item.label}</Link>)}
           <Link to="/limpeza-de-coifas">Higienização de coifas</Link>
         </nav>
         <div className="wd-footer-contact">

@@ -4,6 +4,7 @@ import logoWedo from "@/assets/logo-wedo-full.jpg";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 
 const quickLinks = [
+  { label: "Marcas e equipamentos", href: "/marcas-e-equipamentos" },
   { label: "Refrigeração Industrial", href: "/manutencao-camaras-frias" },
   { label: "Assistência Rational", href: "/assistencia-tecnica-rational" },
   { label: "Sobre", href: "/sobre" },

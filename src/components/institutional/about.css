@@ -13,6 +13,7 @@
 .wd-institutional .wd-about-work-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 110px; }
 .wd-institutional .wd-about-work h2,
 .wd-institutional .wd-about-principles h2,
+.wd-institutional .wd-about-training h2,
 .wd-institutional .wd-about-services h2 { color: #142c43; font-size: 32px; line-height: 1.2; font-weight: 400; letter-spacing: -.025em; margin: 15px 0 20px; }
 .wd-institutional .wd-about-work-copy p { color: #5e6b74; font-size: 15px; line-height: 1.85; margin: 0 0 18px; }
 .wd-institutional .wd-about-work-copy p:last-child { margin-bottom: 0; }
@@ -29,11 +30,23 @@
 .wd-institutional .wd-about-service-list > a:last-child { border-bottom: 1px solid #dce2e6; }
 .wd-institutional .wd-about-service-list > a > span { flex-shrink: 0; color: #142c43; font-size: 23px; }
 .wd-institutional .wd-about-service-list > a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.wd-institutional .wd-about-training { padding: 75px 0; border-bottom: 1px solid #e2e6e8; background: #fff; }
+.wd-institutional .wd-about-training-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr); align-items: center; gap: 70px; }
+.wd-institutional .wd-about-training-copy > p:not(.wd-kicker) { color: #5e6b74; font-size: 15px; line-height: 1.85; margin-bottom: 18px; }
+.wd-institutional .wd-about-training-copy > p:last-child { margin-bottom: 0; }
+.wd-institutional .wd-about-training-photo { margin: 0; min-width: 0; }
+.wd-institutional .wd-about-training-photo img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.wd-institutional .wd-about-training-photo figcaption { color: #7b858c; font-size: 11px; line-height: 1.5; margin-top: 10px; }
 @media (max-width: 900px) {
   .wd-institutional .wd-about-hero-grid { gap: 40px; }
   .wd-institutional .wd-about-work-grid { gap: 50px; }
   .wd-institutional .wd-about-photo img { height: 440px; }
   .wd-institutional .wd-about-principle-grid { gap: 28px; }
+  .wd-institutional .wd-about-training-grid { gap: 40px; }
+}
+@media (max-width: 800px) {
+  .wd-institutional .wd-about-training-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .wd-institutional .wd-about-training-copy { max-width: 620px; }
 }
 @media (max-width: 640px) {
   .wd-institutional .wd-about-hero { padding: 20px 0 45px; }
@@ -44,10 +57,12 @@
   .wd-institutional .wd-about-lead { font-size: 16px; line-height: 1.7; }
   .wd-institutional .wd-about-photo img { height: 360px; }
   .wd-institutional .wd-about-work,
+  .wd-institutional .wd-about-training,
   .wd-institutional .wd-about-services { padding: 48px 0; }
   .wd-institutional .wd-about-principles { padding: 48px 0 52px; }
   .wd-institutional .wd-about-work h2,
   .wd-institutional .wd-about-principles h2,
+  .wd-institutional .wd-about-training h2,
   .wd-institutional .wd-about-services h2 { font-size: 28px; }
   .wd-institutional .wd-about-principle-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 32px; }
 }

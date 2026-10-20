@@ -9,7 +9,7 @@ export default function AssistenciaMultimarcas() {
     kicker="Manutenção multimarcas"
     heading="Assistência técnica para cozinhas profissionais."
     introduction="Do diagnóstico ao reparo, cuidamos dos equipamentos que fazem parte da sua operação. Atendimento técnico com orçamento para aprovação e registro do trabalho realizado."
-    image={{ src: "/images/institucional/tecnico-forno.webp", alt: "Técnico da WeDo durante manutenção em um forno profissional", position: "center 45%", caption: "Manutenção de equipamentos realizada pela equipe WeDo." }}
+    image={{ src: "/images/institucional/rational-icombi-pro-portfolio.webp", alt: "Dois fornos combinados Rational iCombi Pro instalados sob coifa", position: "center 42%", caption: "Fornos combinados integram os equipamentos atendidos pela WeDo." }}
     action="Solicitar assistência"
     subject="Assistência técnica"
     overview={{
@@ -37,6 +37,6 @@ export default function AssistenciaMultimarcas() {
       { question: "Vocês fazem manutenção preventiva e corretiva?", answer: "Sim. A manutenção corretiva atende falhas identificadas no equipamento. A preventiva pode ser programada conforme as condições de uso e as necessidades da cozinha, inclusive por contrato." },
       { question: "O reparo é executado assim que o técnico chega?", answer: "Primeiro avaliamos a condição do equipamento. A execução depende do diagnóstico, da aprovação do orçamento, das peças necessárias e das condições de acesso e trabalho." },
     ]}
-    related={[{ to: "/contratos-pcm", label: "Contratos de manutenção" }, { to: "/pecas-originais", label: "Peças e componentes" }]}
+    related={[{ to: "/marcas-e-equipamentos", label: "Marcas e equipamentos atendidos" }, { to: "/contratos-pcm", label: "Contratos de manutenção" }, { to: "/pecas-originais", label: "Peças e componentes" }]}
   />;
 }

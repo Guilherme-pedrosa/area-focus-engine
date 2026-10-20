@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroKitchen from "@/assets/cozinha-profissional-home-sem-utensilios.webp";
+import heroKitchen from "@/assets/cozinha-tramontina-rational.webp";
 import "./home.css";
 
 const services = [
@@ -57,9 +57,11 @@ export default function HomeContent() {
     <>
       <section className="wd-home-hero" aria-labelledby="wd-home-title">
         <div className="wd-container wd-home-hero-grid">
-          <div className="wd-home-hero-copy">
+          <div className="wd-home-hero-heading">
             <p className="wd-kicker">WeDo · Goiás e Distrito Federal</p>
             <h1 id="wd-home-title">Assistência técnica para cozinhas profissionais.</h1>
+          </div>
+          <div className="wd-home-hero-copy">
             <p className="wd-home-hero-description">
               Manutenção, contratos preventivos e peças para os equipamentos que fazem parte da sua operação.
             </p>
@@ -69,21 +71,22 @@ export default function HomeContent() {
             </div>
             <p className="wd-home-coverage">Atendimento a restaurantes, hotéis e cozinhas institucionais.</p>
           </div>
-          <figure className="wd-home-hero-photo">
+          <figure className="wd-home-hero-photo wd-home-hero-photo-wide">
             <img
               src={heroKitchen}
-              alt="Cozinha profissional com equipamentos de cocção e sistema de exaustão em aço inox"
-              width="1440"
-              height="960"
+              alt="Linha de cocção Tramontina e forno combinado Rational iCombi Pro sob coifa de exaustão"
+              width="1599"
+              height="900"
               {...{ fetchpriority: "high" }}
               decoding="async"
             />
+            <figcaption>Imagem ilustrativa dos equipamentos atendidos.</figcaption>
           </figure>
         </div>
       </section>
 
       <section className="wd-home-brands wd-container" aria-label="Atendimento multimarcas">
-        <p>Assistência<br /><strong>multimarcas</strong></p>
+        <p>Assistência<br /><strong>multimarcas</strong><br /><Link className="wd-home-all-brands" to="/marcas-e-equipamentos">Ver todas as marcas ↗</Link></p>
         <ul>
           {brands.map((brand) => (
             <li key={brand.name}>
