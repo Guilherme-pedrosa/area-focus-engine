@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "build:dev": "vite build --mode development",
+    "build": "vite build --manifest && node scripts/prerender.mjs && node scripts/verify-prerender.mjs",
+    "build:dev": "vite build --mode development --manifest && node scripts/prerender.mjs && node scripts/verify-prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:prerender": "node scripts/verify-prerender.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

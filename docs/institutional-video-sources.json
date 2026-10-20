@@ -1,0 +1,12 @@
+{
+  "videos": [
+    {
+      "asset": "/videos/limpeza-de-coifas-wedo.mp4",
+      "source": "APRESENTAÇÃO SERVIÇOS/Limpeza de Coifa WeDo.mp4",
+      "source_bytes": 17242482,
+      "sha256": "1856c7c114e87d416f33b24c7eaa7d70f50d5730a3f97046d7d22f484dd08a1f",
+      "treatment": "Binary copy of the user-provided marketing video. No transcoding or content edits.",
+      "placement": "/limpeza-de-coifas, embedded hero player with native playback controls, playsInline and metadata preload"
+    }
+  ]
+}

@@ -215,9 +215,15 @@ const getCategoryContent = (page: SeoSymptomPage) => {
   return categoryTexts[page.categoria] || categoryTexts["camaras-frias"];
 };
 
-export default function SeoSymptomTemplate() {
+interface SeoSymptomTemplateProps {
+  slug?: string;
+}
+
+export default function SeoSymptomTemplate({ slug: routeSlug }: SeoSymptomTemplateProps) {
   const { ctaUrl, ctaText } = useCTASettings();
-  const { slug } = useParams<{ slug: string }>();
+  const { slug: paramSlug } = useParams<{ slug: string }>();
+  // Literal routes do not populate useParams; App passes their stable slug.
+  const slug = routeSlug ?? paramSlug;
   
   if (!slug) {
     return <Navigate to="/404" replace />;
@@ -238,7 +244,12 @@ export default function SeoSymptomTemplate() {
     "name": "WeDo Manutenção de Cozinhas Profissionais",
     "description": page.metaDescription,
     "url": `https://wedocozinhas.com.br/${page.slug}`,
-    "telephone": "https://contatoswedo.lovable.app/",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Atendimento ao cliente",
+      "url": CONTACT_URL,
+      "availableLanguage": "Portuguese"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": page.cidade,

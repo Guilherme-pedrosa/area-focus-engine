@@ -2,8 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { SiteSettingsProvider } from "@/hooks/useSiteSettings";
 import Index from "./pages/Index";
 import ManutencaoCamarasFrias from "./pages/ManutencaoCamarasFrias";
@@ -68,6 +68,13 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+function AdminRobots() {
+  const { pathname } = useLocation();
+  return /^\/admin(?:\/|$)/.test(pathname) ? (
+    <Helmet><meta name="robots" content="noindex, nofollow" /></Helmet>
+  ) : null;
+}
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -76,6 +83,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AdminRobots />
           <Routes>
             {/* Site Principal */}
             <Route path="/" element={<Index />} />
@@ -138,11 +146,11 @@ const App = () => (
 
             {/* Páginas SEO Dinâmicas baseadas em Sintomas */}
             {seoSymptomsPages.map((page) => (
-              <Route key={page.slug} path={`/${page.slug}`} element={<SeoSymptomTemplate />} />
+              <Route key={page.slug} path={`/${page.slug}`} element={<SeoSymptomTemplate slug={page.slug} />} />
             ))}
 
             {/* 404 */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<><Helmet><title>Página não encontrada | WeDo</title><meta name="robots" content="noindex, follow" /></Helmet><NotFound /></>} />
           </Routes>
           <PageTracker />
         </BrowserRouter>

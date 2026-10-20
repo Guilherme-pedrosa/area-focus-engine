@@ -20,7 +20,7 @@ export default function AssistenciaTecnicaTramontina() {
           content="Assistência técnica especializada Tramontina em Goiás. Manutenção de fogões industriais, chapas, fritadeiras e banho-maria. Atendimento em 24h com peças originais."
         />
         <meta name="keywords" content="assistência técnica tramontina, manutenção fogão tramontina, conserto chapa tramontina, fritadeira tramontina, banho-maria tramontina, goiânia, goiás" />
-        <link rel="canonical" href="https://area-focus-engine.lovable.app/assistencia-tecnica-tramontina" />
+        <link rel="canonical" href="https://wedocozinhas.com.br/assistencia-tecnica-tramontina" />
       </Helmet>
 
       {/* Hero Section */}

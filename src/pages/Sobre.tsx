@@ -1,96 +1,89 @@
-import { Helmet } from "react-helmet-async";
-import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Award, Users, MapPin, Calendar } from "lucide-react";
-import { useCTASettings } from "@/hooks/useSiteSettings";
+import Layout from "@/components/Layout";
+import SchemaOrg from "@/components/SchemaOrg";
+import ContactSection from "@/components/institutional/ContactSection";
+import "@/components/institutional/about.css";
 
+const principles = [
+  {
+    title: "Diagnóstico registrado",
+    description: "A condição encontrada no equipamento orienta a proposta de manutenção e fica documentada no atendimento.",
+  },
+  {
+    title: "Execução após aprovação",
+    description: "Serviços, materiais e condições são apresentados para aprovação antes da execução do escopo.",
+  },
+  {
+    title: "Histórico por equipamento",
+    description: "Os registros do trabalho ajudam a acompanhar o que foi realizado e as necessidades de manutenção.",
+  },
+];
 
-const valores = [
-  { icon: Award, title: "Excelência Técnica", desc: "Compromisso com a qualidade em cada serviço prestado." },
-  { icon: Users, title: "Equipe Especializada", desc: "Técnicos certificados com treinamento contínuo." },
-  { icon: MapPin, title: "Presença Regional", desc: "Atendimento em todo o estado de Goiás e Distrito Federal." },
-  { icon: Calendar, title: "Desde 2018", desc: "Anos de experiência consolidada no mercado." },
+const services = [
+  { to: "/assistencia-multimarcas", title: "Assistência técnica", description: "Avaliação e manutenção de equipamentos de cocção, refrigeração, lavagem e preparo." },
+  { to: "/contratos-pcm", title: "Contratos de manutenção", description: "Inventário, prioridades e programação de visitas conforme a rotina de cada unidade." },
+  { to: "/pecas-originais", title: "Peças e componentes", description: "Identificação, consulta de aplicação e cotação de componentes para equipamentos profissionais." },
+  { to: "/limpeza-de-coifas", title: "Limpeza de coifas", description: "Avaliação e higienização dos componentes de exaustão previstos no escopo do serviço." },
 ];
 
 export default function Sobre() {
-  const { ctaUrl, ctaText } = useCTASettings();
   return (
-    <Layout>
-      <Helmet>
-        <title>Sobre a WeDo | Manutenção de Equipamentos Industriais | Goiás e DF</title>
-        <meta name="description" content="Conheça a WeDo: desde 2018 oferecendo assistência técnica especializada em câmaras frias e equipamentos industriais em Goiás e DF." />
-        <link rel="canonical" href="https://wedocozinhas.com.br/sobre" />
-      </Helmet>
+    <Layout variant="institutional">
+      <SchemaOrg
+        pageTitle="Sobre a WeDo | Manutenção de Equipamentos Industriais | Goiás e DF"
+        pageDescription="Conheça a WeDo: assistência técnica e manutenção de equipamentos de cozinhas profissionais em Goiás e Distrito Federal. Diagnóstico, planejamento e registro dos serviços."
+      />
 
-      {/* Hero */}
-      <section className="bg-secondary text-secondary-foreground section-padding">
-        <div className="container-wedo">
-          <div className="max-w-4xl">
-            <nav className="text-sm text-secondary-foreground/60 mb-6">
-              <Link to="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <span>Sobre</span>
-            </nav>
-            <h1 className="title-hero text-primary-foreground mb-6">
-              Sobre a WeDo
-            </h1>
-            <p className="text-xl text-secondary-foreground/80 max-w-3xl">
-              Desde 2018, a WeDo oferece assistência técnica especializada em câmaras frias, refrigeração industrial e equipamentos para cozinhas profissionais em Goiás e Distrito Federal.
-            </p>
+      <section className="wd-about-hero">
+        <div className="wd-container">
+          <nav className="wd-about-breadcrumb" aria-label="Caminho da página">
+            <Link to="/">Início</Link><span aria-hidden="true">/</span><span aria-current="page">A WeDo</span>
+          </nav>
+          <div className="wd-about-hero-grid">
+            <div className="wd-about-introduction">
+              <p className="wd-kicker">A WeDo</p>
+              <h1>Manutenção de cozinhas profissionais é o nosso trabalho.</h1>
+              <p className="wd-about-lead">Atendemos operações em Goiás e no Distrito Federal, com assistência técnica, manutenção planejada e fornecimento de peças para os equipamentos da cozinha.</p>
+              <a href="#contato" className="wd-button">Falar com a WeDo <span aria-hidden="true">↗</span></a>
+            </div>
+            <figure className="wd-about-photo wd-about-photo-landscape">
+              <img src="/images/institucional/portfolio-equipe-v2.webp" alt="Equipe administrativa da WeDo acompanhando os atendimentos" width="1000" height="750" {...{ fetchpriority: "high" }} decoding="async" />
+              <figcaption>Atendimento e acompanhamento administrativo.</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      {/* História */}
-      <section className="section-padding">
-        <div className="container-wedo">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="title-section mb-6">Nossa História</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              A WeDo nasceu da necessidade de oferecer um serviço técnico de excelência para cozinhas profissionais. Com mais de 2.000 clientes atendidos e mais de 15.000 soluções entregues, consolidamos nossa posição como referência em manutenção de equipamentos industriais.
-            </p>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Como parceiro autorizado Rational, oferecemos assistência técnica certificada com técnicos treinados diretamente pela fábrica. Nossa expertise abrange todas as principais marcas do mercado, permitindo que sejamos o único parceiro para toda a sua operação.
-            </p>
+      <section className="wd-about-work">
+        <div className="wd-container wd-about-work-grid">
+          <div><p className="wd-kicker">Nosso trabalho</p><h2>Suporte para os equipamentos que mantêm a cozinha em operação.</h2></div>
+          <div className="wd-about-work-copy">
+            <p>Fornos, fogões, câmaras frias, lavadoras e equipamentos de preparo têm necessidades diferentes. O atendimento começa pela identificação do equipamento e pela avaliação da condição encontrada.</p>
+            <p>A partir do diagnóstico, apresentamos o orçamento para aprovação, organizamos os recursos necessários e registramos o serviço realizado. Nos contratos, esse trabalho segue um planejamento definido para a unidade e seus equipamentos.</p>
           </div>
         </div>
       </section>
 
-      {/* Valores */}
-      <section className="section-padding bg-muted">
-        <div className="container-wedo">
-          <h2 className="title-section text-center mb-12">Nossos Valores</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valores.map((valor) => (
-              <div key={valor.title} className="card-wedo text-center">
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <valor.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="font-heading font-bold text-lg mb-2">{valor.title}</h3>
-                <p className="text-sm text-muted-foreground">{valor.desc}</p>
-              </div>
-            ))}
+      <section className="wd-about-principles">
+        <div className="wd-container">
+          <p className="wd-kicker">Como conduzimos o atendimento</p>
+          <h2>Informação clara em cada etapa.</h2>
+          <div className="wd-about-principle-grid">
+            {principles.map(principle => <article key={principle.title}><h3>{principle.title}</h3><p>{principle.description}</p></article>)}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-wedo text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Conheça Nossos Serviços
-          </h2>
-          <a
-            href={ctaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1"
-          >
-            {ctaText}
-            <ArrowRight className="w-6 h-6" />
-          </a>
+      <section className="wd-about-services">
+        <div className="wd-container wd-about-work-grid">
+          <div><p className="wd-kicker">O que fazemos</p><h2>Conheça os serviços da WeDo.</h2><p className="wd-about-services-intro">Consulte o serviço e fale com a nossa equipe sobre a necessidade da sua operação.</p></div>
+          <div className="wd-about-service-list">
+            {services.map(service => <Link to={service.to} key={service.to}><div><h3>{service.title}</h3><p>{service.description}</p></div><span aria-hidden="true">↗</span></Link>)}
+          </div>
         </div>
       </section>
+
+      <ContactSection />
     </Layout>
   );
 }

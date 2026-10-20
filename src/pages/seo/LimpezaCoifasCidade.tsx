@@ -4,6 +4,7 @@ import { Link, useLocation, Navigate } from "react-router-dom";
 import { ArrowRight, CheckCircle, Shield, MapPin } from "lucide-react";
 import { useCTASettings } from "@/hooks/useSiteSettings";
 import { cidadesCoifas, type CidadeCoifasData } from "@/data/limpezaCoifasCidades";
+import { WEDO_CONTACT } from "@/lib/institutional";
 
 function CidadeContent({ data }: { data: CidadeCoifasData }) {
   const { ctaUrl, ctaText } = useCTASettings();
@@ -25,7 +26,12 @@ function CidadeContent({ data }: { data: CidadeCoifasData }) {
               "@type": "LocalBusiness",
               "name": "WeDo Comércio e Importação Ltda",
               "url": "https://wedocozinhas.com.br",
-              "telephone": "+55-62-99377-5711",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Atendimento ao cliente",
+                "url": WEDO_CONTACT.channelsHref,
+                "availableLanguage": "Portuguese"
+              },
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Anápolis",

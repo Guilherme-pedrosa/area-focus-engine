@@ -1,195 +1,42 @@
-import { Helmet } from "react-helmet-async";
-import Layout from "@/components/Layout";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Package, Truck, ShieldCheck } from "lucide-react";
-import { useCTASettings } from "@/hooks/useSiteSettings";
-import FAQSection from "@/components/FAQSection";
-import ServiceSchema from "@/components/ServiceSchema";
-
-const marcas = [
-  "Rational", "Hobart", "Robot Coupe", "Vulcan", "Unox", "Cozil",
-  "Irinox", "Prática", "Tramontina", "Skymsen", "Middleby",
-];
-
-const categorias = [
-  "Peças para fornos combinados",
-  "Peças para câmaras frias",
-  "Peças para lavadoras industriais",
-  "Peças para processadores de alimentos",
-  "Sensores, válvulas e SSRs",
-  "Vedações e borrachas de porta",
-  "Placas eletrônicas e controladores",
-  "Filtros e kits de limpeza",
-];
-
-const cidades = ["Goiânia", "Anápolis", "Brasília", "Distrito Federal"];
-
-const faqs = [
-  {
-    q: "Vocês têm peças originais Rational?",
-    a: "Sim, mantemos estoque permanente de peças originais Rational, incluindo vedações, sensores B1/B2/B4/P1, válvulas solenoides, SSRs, filtros e kits de limpeza Care/Detergente.",
-  },
-  {
-    q: "Qual o prazo de entrega das peças?",
-    a: "Para itens em estoque, a entrega é imediata em Goiânia, Anápolis e Brasília. Para peças sob encomenda, o prazo varia conforme a marca e o componente.",
-  },
-  {
-    q: "Atendem em Brasília e Distrito Federal?",
-    a: "Sim, fornecemos peças originais para todo o Distrito Federal, incluindo Plano Piloto, regiões administrativas e Entorno do DF.",
-  },
-  {
-    q: "As peças têm garantia?",
-    a: "Sim. As peças originais possuem garantia do próprio fabricante. Quando aplicada por nossa equipe técnica, agregamos garantia de 90 dias sobre o serviço de instalação.",
-  },
-];
+import ServicePage from "@/components/institutional/ServicePage";
 
 export default function PecasOriginais() {
-  const { ctaUrl, ctaText } = useCTASettings();
-  return (
-    <Layout>
-      <Helmet>
-        <title>Peças Originais para Cozinhas Profissionais | Rational, Hobart e mais | WeDo</title>
-        <meta
-          name="description"
-          content="Peças originais para Rational, Hobart, Vulcan, Robot Coupe e mais. Estoque próprio com entrega rápida em Goiás e DF. Forno combinado, câmara fria, lavadora industrial."
-        />
-        <link rel="canonical" href="https://wedocozinhas.com.br/pecas-originais" />
-      </Helmet>
-
-      <ServiceSchema
-        serviceType="Fornecimento de Peças Originais para Equipamentos de Cozinha Profissional"
-        description="Estoque próprio de peças originais para equipamentos de cozinha profissional Rational, Hobart, Robot Coupe, Vulcan, Unox, Cozil e outras marcas, com entrega rápida em Goiânia, Anápolis, Brasília e Distrito Federal."
-        slug="pecas-originais"
-      />
-
-      {/* Hero */}
-      <section className="bg-secondary text-secondary-foreground section-padding">
-        <div className="container-wedo">
-          <div className="max-w-4xl">
-            <nav className="text-sm text-secondary-foreground/60 mb-6">
-              <Link to="/" className="hover:text-primary">Home</Link>
-              <span className="mx-2">/</span>
-              <span>Peças Originais</span>
-            </nav>
-            <h1 className="title-hero text-primary-foreground mb-6">
-              Peças Originais para Equipamentos de Cozinha Profissional | Goiás e DF
-            </h1>
-            <p className="text-xl text-secondary-foreground/80 max-w-3xl mb-8">
-              Estoque próprio de peças originais para Rational, Hobart, Robot Coupe, Vulcan, Unox, Cozil e outras marcas. Entrega rápida em Goiânia, Anápolis, Brasília e Distrito Federal para fornos combinados, câmaras frias, lavadoras industriais e processadores.
-            </p>
-            <a
-              href={ctaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold text-lg rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
-            >
-              Cotar Peças
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Marcas */}
-      <section className="section-padding">
-        <div className="container-wedo">
-          <h2 className="title-section text-center mb-4">Peças Originais por Marca</h2>
-          <p className="subtitle-section text-center mx-auto mb-10">
-            Trabalhamos com fornecedores oficiais para garantir originalidade, desempenho e durabilidade.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {marcas.map((m) => (
-              <span key={m} className="badge-wedo">{m}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categorias */}
-      <section className="section-padding bg-muted">
-        <div className="container-wedo">
-          <h2 className="title-section text-center mb-12">Categorias de Peças</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            {categorias.map((c) => (
-              <div key={c} className="flex items-center gap-3 p-4 bg-card rounded-lg shadow-sm">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-medium text-sm">{c}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Diferenciais */}
-      <section className="section-padding">
-        <div className="container-wedo">
-          <h2 className="title-section text-center mb-12">Diferenciais do Estoque WeDo</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Package className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-heading font-bold text-lg mb-2">Estoque Próprio</h3>
-              <p className="text-muted-foreground text-sm">
-                Peças críticas em estoque permanente, evitando paradas longas na sua operação.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-heading font-bold text-lg mb-2">Entrega Rápida</h3>
-              <p className="text-muted-foreground text-sm">
-                Logística estruturada para Goiânia, Anápolis, Brasília e demais cidades de Goiás e DF.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="font-heading font-bold text-lg mb-2">Originalidade Garantida</h3>
-              <p className="text-muted-foreground text-sm">
-                Apenas peças originais de fábrica, com rastreabilidade completa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Cidades */}
-      <section className="section-padding bg-muted">
-        <div className="container-wedo text-center">
-          <h2 className="title-section mb-6">Entrega em Goiás e DF</h2>
-          <div className="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-            {cidades.map((c) => (
-              <span key={c} className="badge-wedo">{c}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <FAQSection
-        title="Perguntas Frequentes sobre Peças Originais"
-        faqs={faqs}
-      />
-
-      {/* CTA */}
-      <section className="section-padding bg-primary">
-        <div className="container-wedo text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
-            Solicite uma Cotação de Peças
-          </h2>
-          <a
-            href={ctaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-secondary text-secondary-foreground font-bold text-lg rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
-          >
-            {ctaText}
-            <ArrowRight className="w-6 h-6" />
-          </a>
-        </div>
-      </section>
-    </Layout>
-  );
+  return <ServicePage
+    slug="pecas-originais"
+    title="Peças para equipamentos de cozinha profissional | WeDo Goiás e DF"
+    description="Consulta e cotação de peças para equipamentos de cozinha profissional. Envie marca, modelo, foto da etiqueta e do componente para verificar aplicação e disponibilidade."
+    breadcrumb="Peças e componentes"
+    kicker="Peças para cozinhas profissionais"
+    heading="Peças para equipamentos de cozinha profissional."
+    introduction="Ajudamos a identificar o componente para o seu equipamento. Com a marca, o modelo e as referências da peça, consultamos aplicação, disponibilidade e condições de fornecimento."
+    image={{ src: "/images/institucional/portfolio-pecas-v2.webp", alt: "Profissional conferindo componentes em prateleiras de peças", position: "65% 50%", caption: "Conferência de peças e componentes.", landscape: true }}
+    action="Consultar uma peça"
+    subject="Cotação de peças"
+    overview={{
+      title: "Informações para identificar a peça.",
+      description: "Equipamentos de uma mesma marca podem usar componentes diferentes. Conferir os dados evita que uma semelhança visual seja tratada como compatibilidade.",
+      items: [
+        { title: "Marca e modelo", description: "Informe o fabricante e o modelo completo do equipamento." },
+        { title: "Etiqueta de identificação", description: "Envie uma foto legível da etiqueta, incluindo número de série e dados elétricos quando disponíveis." },
+        { title: "Foto e código da peça", description: "Mostre o componente, suas conexões e qualquer referência ou código gravado nele." },
+        { title: "Local de entrega", description: "Informe a cidade e se a solicitação também envolve instalação pela equipe técnica." },
+      ],
+    }}
+    process={{
+      title: "Da consulta à separação do material.",
+      description: "Cada cotação informa as condições do item identificado para a solicitação.",
+      steps: [
+        { title: "Identificação", description: "Conferência das informações do equipamento e das referências recebidas." },
+        { title: "Consulta", description: "Verificação de aplicação, disponibilidade em estoque ou necessidade de encomenda." },
+        { title: "Cotação", description: "Apresentação do item, valor, prazo e condições de fornecimento para aprovação." },
+        { title: "Separação", description: "Conferência e preparação do material aprovado para entrega ou aplicação no serviço." },
+      ],
+    }}
+    faqs={[
+      { question: "Uma foto da peça é suficiente para fazer a cotação?", answer: "A foto ajuda, mas nem sempre permite identificar a aplicação. Envie também a marca, o modelo e a etiqueta do equipamento. O código da peça, quando disponível, ajuda na conferência." },
+      { question: "Todas as peças estão disponíveis para pronta entrega?", answer: "A disponibilidade é consultada para cada item. A cotação informa se a peça está em estoque ou depende de encomenda, além do prazo e das condições de fornecimento." },
+      { question: "Posso solicitar a instalação da peça?", answer: "Sim, você pode solicitar uma avaliação para instalação pela equipe técnica. O serviço é orçado conforme o equipamento, a localização e as condições do atendimento." },
+    ]}
+    related={[{ to: "/assistencia-multimarcas", label: "Assistência técnica" }, { to: "/contratos-pcm", label: "Contratos de manutenção" }]}
+  />;
 }

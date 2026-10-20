@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { WEDO_CONTACT } from "@/lib/institutional";
 
 interface SchemaOrgProps {
   type?: "LocalBusiness" | "Service";
@@ -24,7 +25,12 @@ export default function SchemaOrg({
     "description": "Assistência técnica especializada em equipamentos para cozinhas profissionais",
     "url": BASE_URL,
     "image": `${BASE_URL}/images/logo-wedo-full.jpg`,
-    "telephone": "+55-62-99377-5711",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Atendimento ao cliente",
+      "url": WEDO_CONTACT.channelsHref,
+      "availableLanguage": "Portuguese"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Rua 5",

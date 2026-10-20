@@ -1,0 +1,296 @@
+{
+  "treatment": "Presentation assets were only converted/resized. The two portfolio-v2 files use earlier imagegen treatments of user-supplied photos, described individually below. No new image generation in this revision.",
+  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded.",
+  "comparisons": [
+    {
+      "service": "Fogão profissional",
+      "before": "manutencao-fogao-antes.webp",
+      "after": "manutencao-fogao-depois.webp",
+      "extraction_source": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf, page 5",
+      "order_verified_in": "WEDO APRESENTAÇÃO PREVENTIVAS.pdf, page 9, ANTES/DEPOIS columns and same-equipment caption",
+      "image_treatment": "Format conversion only; no generated or edited repair results."
+    },
+    {
+      "service": "Componentes elétricos",
+      "before": "manutencao-eletrica-antes.webp",
+      "after": "manutencao-eletrica-depois.webp",
+      "extraction_source": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf, page 5",
+      "order_verified_in": "WEDO APRESENTAÇÃO PREVENTIVAS.pdf, page 9, ANTES/DEPOIS columns and same-equipment caption",
+      "image_treatment": "Format conversion only; no generated or edited repair results."
+    }
+  ],
+  "images": [
+    {
+      "asset": "logo-wedo.png",
+      "original_id": "A194",
+      "original_sha256": "0dc509249e476fc2d06a5f78b8a7c4fc49fbbc93fa82f988714a4c10b131d334",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO CÓDIGO DE CULTURA WEDO.pptx",
+          "location": "slide 1"
+        }
+      ],
+      "width": 540,
+      "height": 274,
+      "bytes": 50054,
+      "sha256": "142af26c769d48ae8a88b906fb46234ac6306daf39bd80e4984d2ace42704eb9"
+    },
+    {
+      "asset": "rational.png",
+      "original_id": "A257",
+      "original_sha256": "b25856d0fc6bdfc7438df07bd8e6600bc58178bc95ccc0d1aa2f0024f735ad36",
+      "source": [
+        {
+          "file": "Manutencoes-em-Equipamentos-de-Food-Service (3).pptx",
+          "location": "slide 10"
+        }
+      ],
+      "width": 280,
+      "height": 83,
+      "bytes": 12369,
+      "sha256": "4832d140b10f357d208d70b7d338143ea0db959b5259bc740018f15e604211e2"
+    },
+    {
+      "asset": "hobart.png",
+      "original_id": "A013",
+      "original_sha256": "1810ad9b9acd28649b0ff63143ce9d2cdbac5228197fba62ecfaf3f5940a79dd",
+      "source": [
+        {
+          "file": "Apresentação WEDO  2025.pptx",
+          "location": "slide 13"
+        },
+        {
+          "file": "Apresentação WEDO  2025 - Copia.pptx",
+          "location": "slide 13"
+        }
+      ],
+      "width": 249,
+      "height": 120,
+      "bytes": 13541,
+      "sha256": "e2eb5b3c9ef9e0e7575edb2985ac4c231138110a7627af55366f35a8c97ca176"
+    },
+    {
+      "asset": "pratica.png",
+      "original_id": "A266",
+      "original_sha256": "3c91784e8b795efad2467bd77d5fab38e78356511bb5046acb7d773f8238ab7e",
+      "source": [
+        {
+          "file": "Manutencoes-em-Equipamentos-de-Food-Service (3).pptx",
+          "location": "slide 10"
+        }
+      ],
+      "width": 280,
+      "height": 74,
+      "bytes": 16192,
+      "sha256": "0d77738110153507f9fbdf102b4a8678545d6db8ac423a071a16f0a5b27aab4b"
+    },
+    {
+      "asset": "unox.png",
+      "original_id": "A010",
+      "original_sha256": "36781a057e487451591bc91577422a03279c1f403c1b0dcda5d26f2265c0884c",
+      "source": [
+        {
+          "file": "Apresentação WEDO  2025.pptx",
+          "location": "slide 13"
+        },
+        {
+          "file": "Apresentação WEDO  2025 - Copia.pptx",
+          "location": "slide 13"
+        }
+      ],
+      "width": 216,
+      "height": 120,
+      "bytes": 2705,
+      "sha256": "f3818ed13105ca253aab0ffea3196a394a3b4fd1207684ca12d4a75665b7f12a"
+    },
+    {
+      "asset": "irinox.png",
+      "original_id": "A267",
+      "original_sha256": "f24208de5c845ee386021bd9354a4ee999bc6bd0c83ed3cd556fd0c8cf586877",
+      "source": [
+        {
+          "file": "Manutencoes-em-Equipamentos-de-Food-Service (3).pptx",
+          "location": "slide 10"
+        }
+      ],
+      "width": 280,
+      "height": 65,
+      "bytes": 11700,
+      "sha256": "ddc092a0339e03a7115a28cd776bbda1587f5cd5c06655179f081074fb2bdc55"
+    },
+    {
+      "asset": "forno-pratica.webp",
+      "original_id": "A209",
+      "original_sha256": "03b42c1396c4d8a9f11426561dffd73c056ccf60c50784c2733d3f0390f68cb9",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO SERVIÇOS DE PREVENTIVA.pdf",
+          "location": "página 10"
+        }
+      ],
+      "width": 840,
+      "height": 1120,
+      "bytes": 52918,
+      "sha256": "9bbc5d56be30564ac6627c5a205feacb4d68c4500ee9ceb13c303379580aa15a"
+    },
+    {
+      "asset": "estoque-pecas.webp",
+      "original_id": "A029",
+      "original_sha256": "764669cf1a898ca507f92b3e3940d1640d2608ab4b2199297c21a278afd423df",
+      "source": [
+        {
+          "file": "Apresentação ESTRUTURA WEDO.pptx",
+          "location": "slide 9"
+        }
+      ],
+      "width": 800,
+      "height": 1067,
+      "bytes": 127304,
+      "sha256": "b2c81f41cbd276e20600e6bed01eff24fd959188094578fda8fbcdc3d0f1e5a6"
+    },
+    {
+      "asset": "coifas-limpeza.webp",
+      "original_id": "A218",
+      "original_sha256": "660a8914d82a505bf759f245a38ac7257616862f631b74130f4193011fe2d25c",
+      "source": [
+        {
+          "file": "HIGIENIZAÇÃO DE COIFAS WEDO.pdf",
+          "location": "página 2"
+        },
+        {
+          "file": "HIGIENIZAÇÃO DE COIFAS WEDO.pdf",
+          "location": "página 5"
+        }
+      ],
+      "width": 517,
+      "height": 838,
+      "bytes": 44906,
+      "sha256": "46deecff1756683cda76e536e70114866eb7f1df7d1833c0a32359162dc00318"
+    },
+    {
+      "asset": "caldeirao.webp",
+      "original_id": "A274",
+      "original_sha256": "da5162a615eebf88b72b625fdfd00c26b4c54339480a218ecbfc5a4ef189276d",
+      "source": [
+        {
+          "file": "WEDO APRESENTAÇÃO PREVENTIVAS.pdf",
+          "location": "página 12"
+        }
+      ],
+      "width": 838,
+      "height": 1120,
+      "bytes": 49756,
+      "sha256": "859c2009c39b39cacf59b4c32752fd593c1bcf309a1fbec8fc876239d4ed9d29"
+    },
+    {
+      "asset": "cozinha-profissional-home.webp",
+      "original_id": "A298",
+      "original_sha256": "269e9f261e9bb61795e6983259c711a97689b8f5caf8c69f946a75286e6ea8a6",
+      "source": [
+        {
+          "file": "Apresentação locação de lavadora de louças.pdf",
+          "location": "página 3"
+        }
+      ],
+      "width": 1440,
+      "height": 960,
+      "bytes": 124420,
+      "sha256": "d4dbeb4bcd1bf050d4b6a0ffda48fda203093ed0584f03e3749e4e1753124698",
+      "bundled_source": "src/assets/cozinha-profissional-home.webp",
+      "usage": "Illustrative photograph from user-supplied presentation; not attributed as a WeDo project. Imported by the home component so Vite validates and fingerprints the file."
+    },
+    {
+      "asset": "manutencao-fogao-antes.webp",
+      "original_id": "A103",
+      "original_sha256": "dab03e4eb150c711dfc1a520187f1907757ad9323b7160a03b75b4f897edd67c",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf",
+          "location": "página 5"
+        }
+      ],
+      "width": 543,
+      "height": 400,
+      "bytes": 18108,
+      "sha256": "e11835fd43aaa341ecc1120842c6b716dc35991d73acb5ef1dd795a97b164e12"
+    },
+    {
+      "asset": "manutencao-fogao-depois.webp",
+      "original_id": "A104",
+      "original_sha256": "0041460d1d1a2641b4bc4032b3e260ed62dc2b6f6319831a8b9fd0d27aeb92c3",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf",
+          "location": "página 5"
+        }
+      ],
+      "width": 713,
+      "height": 400,
+      "bytes": 34848,
+      "sha256": "5df7b650f1186c0a7612397a6f680f627e8a345ba564f92cdcdd3c1150f82027"
+    },
+    {
+      "asset": "manutencao-eletrica-antes.webp",
+      "original_id": "A105",
+      "original_sha256": "51e656acfeb363136229d93b7e1da81f47087d69ee5b56681572ab481db9f5cd",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf",
+          "location": "página 5"
+        }
+      ],
+      "width": 580,
+      "height": 400,
+      "bytes": 62100,
+      "sha256": "38bdee5fb08bfb71b7dd81c9e9e19af8d84993ed20acf7af1421ba8c3ad308c4"
+    },
+    {
+      "asset": "manutencao-eletrica-depois.webp",
+      "original_id": "A106",
+      "original_sha256": "18a38d5f1558bf861c670a2579cc1740c447247ff35fd521639e7fe405a0cf01",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO MÉTODO DE TRABALHO WEDO .R.pdf",
+          "location": "página 5"
+        }
+      ],
+      "width": 728,
+      "height": 400,
+      "bytes": 57332,
+      "sha256": "f58dbd53bfc247d5b66c0a3a24cb0a988c9634e314e530491bc1c0b9e00078db"
+    },
+    {
+      "asset": "tecnico-forno.webp",
+      "source": "tecnico-wedo-forno-aberto.png",
+      "original_sha256": "9c79a84d280e09deef3fab6dbfa3d97bb0e29641d7c7422db67cde97c85665da",
+      "width": 768,
+      "height": 1151,
+      "bytes": 129868,
+      "sha256": "75466b4cb69208177f70451d15badcd83fa218bcc675b25f5bbd2fbdaecfa0ee"
+    },
+    {
+      "asset": "portfolio-pecas-v2.webp",
+      "source": "08-estoque-pecas-rosto-corrigido.png",
+      "original_source": "08-estoque-pecas-tecnico-miniatura.jpg",
+      "original_sha256": "18e7e803fcdd3f2c073918a3fbd25dc4bc308b31611263622e5c09fbb0d6ec53",
+      "treated_source_sha256": "7d60bcdc71bba5e60e4e5b9d237141adce8f70dc473cfee1bff99c3959df5994",
+      "treatment": "User photo 08: edited face and expanded stock scene, as requested. Not an exact record of physical capacity.",
+      "width": 1200,
+      "height": 900,
+      "bytes": 210222,
+      "sha256": "7bb0ab7df0b218e6d6e36489a062872563518e546233f2d35da5d0579d2593c5"
+    },
+    {
+      "asset": "portfolio-equipe-v2.webp",
+      "source": "09-equipe-administrativa-final.png",
+      "original_source": "09-equipe-administrativa-frente.jpg",
+      "original_sha256": "3c66a70b29b7afd35a3a4debc81874b401b101d4acddf96bef073733df1404a8",
+      "treated_source_sha256": "9023f806320f070a55871fda2b2386b898b5003d4aaa659a28f5217feaf41abd",
+      "treatment": "User photo 09: previous lighting, face replacement and logo correction treatment.",
+      "width": 1200,
+      "height": 900,
+      "bytes": 107758,
+      "sha256": "78f599764690eb34c066e70dc64900ef430a369f1f2956e649d0a28e9a442c40"
+    }
+  ]
+}

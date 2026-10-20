@@ -1,0 +1,53 @@
+.wd-institutional .wd-about-hero { padding: 25px 0 70px; }
+.wd-institutional .wd-about-breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; color: #68737d; font-size: 13px; margin-bottom: 35px; }
+.wd-institutional .wd-about-breadcrumb a { color: inherit; text-decoration: none; }
+.wd-institutional .wd-about-breadcrumb a:hover { color: #142c43; text-decoration: underline; }
+.wd-institutional .wd-about-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 80px; }
+.wd-institutional .wd-about-introduction h1 { color: #142c43; font-size: clamp(36px, 3.5vw, 46px); line-height: 1.13; letter-spacing: -.035em; font-weight: 400; margin: 18px 0 24px; }
+.wd-institutional .wd-about-lead { font-size: 17px; line-height: 1.75; color: #54616a; margin: 0 0 30px; max-width: 510px; }
+.wd-institutional .wd-about-photo { margin: 0; min-width: 0; }
+.wd-institutional .wd-about-photo img { width: 100%; height: 470px; display: block; object-fit: cover; object-position: center; }
+.wd-institutional .wd-about-photo.wd-about-photo-landscape img { aspect-ratio: 3 / 2; height: auto; object-position: center 35%; }
+.wd-institutional .wd-about-photo figcaption { font-size: 11px; line-height: 1.5; color: #7b858c; margin-top: 10px; }
+.wd-institutional .wd-about-work { padding: 75px 0; border-top: 1px solid #e2e6e8; }
+.wd-institutional .wd-about-work-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 110px; }
+.wd-institutional .wd-about-work h2,
+.wd-institutional .wd-about-principles h2,
+.wd-institutional .wd-about-services h2 { color: #142c43; font-size: 32px; line-height: 1.2; font-weight: 400; letter-spacing: -.025em; margin: 15px 0 20px; }
+.wd-institutional .wd-about-work-copy p { color: #5e6b74; font-size: 15px; line-height: 1.85; margin: 0 0 18px; }
+.wd-institutional .wd-about-work-copy p:last-child { margin-bottom: 0; }
+.wd-institutional .wd-about-principles { background: #f6f7f7; padding: 75px 0 80px; }
+.wd-institutional .wd-about-principle-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 45px; margin-top: 40px; }
+.wd-institutional .wd-about-principle-grid article { border-top: 1px solid #b8c2c9; padding-top: 25px; }
+.wd-institutional .wd-about-principle-grid h3,
+.wd-institutional .wd-about-service-list h3 { color: #142c43; font-size: 18px; line-height: 1.35; font-weight: 500; margin: 0 0 10px; }
+.wd-institutional .wd-about-principle-grid p,
+.wd-institutional .wd-about-service-list p { color: #5e6b74; font-size: 14px; line-height: 1.8; margin: 0; }
+.wd-institutional .wd-about-services { padding: 75px 0; }
+.wd-institutional .wd-about-services-intro { color: #5e6b74; font-size: 15px; line-height: 1.8; }
+.wd-institutional .wd-about-service-list > a { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 26px 0; border-top: 1px solid #dce2e6; text-decoration: none; }
+.wd-institutional .wd-about-service-list > a:last-child { border-bottom: 1px solid #dce2e6; }
+.wd-institutional .wd-about-service-list > a > span { flex-shrink: 0; color: #142c43; font-size: 23px; }
+.wd-institutional .wd-about-service-list > a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 900px) {
+  .wd-institutional .wd-about-hero-grid { gap: 40px; }
+  .wd-institutional .wd-about-work-grid { gap: 50px; }
+  .wd-institutional .wd-about-photo img { height: 440px; }
+  .wd-institutional .wd-about-principle-grid { gap: 28px; }
+}
+@media (max-width: 640px) {
+  .wd-institutional .wd-about-hero { padding: 20px 0 45px; }
+  .wd-institutional .wd-about-breadcrumb { margin-bottom: 30px; font-size: 12px; }
+  .wd-institutional .wd-about-hero-grid,
+  .wd-institutional .wd-about-work-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .wd-institutional .wd-about-introduction h1 { font-size: 32px; max-width: 500px; }
+  .wd-institutional .wd-about-lead { font-size: 16px; line-height: 1.7; }
+  .wd-institutional .wd-about-photo img { height: 360px; }
+  .wd-institutional .wd-about-work,
+  .wd-institutional .wd-about-services { padding: 48px 0; }
+  .wd-institutional .wd-about-principles { padding: 48px 0 52px; }
+  .wd-institutional .wd-about-work h2,
+  .wd-institutional .wd-about-principles h2,
+  .wd-institutional .wd-about-services h2 { font-size: 28px; }
+  .wd-institutional .wd-about-principle-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 32px; }
+}

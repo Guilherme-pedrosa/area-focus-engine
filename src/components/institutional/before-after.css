@@ -1,0 +1,24 @@
+.wd-institutional .wd-before-after { margin: 0; min-width: 0; }
+.wd-institutional .wd-before-after-title { color: #142c43; font-size: 18px; font-weight: 500; line-height: 1.4; margin: 0 0 20px; }
+.wd-institutional .wd-before-after-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.wd-institutional .wd-before-after-record { min-width: 0; }
+.wd-institutional .wd-before-after-label { border-top: 1px solid #b8c2c9; color: #142c43; font-size: 13px; font-weight: 500; line-height: 1.5; margin: 0 0 10px; padding-top: 10px; }
+.wd-institutional .wd-before-after-record:last-child .wd-before-after-label { border-color: #758b5b; }
+.wd-institutional .wd-before-after-image { aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; }
+.wd-institutional .wd-before-after-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.wd-institutional .wd-before-after figcaption { color: #68737d; font-size: 12px; line-height: 1.6; margin-top: 14px; }
+.wd-institutional .wd-before-after-compact .wd-before-after-pair { gap: 12px; }
+.wd-institutional .wd-service-results { border-top: 1px solid #e2e6e8; padding: 70px 0; background: #fff; }
+.wd-institutional .wd-service-results-grid { display: grid; grid-template-columns: 1fr 1.65fr; align-items: center; gap: 70px; }
+.wd-institutional .wd-service-results h2 { color: #142c43; font-size: 32px; font-weight: 400; letter-spacing: -.025em; line-height: 1.2; margin: 15px 0 20px; }
+.wd-institutional .wd-service-results-heading > p:last-child { color: #5e6b74; font-size: 15px; line-height: 1.8; margin: 0; }
+@media (max-width: 900px) {
+  .wd-institutional .wd-service-results-grid { gap: 35px; }
+}
+@media (max-width: 640px) {
+  .wd-institutional .wd-service-results { padding: 45px 0; }
+  .wd-institutional .wd-service-results-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .wd-institutional .wd-service-results h2 { font-size: 28px; }
+  .wd-institutional .wd-before-after-pair { gap: 12px; }
+  .wd-institutional .wd-before-after figcaption { font-size: 11px; }
+}
