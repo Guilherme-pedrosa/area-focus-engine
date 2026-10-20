@@ -6,7 +6,7 @@
       "source_bytes": 17242482,
       "sha256": "1856c7c114e87d416f33b24c7eaa7d70f50d5730a3f97046d7d22f484dd08a1f",
       "treatment": "Binary copy of the user-provided marketing video. No transcoding or content edits.",
-      "placement": "/limpeza-de-coifas, embedded hero player with native playback controls, playsInline and metadata preload"
+      "placement": "/limpeza-de-coifas, embedded hero player with native playback controls, playsInline and preload none. The poster is shown before play; the hosting returns the full MP4 for Range requests, so no speculative metadata download is requested."
     }
   ]
 }

@@ -19,6 +19,11 @@ duplicado, `noindex`, JSON-LD inválido ou arquivo de imagem/vídeo/CSS/JavaScri
 local ausente. O resultado verificável fica em `dist/prerender-report.json`.
 Para repetir apenas a validação da saída existente, use `npm run test:prerender`.
 
+O endereço antigo `/higienizacao-coifas` recebe HTML próprio com canonical do
+destino e redirecionamento imediato por `meta refresh` para `/limpeza-de-coifas`,
+sem depender de JavaScript. Ele continua fora do sitemap. O hosting responde
+HTTP 200 nesse alias; não se trata de uma regra HTTP 301 do servidor.
+
 ## Verificação no servidor publicado
 
 A existência dos arquivos no build não confirma como o provedor os serve.

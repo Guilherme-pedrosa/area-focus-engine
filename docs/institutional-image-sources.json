@@ -291,6 +291,27 @@
       "height": 900,
       "bytes": 107758,
       "sha256": "78f599764690eb34c066e70dc64900ef430a369f1f2956e649d0a28e9a442c40"
+    },
+    {
+      "asset": "cozinha-profissional-home-sem-utensilios.webp",
+      "bundled_source": "src/assets/cozinha-profissional-home-sem-utensilios.webp",
+      "original_id": "A298",
+      "original_sha256": "269e9f261e9bb61795e6983259c711a97689b8f5caf8c69f946a75286e6ea8a6",
+      "source": [
+        {
+          "file": "Apresentação locação de lavadora de louças.pdf",
+          "location": "página 3"
+        }
+      ],
+      "edited_source": "exec-7497ae2c-91e5-4d42-89f5-6945848c87d9.png",
+      "edited_source_sha256": "52ead647d1f2b06ee24447f9692b180cc08c000f5e24f5540906d6b7df845226",
+      "tool": "built-in image_gen",
+      "prompt": "Localized photographic edit of A298: remove all utensils, hooks and the suspended rack beneath the hood. Reconstruct the occluded background with matching perspective. Preserve the hood, appliances, room, camera, natural lighting and realistic steel textures. No new decoration, people, logos or text.",
+      "usage": "Illustrative presentation photo with user-requested object removal; not attributed as a WeDo customer project.",
+      "width": 1440,
+      "height": 960,
+      "bytes": 111116,
+      "sha256": "e06414bb0b3a9632ac3f420ed24749f4546f7eb5ec5af3aa9c7d5e541d03d579"
     }
   ]
 }

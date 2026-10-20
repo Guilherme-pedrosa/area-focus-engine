@@ -13,7 +13,7 @@ export default function HigienizacaoCoifas() {
       <video
         controls
         playsInline
-        preload="metadata"
+              preload="none"
         poster="/images/institucional/coifas-limpeza.webp"
         aria-label="Vídeo da higienização de coifa pela equipe WeDo"
       >

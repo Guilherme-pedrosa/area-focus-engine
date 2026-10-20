@@ -15,6 +15,7 @@ const require = createRequire(import.meta.url);
 // esbuild is Vite's installed dependency; no extra build service is needed.
 const { build } = createRequire(require.resolve('vite/package.json'))('esbuild');
 const origin = 'https://wedocozinhas.com.br';
+const legacyRedirects = [['/higienizacao-coifas', '/limpeza-de-coifas']];
 
 function headKey(element) {
   const tag = element.tagName.toLowerCase();
@@ -69,6 +70,23 @@ function htmlWithPage(template, page, route) {
   const output = '<!doctype html>\n' + document.documentElement.outerHTML + '\n';
   document.defaultView.close();
   incoming.ownerDocument.defaultView.close();
+  return output;
+}
+
+function htmlWithRedirect(destinationHtml, route, destination) {
+  const document = new JSDOM(destinationHtml).window.document;
+  const targetUrl = origin + destination;
+  const root = document.getElementById('root');
+  root.setAttribute('data-prerendered-route', route);
+  root.setAttribute('data-redirect-target', destination);
+  root.innerHTML = `<main style="max-width:48rem;margin:4rem auto;padding:1.5rem;font-family:Arial,sans-serif"><h1>Limpeza de coifas</h1><p>Esta página mudou de endereço.</p><p><a href="${targetUrl}" style="text-decoration:underline">Acessar a página de limpeza de coifas da WeDo</a></p></main>`;
+  const refresh = document.createElement('meta');
+  refresh.setAttribute('http-equiv', 'refresh');
+  refresh.setAttribute('content', `0;url=${targetUrl}`);
+  document.head.appendChild(refresh);
+  document.head.querySelector('link[rel="canonical"]').setAttribute('href', targetUrl);
+  const output = '<!doctype html>\n' + document.documentElement.outerHTML + '\n';
+  document.defaultView.close();
   return output;
 }
 
@@ -149,7 +167,14 @@ async function main() {
     } catch (error) { failures.push(error.message); }
   }
   if (failures.length) throw new Error(`Prerender failed for ${failures.length} public URLs:\n${failures.join('\n')}`);
-  console.log(`Prerender: ${routes.length} public URLs contain their real page HTML and metadata.`);
+  for (const [route, destination] of legacyRedirects) {
+    if (routes.includes(route) || !routes.includes(destination)) throw new Error(`Legacy redirect must stay outside the sitemap and target a public page: ${route}`);
+    const destinationHtml = await fs.readFile(path.join(dist, destination.slice(1), 'index.html'), 'utf8');
+    const filename = path.join(dist, route.slice(1), 'index.html');
+    await fs.mkdir(path.dirname(filename), { recursive: true });
+    await fs.writeFile(filename, htmlWithRedirect(destinationHtml, route, destination));
+  }
+  console.log(`Prerender: ${routes.length} public URLs contain their real page HTML and metadata; ${legacyRedirects.length} legacy URL redirects without JavaScript.`);
 }
 
 main().catch(error => { console.error(error); process.exitCode = 1; });

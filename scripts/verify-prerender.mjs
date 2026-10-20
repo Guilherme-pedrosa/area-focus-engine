@@ -14,6 +14,7 @@ const failures = [];
 const pages = [];
 const hashes = new Map();
 const checkedAssets = new Set();
+const redirects = [];
 for (const route of routes) {
   try {
     const filename = path.join(dist, route.slice(1), 'index.html');
@@ -48,9 +49,25 @@ for (const route of routes) {
     document.defaultView.close();
   } catch (error) { failures.push(`${route}: ${error.message}`); }
 }
-const report = { publicRoutes: routes.length, verifiedAssets: checkedAssets.size, failures, pages };
+for (const [route, destination] of [['/higienizacao-coifas', '/limpeza-de-coifas']]) {
+  try {
+    if (routes.includes(route)) failures.push(`${route}: legacy alias must not appear in the sitemap`);
+    const html = await fs.readFile(path.join(dist, route.slice(1), 'index.html'), 'utf8');
+    const document = new JSDOM(html).window.document;
+    const targetUrl = origin + destination;
+    const canonical = document.querySelector('link[rel="canonical"]')?.getAttribute('href');
+    const refresh = [...document.querySelectorAll('meta[http-equiv]')].filter(meta => meta.getAttribute('http-equiv').toLowerCase() === 'refresh');
+    if (document.querySelectorAll('link[rel="canonical"]').length !== 1 || canonical !== targetUrl) failures.push(`${route}: redirect canonical must point to ${destination}`);
+    if (refresh.length !== 1 || refresh[0].content !== `0;url=${targetUrl}`) failures.push(`${route}: missing immediate redirect without JavaScript`);
+    if (![...document.querySelectorAll('#root a[href]')].some(link => link.getAttribute('href') === targetUrl && link.textContent.trim())) failures.push(`${route}: missing accessible fallback link`);
+    if (!document.querySelector('script[type="module"][src]')) failures.push(`${route}: missing interactive Vite entry`);
+    redirects.push({ route, destination, canonical, refresh: refresh[0]?.content });
+    document.defaultView.close();
+  } catch (error) { failures.push(`${route}: ${error.message}`); }
+}
+const report = { publicRoutes: routes.length, verifiedAssets: checkedAssets.size, failures, pages, redirects };
 await fs.writeFile(path.join(dist, 'prerender-report.json'), JSON.stringify(report, null, 2) + '\n');
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exitCode = 1;
-} else console.log(`Prerender validation: ${routes.length} unique pages; metadata, canonicals, JSON-LD and ${checkedAssets.size} local assets checked.`);
+} else console.log(`Prerender validation: ${routes.length} unique pages; metadata, canonicals, JSON-LD and ${checkedAssets.size} local assets checked; ${redirects.length} legacy redirect checked.`);

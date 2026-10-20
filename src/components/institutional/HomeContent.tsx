@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroKitchen from "@/assets/cozinha-profissional-home.webp";
+import heroKitchen from "@/assets/cozinha-profissional-home-sem-utensilios.webp";
 import "./home.css";
 
 const services = [
