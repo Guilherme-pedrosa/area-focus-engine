@@ -9,7 +9,7 @@ export default function PecasOriginais() {
     kicker="Peças para cozinhas profissionais"
     heading="Peças para equipamentos de cozinha profissional."
     introduction="Ajudamos a identificar o componente para o seu equipamento. Com a marca, o modelo e as referências da peça, consultamos aplicação, disponibilidade e condições de fornecimento."
-    image={{ src: "/images/institucional/portfolio-pecas-v2.webp", alt: "Profissional conferindo componentes em prateleiras de peças", position: "65% 50%", caption: "Conferência de peças e componentes.", landscape: true }}
+    image={{ src: "/images/institucional/estoque-pecas-equipe-original.webp", alt: "Profissional da WeDo conferindo peças nas prateleiras do estoque", position: "50% 50%", caption: "Nossa equipe na conferência de peças e componentes.", landscape: true }}
     action="Consultar uma peça"
     subject="Cotação de peças"
     overview={{

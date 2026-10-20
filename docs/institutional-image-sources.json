@@ -1,6 +1,6 @@
 {
-  "treatment": "Presentation assets were only converted/resized. The two portfolio-v2 files use earlier imagegen treatments of user-supplied photos, described individually below. No new image generation in this revision.",
-  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded. New catalogue release uses the user-requested Tramontina/Rational composition in the home hero, a real Rational photo on assistance, and a real internal training photo on About. Earlier synthetic kitchen variants were rejected and not added to the website.",
+  "treatment": "The stock page now uses an original photograph extracted from the user-supplied presentation, converted to WebP only. Existing treatments on other assets remain documented individually below.",
+  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded. New catalogue release uses the user-requested Tramontina/Rational composition in the home hero, a real Rational photo on assistance, and a real internal training photo on About. Earlier synthetic kitchen variants were rejected and not added to the website. Stock revision: the expanded synthetic portfolio-pecas-v2 image was rejected and removed from the public assets. The original A084 stock photograph replaces it, preserving the employee, shelving, room dimensions and complete original framing.",
   "comparisons": [
     {
       "service": "Fogão profissional",
@@ -278,7 +278,8 @@
       "width": 1200,
       "height": 900,
       "bytes": 210222,
-      "sha256": "7bb0ab7df0b218e6d6e36489a062872563518e546233f2d35da5d0579d2593c5"
+      "sha256": "7bb0ab7df0b218e6d6e36489a062872563518e546233f2d35da5d0579d2593c5",
+      "status": "Rejected by user; removed from public assets and page references."
     },
     {
       "asset": "portfolio-equipe-v2.webp",
@@ -348,6 +349,27 @@
       "height": 810,
       "bytes": 165738,
       "sha256": "3db3b4cc20303f9b5f786544d4623024eb7c889f4c788b5dd717339f6f9b27fe"
+    },
+    {
+      "asset": "estoque-pecas-equipe-original.webp",
+      "original_id": "A084",
+      "original_sha256": "80527e2a3f086e7ca5f98498c365c2ff80d046535de331c14926570ac1850b0b",
+      "source": [
+        {
+          "file": "APRESENTAÇÃO SERVIÇOS DE MANUTENÇÃO 2025.pdf",
+          "location": "page 5"
+        },
+        {
+          "file": "ANTIGOS/APRESENTAÇÃO MANUTENÇÕES WEDO - FOOD SERVICE.pdf",
+          "location": "page 5"
+        }
+      ],
+      "treatment": "Format conversion to WebP only, at original resolution and full framing. No AI editing, face replacement, object changes or stockroom expansion.",
+      "width": 1216,
+      "height": 912,
+      "bytes": 310482,
+      "sha256": "fd091f94fabf375f173b93c3ebf0686061c640a9743a9c872dfca794ad8a45c5",
+      "usage": "Authentic stock and employee photograph on /pecas-originais."
     }
   ]
 }
