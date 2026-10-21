@@ -1,6 +1,6 @@
 {
-  "treatment": "The stock page now uses an original photograph extracted from the user-supplied presentation, converted to WebP only. Existing treatments on other assets remain documented individually below.",
-  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded. New catalogue release uses the user-requested Tramontina/Rational composition in the home hero, a real Rational photo on assistance, and a real internal training photo on About. Earlier synthetic kitchen variants were rejected and not added to the website. Stock revision: the expanded synthetic portfolio-pecas-v2 image was rejected and removed from the public assets. The original A084 stock photograph replaces it, preserving the employee, shelving, room dimensions and complete original framing.",
+  "treatment": "Stock, administrative team, assistance equipment, training and before/after documentation use original photographs with format conversion or proportional resizing only. The home kitchen illustration remains documented individually below.",
+  "selection_revision": "Raw stockroom and standalone Pratica oven photographs rejected by the user and no longer used. User photo08 replaces the stockroom; photo09 represents the administrative team. Contracts uses documented stove and electrical before/after pairs. Workshop13 and reconstructed instructor12 excluded. New catalogue release uses the user-requested Tramontina/Rational composition in the home hero, a real Rational photo on assistance, and a real internal training photo on About. Earlier synthetic kitchen variants were rejected and not added to the website. Stock revision: the expanded synthetic portfolio-pecas-v2 image was rejected and removed from the public assets. The original A084 stock photograph replaces it, preserving the employee, shelving, room dimensions and complete original framing. Administrative revision: removed the previous face-replacement treatment portfolio-equipe-v2 from both Home and About, replacing it with the original user photo09. Existing section sizes and layout preserved.",
   "comparisons": [
     {
       "service": "Fogão profissional",
@@ -291,7 +291,8 @@
       "width": 1200,
       "height": 900,
       "bytes": 107758,
-      "sha256": "78f599764690eb34c066e70dc64900ef430a369f1f2956e649d0a28e9a442c40"
+      "sha256": "78f599764690eb34c066e70dc64900ef430a369f1f2956e649d0a28e9a442c40",
+      "status": "Retired; replaced on Home and About by the original user photo09. Removed from public assets."
     },
     {
       "asset": "cozinha-profissional-home-sem-utensilios.webp",
@@ -370,6 +371,21 @@
       "bytes": 310482,
       "sha256": "fd091f94fabf375f173b93c3ebf0686061c640a9743a9c872dfca794ad8a45c5",
       "usage": "Authentic stock and employee photograph on /pecas-originais."
+    },
+    {
+      "asset": "equipe-administrativa-original.webp",
+      "original_source": "09-equipe-administrativa-frente.jpg",
+      "original_sha256": "3c66a70b29b7afd35a3a4debc81874b401b101d4acddf96bef073733df1404a8",
+      "source": "User-supplied photo09, original administrative team photograph",
+      "treatment": "Proportional reduction and WebP conversion only. Original people, faces, logo, environment and framing preserved; no generative edits.",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 257706,
+      "sha256": "b489b72a9068876ff3567c369edef36e640d61b2fd2d31082fa65f83c4ec50bf",
+      "usage": [
+        "Home: administrative service follow-up section",
+        "About: administrative team introduction"
+      ]
     }
   ]
 }

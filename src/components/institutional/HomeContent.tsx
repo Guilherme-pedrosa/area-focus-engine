@@ -139,10 +139,10 @@ export default function HomeContent() {
       <section className="wd-home-process wd-container" aria-labelledby="wd-home-process-title">
         <figure className="wd-home-process-photo">
           <img
-            src="/images/institucional/portfolio-equipe-v2.webp"
+            src="/images/institucional/equipe-administrativa-original.webp"
             alt="Equipe administrativa da WeDo acompanhando os atendimentos"
-            width="1000"
-            height="750"
+            width="1440"
+            height="1080"
             loading="lazy"
             decoding="async"
           />

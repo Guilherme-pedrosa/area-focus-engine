@@ -47,7 +47,7 @@ export default function Sobre() {
               <a href="#contato" className="wd-button">Falar com a WeDo <span aria-hidden="true">↗</span></a>
             </div>
             <figure className="wd-about-photo wd-about-photo-landscape">
-              <img src="/images/institucional/portfolio-equipe-v2.webp" alt="Equipe administrativa da WeDo acompanhando os atendimentos" width="1000" height="750" {...{ fetchpriority: "high" }} decoding="async" />
+              <img src="/images/institucional/equipe-administrativa-original.webp" alt="Equipe administrativa da WeDo acompanhando os atendimentos" width="1440" height="1080" {...{ fetchpriority: "high" }} decoding="async" />
               <figcaption>Atendimento e acompanhamento administrativo.</figcaption>
             </figure>
           </div>
